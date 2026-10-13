@@ -25,7 +25,7 @@ The entire `website/` folder is public. Never place family records, diagnostics,
 
 The App Store launch is pending, so the site deliberately uses “Coming to the App Store.” When the app's public listing is available, replace the launch notes and download FAQ with the verified App Store link and update the software metadata. Do not add fabricated ratings, reviews, medical claims, or download counts.
 
-Public contact uses the email already displayed on Fedor's public GitHub profile. Update it in both legal/support pages if the owner selects another address. A `support@` address must not be advertised until it can receive email.
+Public contact is `support@swaddle-ios.app`. Cloudflare Email Routing forwards it to the owner's verified Gmail destination. Free forwarding is enabled; outgoing email from the support address has not been configured. Keep the address consistent on the support and privacy pages.
 
 ## Hosting
 
@@ -46,6 +46,6 @@ gh run list --repo fkorotkov/swaddle-ios.app --limit 3
 
 Normal commits to `main` that change the website trigger deployment. The helper above is also available for publishing only website changes from a dirty app checkout: it validates locally, clones the same private repository into a temporary directory, copies an explicit website allowlist, validates again, and pushes a website commit. It preserves app files and never copies local Git history. Fetch the resulting commit before the next app push. Check the resulting GitHub Actions deployment before declaring an update live.
 
-Domain DNS: four GitHub Pages A records and four AAAA records at the apex; `www` is a CNAME to `fkorotkov.github.io`. Records are DNS-only in Cloudflare. GitHub manages the site certificate and the `www` redirect. No wildcard DNS or email settings were added.
+Domain DNS: four GitHub Pages A records and four AAAA records at the apex; `www` is a CNAME to `fkorotkov.github.io`. Records are DNS-only in Cloudflare. GitHub manages the site certificate and the `www` redirect. No wildcard DNS was added. Cloudflare Email Routing manages three MX records, an SPF TXT record, and a DKIM TXT record for free inbound forwarding. The support routing rule and verified destination were checked on October 13, 2026; public MX and SPF resolution passed. A separate end-to-end delivery test from another sender has not been performed.
 
 SEO includes crawlable HTML, unique titles/descriptions, canonical URLs, social previews, descriptive image text, SoftwareApplication structured data, robots.txt, and a sitemap. These help discovery; they do not guarantee indexing, rich results, or search ranking.
