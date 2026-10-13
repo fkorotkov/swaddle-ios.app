@@ -71,7 +71,7 @@ def main():
             if p.is_dir(): p = p / "index.html"
             assert p.is_file() and not p.is_symlink(), (path, link)
             if u.fragment: assert u.fragment in pages[p].ids, (path, link)
-        assert "fedor.korotkov@gmail.com" in source or path.name in ("index.html", "404.html")
+        assert "support@swaddle-ios.app" in source or path.name in ("index.html", "404.html")
     urls = ElementTree.parse(ROOT / "sitemap.xml").getroot()
     sitemap_urls = {el.text for el in urls.iter() if el.tag.endswith("}loc")}
     assert sitemap_urls == {ORIGIN + s for s in ("/", "/privacy/", "/support/")}

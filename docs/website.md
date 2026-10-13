@@ -31,9 +31,9 @@ Public contact is `support@swaddle-ios.app`. Cloudflare Email Routing forwards i
 
 GitHub Pages hosts the site; Cloudflare manages `swaddle-ios.app` DNS. The custom domain belongs to the Pages configuration before DNS is pointed there. Apex and `www` use GitHub's documented records, with HTTPS enforced after GitHub provisions its certificate. Keep unrelated DNS records intact.
 
-The private repository at https://github.com/fkorotkov/swaddle-ios.app contains the iOS app and website together on `main`. The workflow in `.github/workflows/website.yml` publishes only `website/`; no separate website branch or repository is needed. GitHub Pro (or another eligible plan) is required for Pages from a private repository.
+The public repository at https://github.com/fkorotkov/swaddle-ios.app contains the iOS app and website together on `main`. Original source, documentation, and artwork use the Mozilla Public License 2.0; third-party materials retain their own terms. The workflow in `.github/workflows/website.yml` publishes only `website/`; no separate website branch or repository is needed.
 
-**Hosting status, October 13, 2026:** GitHub disabled Pages after the repository became private. Its API rejects enabling Pages with “Your current plan does not support GitHub Pages for this repository.” The domain currently returns 404. The website artifact passed verification (only the 24 public files). Restoration is awaiting the owner's choice between a GitHub plan upgrade and Cloudflare Pages. Do not make this repository public to restore the site: it now contains the app source.
+On October 13, 2026, the owner chose to publish the clean app-and-website repository under MPL 2.0. This supersedes the earlier private-repository configuration, which disabled Pages because the account's plan did not support private-repository hosting. Public-repository Pages does not require that plan upgrade. Configure Pages to use GitHub Actions and set the custom domain to `swaddle-ios.app`.
 
 The initial app upload is a clean snapshot of the current source, tests, resources, reference data, and build configuration. Local build products, signing credentials, family exports, design experiments, and release/QA evidence are excluded. The older local app history is retained locally, not pushed to GitHub. Never publish the repository root as a Pages artifact.
 
@@ -44,7 +44,7 @@ python3 scripts/publish_website.py
 gh run list --repo fkorotkov/swaddle-ios.app --limit 3
 ```
 
-Normal commits to `main` that change the website trigger deployment. The helper above is also available for publishing only website changes from a dirty app checkout: it validates locally, clones the same private repository into a temporary directory, copies an explicit website allowlist, validates again, and pushes a website commit. It preserves app files and never copies local Git history. Fetch the resulting commit before the next app push. Check the resulting GitHub Actions deployment before declaring an update live.
+Normal commits to `main` that change the website trigger deployment. The helper above is also available for publishing only website changes from a dirty app checkout: it validates locally, clones the same repository into a temporary directory, copies an explicit website allowlist, validates again, and pushes a website commit. It preserves app files and never copies local Git history. Fetch the resulting commit before the next app push. Check the resulting GitHub Actions deployment and the live home, privacy, and support URLs before declaring an update live.
 
 Domain DNS: four GitHub Pages A records and four AAAA records at the apex; `www` is a CNAME to `fkorotkov.github.io`. Records are DNS-only in Cloudflare. GitHub manages the site certificate and the `www` redirect. No wildcard DNS was added. Cloudflare Email Routing manages three MX records, an SPF TXT record, and a DKIM TXT record for free inbound forwarding. The support routing rule and verified destination were checked on October 13, 2026; public MX and SPF resolution passed. A separate end-to-end delivery test from another sender has not been performed.
 

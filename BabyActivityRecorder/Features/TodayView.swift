@@ -647,13 +647,13 @@ struct PumpActivityRow: View {
           let pump = PumpSession(
             familyID: familyID, motherID: caregiverID, occurredAt: .now,
             authorID: UUID(), totalML: 135, unit: .ml, minutes: 20, note: "Left 75 mL, right 60 mL")
-          PumpActivityRow(pump: pump, caregiver: "Elnara", author: "Fedor", unit: .ml)
+          PumpActivityRow(pump: pump, caregiver: "Sam", author: "Alex", unit: .ml)
           Divider().padding(.leading, 56)
           ActivityRow(
             activity: Activity(
               familyID: familyID, childID: UUID(), occurredAt: .now.addingTimeInterval(-1800),
               authorID: caregiverID,
-              payload: .bottle(Bottle(milkML: 90, formulaML: 0, unit: .ml))), author: "Elnara",
+              payload: .bottle(Bottle(milkML: 90, formulaML: 0, unit: .ml))), author: "Sam",
             unit: .ml)
           Divider().padding(.leading, 56)
           PumpActivityRow(

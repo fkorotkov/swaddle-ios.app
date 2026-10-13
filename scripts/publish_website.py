@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update only website files in the shared private app repository."""
+"""Update only website files in the shared app repository."""
 import shutil
 import subprocess
 import tempfile
