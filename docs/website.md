@@ -31,7 +31,9 @@ Public contact uses the email already displayed on Fedor's public GitHub profile
 
 GitHub Pages hosts the site; Cloudflare manages `swaddle-ios.app` DNS. The custom domain belongs to the Pages configuration before DNS is pointed there. Apex and `www` use GitHub's documented records, with HTTPS enforced after GitHub provisions its certificate. Keep unrelated DNS records intact.
 
-The private repository at https://github.com/fkorotkov/swaddle-ios.app contains the iOS app and website together on `main`. GitHub Pages is public and publishes only `website/` through `.github/workflows/website.yml`. No separate website branch or repository is needed. GitHub Pro (or another eligible plan) is required for Pages from a private repository.
+The private repository at https://github.com/fkorotkov/swaddle-ios.app contains the iOS app and website together on `main`. The workflow in `.github/workflows/website.yml` publishes only `website/`; no separate website branch or repository is needed. GitHub Pro (or another eligible plan) is required for Pages from a private repository.
+
+**Hosting status, October 13, 2026:** GitHub disabled Pages after the repository became private. Its API rejects enabling Pages with “Your current plan does not support GitHub Pages for this repository.” The domain currently returns 404. The website artifact passed verification (only the 24 public files). Restoration is awaiting the owner's choice between a GitHub plan upgrade and Cloudflare Pages. Do not make this repository public to restore the site: it now contains the app source.
 
 The initial app upload is a clean snapshot of the current source, tests, resources, reference data, and build configuration. Local build products, signing credentials, family exports, design experiments, and release/QA evidence are excluded. The older local app history is retained locally, not pushed to GitHub. Never publish the repository root as a Pages artifact.
 
