@@ -1,0 +1,1211 @@
+{
+  "ar": {
+    "%@ · %lld sessions": {
+      "few": "%@ · جلسات: %lld",
+      "many": "%@ · جلسات: %lld",
+      "one": "%@ · جلسات: %lld",
+      "other": "%@ · جلسات: %lld",
+      "two": "%@ · جلسات: %lld",
+      "zero": "%@ · جلسات: %lld"
+    },
+    "%lld bottles": {
+      "few": "رضّاعات: %lld",
+      "many": "رضّاعات: %lld",
+      "one": "رضّاعات: %lld",
+      "other": "رضّاعات: %lld",
+      "two": "رضّاعات: %lld",
+      "zero": "رضّاعات: %lld"
+    },
+    "%lld changes": {
+      "few": "تغييرات: %lld",
+      "many": "تغييرات: %lld",
+      "one": "تغييرات: %lld",
+      "other": "تغييرات: %lld",
+      "two": "تغييرات: %lld",
+      "zero": "تغييرات: %lld"
+    },
+    "%lld days": {
+      "few": "%lld أيام",
+      "many": "%lld يومًا",
+      "one": "%lld يوم",
+      "other": "%lld يوم",
+      "two": "يومان (%lld)",
+      "zero": "%lld يوم"
+    },
+    "%lld diaper changes": {
+      "few": "تغييرات الحفاض: %lld",
+      "many": "تغييرات الحفاض: %lld",
+      "one": "تغييرات الحفاض: %lld",
+      "other": "تغييرات الحفاض: %lld",
+      "two": "تغييرات الحفاض: %lld",
+      "zero": "تغييرات الحفاض: %lld"
+    },
+    "%lld diapers": {
+      "few": "حفاضات: %lld",
+      "many": "حفاضات: %lld",
+      "one": "حفاضات: %lld",
+      "other": "حفاضات: %lld",
+      "two": "حفاضات: %lld",
+      "zero": "حفاضات: %lld"
+    },
+    "%lld entries imported for %@": {
+      "few": "إدخالات مستوردة لـ %2$@: %1$lld",
+      "many": "إدخالات مستوردة لـ %2$@: %1$lld",
+      "one": "إدخالات مستوردة لـ %2$@: %1$lld",
+      "other": "إدخالات مستوردة لـ %2$@: %1$lld",
+      "two": "إدخالات مستوردة لـ %2$@: %1$lld",
+      "zero": "إدخالات مستوردة لـ %2$@: %1$lld"
+    },
+    "%lld entries need details before saving.": {
+      "few": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld.",
+      "many": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld.",
+      "one": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld.",
+      "other": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld.",
+      "two": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld.",
+      "zero": "إدخالات تحتاج إلى تفاصيل قبل الحفظ: %lld."
+    },
+    "%lld feeds": {
+      "few": "رضعات: %lld",
+      "many": "رضعات: %lld",
+      "one": "رضعات: %lld",
+      "other": "رضعات: %lld",
+      "two": "رضعات: %lld",
+      "zero": "رضعات: %lld"
+    },
+    "%lld months": {
+      "few": "%lld أشهر",
+      "many": "%lld شهرًا",
+      "one": "%lld شهر",
+      "other": "%lld شهر",
+      "two": "شهران (%lld)",
+      "zero": "%lld شهر"
+    },
+    "%lld notes": {
+      "few": "ملاحظات: %lld",
+      "many": "ملاحظات: %lld",
+      "one": "ملاحظات: %lld",
+      "other": "ملاحظات: %lld",
+      "two": "ملاحظات: %lld",
+      "zero": "ملاحظات: %lld"
+    },
+    "%lld pumping sessions": {
+      "few": "جلسات شفط الحليب: %lld",
+      "many": "جلسات شفط الحليب: %lld",
+      "one": "جلسات شفط الحليب: %lld",
+      "other": "جلسات شفط الحليب: %lld",
+      "two": "جلسات شفط الحليب: %lld",
+      "zero": "جلسات شفط الحليب: %lld"
+    },
+    "%lld pumping sessions imported for %@": {
+      "few": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld",
+      "many": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld",
+      "one": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld",
+      "other": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld",
+      "two": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld",
+      "zero": "جلسات شفط الحليب المستوردة لـ %2$@: %1$lld"
+    },
+    "%lld sessions": {
+      "few": "جلسات: %lld",
+      "many": "جلسات: %lld",
+      "one": "جلسات: %lld",
+      "other": "جلسات: %lld",
+      "two": "جلسات: %lld",
+      "zero": "جلسات: %lld"
+    },
+    "%lld weeks": {
+      "few": "أسابيع: %lld",
+      "many": "أسابيع: %lld",
+      "one": "أسابيع: %lld",
+      "other": "أسابيع: %lld",
+      "two": "أسابيع: %lld",
+      "zero": "أسابيع: %lld"
+    },
+    "Mixed · %lld selected": {
+      "few": "مختلط · المحدد: %lld",
+      "many": "مختلط · المحدد: %lld",
+      "one": "مختلط · المحدد: %lld",
+      "other": "مختلط · المحدد: %lld",
+      "two": "مختلط · المحدد: %lld",
+      "zero": "مختلط · المحدد: %lld"
+    },
+    "Preserving %lld pending uploads": {
+      "few": "الاحتفاظ بعمليات رفع معلّقة: %lld",
+      "many": "الاحتفاظ بعمليات رفع معلّقة: %lld",
+      "one": "الاحتفاظ بعمليات رفع معلّقة: %lld",
+      "other": "الاحتفاظ بعمليات رفع معلّقة: %lld",
+      "two": "الاحتفاظ بعمليات رفع معلّقة: %lld",
+      "zero": "الاحتفاظ بعمليات رفع معلّقة: %lld"
+    },
+    "Review %lld entries": {
+      "few": "مراجعة الإدخالات (%lld)",
+      "many": "مراجعة الإدخالات (%lld)",
+      "one": "مراجعة الإدخالات (%lld)",
+      "other": "مراجعة الإدخالات (%lld)",
+      "two": "مراجعة الإدخالات (%lld)",
+      "zero": "مراجعة الإدخالات (%lld)"
+    },
+    "Save %lld entries": {
+      "few": "حفظ الإدخالات (%lld)",
+      "many": "حفظ الإدخالات (%lld)",
+      "one": "حفظ الإدخالات (%lld)",
+      "other": "حفظ الإدخالات (%lld)",
+      "two": "حفظ الإدخالات (%lld)",
+      "zero": "حفظ الإدخالات (%lld)"
+    },
+    "Save %lld entries for %@": {
+      "few": "حفظ الإدخالات لـ %2$@ (%1$lld)",
+      "many": "حفظ الإدخالات لـ %2$@ (%1$lld)",
+      "one": "حفظ الإدخالات لـ %2$@ (%1$lld)",
+      "other": "حفظ الإدخالات لـ %2$@ (%1$lld)",
+      "two": "حفظ الإدخالات لـ %2$@ (%1$lld)",
+      "zero": "حفظ الإدخالات لـ %2$@ (%1$lld)"
+    },
+    "Save %lld pumping sessions for %@": {
+      "few": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)",
+      "many": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)",
+      "one": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)",
+      "other": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)",
+      "two": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)",
+      "zero": "حفظ جلسات شفط الحليب لـ %2$@ (%1$lld)"
+    },
+    "Save %lld sessions": {
+      "few": "حفظ الجلسات (%lld)",
+      "many": "حفظ الجلسات (%lld)",
+      "one": "حفظ الجلسات (%lld)",
+      "other": "حفظ الجلسات (%lld)",
+      "two": "حفظ الجلسات (%lld)",
+      "zero": "حفظ الجلسات (%lld)"
+    },
+    "Verified %lld iCloud records": {
+      "few": "سجلات iCloud التي تم التحقق منها: %lld",
+      "many": "سجلات iCloud التي تم التحقق منها: %lld",
+      "one": "سجلات iCloud التي تم التحقق منها: %lld",
+      "other": "سجلات iCloud التي تم التحقق منها: %lld",
+      "two": "سجلات iCloud التي تم التحقق منها: %lld",
+      "zero": "سجلات iCloud التي تم التحقق منها: %lld"
+    }
+  },
+  "en": {
+    "%lld weeks": {
+      "one": "%lld week",
+      "other": "%lld weeks"
+    }
+  },
+  "es": {
+    "%lld weeks": {
+      "one": "%lld semana",
+      "other": "%lld semanas"
+    }
+  },
+  "fa": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld نوبت",
+      "other": "%@ · %lld نوبت"
+    },
+    "%lld bottles": {
+      "one": "%lld شیشه شیر",
+      "other": "%lld شیشه شیر"
+    },
+    "%lld changes": {
+      "one": "%lld تعویض",
+      "other": "%lld تعویض"
+    },
+    "%lld days": {
+      "one": "%lld روز",
+      "other": "%lld روز"
+    },
+    "%lld diaper changes": {
+      "one": "%lld تعویض پوشک",
+      "other": "%lld تعویض پوشک"
+    },
+    "%lld diapers": {
+      "one": "%lld پوشک",
+      "other": "%lld پوشک"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld مورد برای %@ وارد شد",
+      "other": "%lld مورد برای %@ وارد شد"
+    },
+    "%lld entries need details before saving.": {
+      "one": "%lld مورد پیش از ذخیره به جزئیات نیاز دارد.",
+      "other": "%lld مورد پیش از ذخیره به جزئیات نیاز دارد."
+    },
+    "%lld feeds": {
+      "one": "%lld نوبت تغذیه",
+      "other": "%lld نوبت تغذیه"
+    },
+    "%lld months": {
+      "one": "%lld ماه",
+      "other": "%lld ماه"
+    },
+    "%lld notes": {
+      "one": "%lld یادداشت",
+      "other": "%lld یادداشت"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld نوبت دوشیدن شیر",
+      "other": "%lld نوبت دوشیدن شیر"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld نوبت دوشیدن شیر برای %@ وارد شد",
+      "other": "%lld نوبت دوشیدن شیر برای %@ وارد شد"
+    },
+    "%lld sessions": {
+      "one": "%lld نوبت",
+      "other": "%lld نوبت"
+    },
+    "%lld weeks": {
+      "one": "%lld هفته",
+      "other": "%lld هفته"
+    },
+    "Mixed · %lld selected": {
+      "one": "ترکیبی · %lld مورد انتخاب شده",
+      "other": "ترکیبی · %lld مورد انتخاب شده"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "نگهداری %lld بارگذاری در انتظار",
+      "other": "نگهداری %lld بارگذاری در انتظار"
+    },
+    "Review %lld entries": {
+      "one": "مرور %lld مورد",
+      "other": "مرور %lld مورد"
+    },
+    "Save %lld entries": {
+      "one": "ذخیره %lld مورد",
+      "other": "ذخیره %lld مورد"
+    },
+    "Save %lld entries for %@": {
+      "one": "ذخیره %lld مورد برای %@",
+      "other": "ذخیره %lld مورد برای %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "ذخیره %lld نوبت دوشیدن شیر برای %@",
+      "other": "ذخیره %lld نوبت دوشیدن شیر برای %@"
+    },
+    "Save %lld sessions": {
+      "one": "ذخیره %lld نوبت",
+      "other": "ذخیره %lld نوبت"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld رکورد iCloud تأیید شد",
+      "other": "%lld رکورد iCloud تأیید شد"
+    }
+  },
+  "fil": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld sesyon",
+      "other": "%@ · %lld sesyon"
+    },
+    "%lld bottles": {
+      "one": "%lld bote",
+      "other": "%lld bote"
+    },
+    "%lld changes": {
+      "one": "%lld pagpapalit",
+      "other": "%lld pagpapalit"
+    },
+    "%lld days": {
+      "one": "%lld araw",
+      "other": "%lld araw"
+    },
+    "%lld diaper changes": {
+      "one": "%lld pagpapalit ng diaper",
+      "other": "%lld pagpapalit ng diaper"
+    },
+    "%lld diapers": {
+      "one": "%lld diaper",
+      "other": "%lld diaper"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld tala ang na-import para kay %@",
+      "other": "%lld tala ang na-import para kay %@"
+    },
+    "%lld entries need details before saving.": {
+      "one": "Kailangan ng detalye ang %lld tala bago i-save.",
+      "other": "Kailangan ng detalye ang %lld tala bago i-save."
+    },
+    "%lld feeds": {
+      "one": "%lld pagpapakain",
+      "other": "%lld pagpapakain"
+    },
+    "%lld months": {
+      "one": "%lld buwan",
+      "other": "%lld buwan"
+    },
+    "%lld notes": {
+      "one": "%lld tala ng detalye",
+      "other": "%lld tala ng detalye"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld sesyon ng pag-pump",
+      "other": "%lld sesyon ng pag-pump"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld sesyon ng pag-pump ang na-import para kay %@",
+      "other": "%lld sesyon ng pag-pump ang na-import para kay %@"
+    },
+    "%lld sessions": {
+      "one": "%lld sesyon",
+      "other": "%lld sesyon"
+    },
+    "%lld weeks": {
+      "one": "%lld linggo",
+      "other": "%lld linggo"
+    },
+    "Mixed · %lld selected": {
+      "one": "Halo · %lld napili",
+      "other": "Halo · %lld napili"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "Pinapanatili ang %lld nakabinbing upload",
+      "other": "Pinapanatili ang %lld nakabinbing upload"
+    },
+    "Review %lld entries": {
+      "one": "Suriin ang %lld tala",
+      "other": "Suriin ang %lld tala"
+    },
+    "Save %lld entries": {
+      "one": "I-save ang %lld tala",
+      "other": "I-save ang %lld tala"
+    },
+    "Save %lld entries for %@": {
+      "one": "I-save ang %lld tala para kay %@",
+      "other": "I-save ang %lld tala para kay %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "I-save ang %lld sesyon ng pag-pump para kay %@",
+      "other": "I-save ang %lld sesyon ng pag-pump para kay %@"
+    },
+    "Save %lld sessions": {
+      "one": "I-save ang %lld sesyon",
+      "other": "I-save ang %lld sesyon"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld tala sa iCloud ang napatunayan",
+      "other": "%lld tala sa iCloud ang napatunayan"
+    }
+  },
+  "fr": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld séance",
+      "other": "%@ · %lld séances"
+    },
+    "%lld bottles": {
+      "one": "%lld biberon",
+      "other": "%lld biberons"
+    },
+    "%lld changes": {
+      "one": "%lld change",
+      "other": "%lld changes"
+    },
+    "%lld days": {
+      "one": "%lld jour",
+      "other": "%lld jours"
+    },
+    "%lld diaper changes": {
+      "one": "%lld changement de couche",
+      "other": "%lld changements de couche"
+    },
+    "%lld diapers": {
+      "one": "%lld couche",
+      "other": "%lld couches"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld entrée importée pour %@",
+      "other": "%lld entrées importées pour %@"
+    },
+    "%lld entries need details before saving.": {
+      "one": "%lld entrée nécessite des détails avant l’enregistrement.",
+      "other": "%lld entrées nécessitent des détails avant l’enregistrement."
+    },
+    "%lld feeds": {
+      "one": "%lld repas",
+      "other": "%lld repas"
+    },
+    "%lld months": {
+      "one": "%lld mois",
+      "other": "%lld mois"
+    },
+    "%lld notes": {
+      "one": "%lld note",
+      "other": "%lld notes"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld séance de tirage",
+      "other": "%lld séances de tirage"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld séance de tirage importée pour %@",
+      "other": "%lld séances de tirage importées pour %@"
+    },
+    "%lld sessions": {
+      "one": "%lld séance",
+      "other": "%lld séances"
+    },
+    "%lld weeks": {
+      "one": "%lld semaine",
+      "other": "%lld semaines"
+    },
+    "Mixed · %lld selected": {
+      "one": "Mixte · %lld sélectionné",
+      "other": "Mixte · %lld sélectionnés"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "Conservation de %lld envoi en attente",
+      "other": "Conservation de %lld envois en attente"
+    },
+    "Review %lld entries": {
+      "one": "Vérifier %lld entrée",
+      "other": "Vérifier %lld entrées"
+    },
+    "Save %lld entries": {
+      "one": "Enregistrer %lld entrée",
+      "other": "Enregistrer %lld entrées"
+    },
+    "Save %lld entries for %@": {
+      "one": "Enregistrer %lld entrée pour %@",
+      "other": "Enregistrer %lld entrées pour %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "Enregistrer %lld séance de tirage pour %@",
+      "other": "Enregistrer %lld séances de tirage pour %@"
+    },
+    "Save %lld sessions": {
+      "one": "Enregistrer %lld séance",
+      "other": "Enregistrer %lld séances"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld enregistrement iCloud vérifié",
+      "other": "%lld enregistrements iCloud vérifiés"
+    }
+  },
+  "hi": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld सत्र",
+      "other": "%@ · %lld सत्र"
+    },
+    "%lld bottles": {
+      "one": "%lld बोतल",
+      "other": "%lld बोतलें"
+    },
+    "%lld changes": {
+      "one": "%lld बदलाव",
+      "other": "%lld बदलाव"
+    },
+    "%lld days": {
+      "one": "%lld दिन",
+      "other": "%lld दिन"
+    },
+    "%lld diaper changes": {
+      "one": "%lld डायपर बदलाव",
+      "other": "%lld डायपर बदलाव"
+    },
+    "%lld diapers": {
+      "one": "%lld डायपर",
+      "other": "%lld डायपर"
+    },
+    "%lld entries imported for %@": {
+      "one": "%2$@ के लिए %1$lld प्रविष्टि आयात की गई",
+      "other": "%2$@ के लिए %1$lld प्रविष्टियाँ आयात की गईं"
+    },
+    "%lld entries need details before saving.": {
+      "one": "सहेजने से पहले %lld प्रविष्टि में विवरण चाहिए।",
+      "other": "सहेजने से पहले %lld प्रविष्टियों में विवरण चाहिए।"
+    },
+    "%lld feeds": {
+      "one": "%lld बार दूध पिलाया",
+      "other": "%lld बार दूध पिलाया"
+    },
+    "%lld months": {
+      "one": "%lld महीना",
+      "other": "%lld महीने"
+    },
+    "%lld notes": {
+      "one": "%lld नोट",
+      "other": "%lld नोट"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld दूध निकालने का सत्र",
+      "other": "%lld दूध निकालने के सत्र"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%2$@ के लिए %1$lld दूध निकालने का सत्र आयात किया गया",
+      "other": "%2$@ के लिए %1$lld दूध निकालने के सत्र आयात किए गए"
+    },
+    "%lld sessions": {
+      "one": "%lld सत्र",
+      "other": "%lld सत्र"
+    },
+    "%lld weeks": {
+      "one": "%lld सप्ताह",
+      "other": "%lld सप्ताह"
+    },
+    "Mixed · %lld selected": {
+      "one": "मिश्रित · %lld चुना गया",
+      "other": "मिश्रित · %lld चुने गए"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "%lld लंबित अपलोड सुरक्षित रखे जा रहे हैं",
+      "other": "%lld लंबित अपलोड सुरक्षित रखे जा रहे हैं"
+    },
+    "Review %lld entries": {
+      "one": "%lld प्रविष्टि की समीक्षा करें",
+      "other": "%lld प्रविष्टियों की समीक्षा करें"
+    },
+    "Save %lld entries": {
+      "one": "%lld प्रविष्टि सहेजें",
+      "other": "%lld प्रविष्टियाँ सहेजें"
+    },
+    "Save %lld entries for %@": {
+      "one": "%2$@ के लिए %1$lld प्रविष्टि सहेजें",
+      "other": "%2$@ के लिए %1$lld प्रविष्टियाँ सहेजें"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "%2$@ के लिए %1$lld दूध निकालने का सत्र सहेजें",
+      "other": "%2$@ के लिए %1$lld दूध निकालने के सत्र सहेजें"
+    },
+    "Save %lld sessions": {
+      "one": "%lld सत्र सहेजें",
+      "other": "%lld सत्र सहेजें"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld iCloud रिकॉर्ड की पुष्टि की गई",
+      "other": "%lld iCloud रिकॉर्ड की पुष्टि की गई"
+    }
+  },
+  "ht": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld sesyon",
+      "other": "%@ · %lld sesyon"
+    },
+    "%lld bottles": {
+      "one": "%lld bibwon",
+      "other": "%lld bibwon"
+    },
+    "%lld changes": {
+      "one": "%lld chanjman",
+      "other": "%lld chanjman"
+    },
+    "%lld days": {
+      "one": "%lld jou",
+      "other": "%lld jou"
+    },
+    "%lld diaper changes": {
+      "one": "%lld chanjman kouchèt",
+      "other": "%lld chanjman kouchèt"
+    },
+    "%lld diapers": {
+      "one": "%lld kouchèt",
+      "other": "%lld kouchèt"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld antre enpòte pou %@",
+      "other": "%lld antre enpòte pou %@"
+    },
+    "%lld entries need details before saving.": {
+      "one": "%lld antre bezwen detay anvan ou sove yo.",
+      "other": "%lld antre bezwen detay anvan ou sove yo."
+    },
+    "%lld feeds": {
+      "one": "%lld manje",
+      "other": "%lld manje"
+    },
+    "%lld months": {
+      "one": "%lld mwa",
+      "other": "%lld mwa"
+    },
+    "%lld notes": {
+      "one": "%lld nòt",
+      "other": "%lld nòt"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld sesyon tire lèt",
+      "other": "%lld sesyon tire lèt"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld sesyon tire lèt enpòte pou %@",
+      "other": "%lld sesyon tire lèt enpòte pou %@"
+    },
+    "%lld sessions": {
+      "one": "%lld sesyon",
+      "other": "%lld sesyon"
+    },
+    "%lld weeks": {
+      "one": "%lld semèn",
+      "other": "%lld semèn"
+    },
+    "Mixed · %lld selected": {
+      "one": "Melanje · %lld chwazi",
+      "other": "Melanje · %lld chwazi"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "Konsève %lld telechajman ki annatant",
+      "other": "Konsève %lld telechajman ki annatant"
+    },
+    "Review %lld entries": {
+      "one": "Revize %lld antre",
+      "other": "Revize %lld antre"
+    },
+    "Save %lld entries": {
+      "one": "Sove %lld antre",
+      "other": "Sove %lld antre"
+    },
+    "Save %lld entries for %@": {
+      "one": "Sove %lld antre pou %@",
+      "other": "Sove %lld antre pou %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "Sove %lld sesyon tire lèt pou %@",
+      "other": "Sove %lld sesyon tire lèt pou %@"
+    },
+    "Save %lld sessions": {
+      "one": "Sove %lld sesyon",
+      "other": "Sove %lld sesyon"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld dosye iCloud verifye",
+      "other": "%lld dosye iCloud verifye"
+    }
+  },
+  "ko": {
+    "%@ · %lld sessions": {
+      "other": "%@ · %lld회"
+    },
+    "%lld bottles": {
+      "other": "젖병 수유 %lld회"
+    },
+    "%lld changes": {
+      "other": "%lld회 교체"
+    },
+    "%lld days": {
+      "other": "%lld일"
+    },
+    "%lld diaper changes": {
+      "other": "기저귀 교체 %lld회"
+    },
+    "%lld diapers": {
+      "other": "기저귀 %lld개"
+    },
+    "%lld entries imported for %@": {
+      "other": "%2$@의 기록 %1$lld개 가져옴"
+    },
+    "%lld entries need details before saving.": {
+      "other": "저장하기 전에 기록 %lld개에 세부 정보가 필요합니다."
+    },
+    "%lld feeds": {
+      "other": "수유 %lld회"
+    },
+    "%lld months": {
+      "other": "%lld개월"
+    },
+    "%lld notes": {
+      "other": "메모 %lld개"
+    },
+    "%lld pumping sessions": {
+      "other": "유축 %lld회"
+    },
+    "%lld pumping sessions imported for %@": {
+      "other": "%2$@의 유축 기록 %1$lld개 가져옴"
+    },
+    "%lld sessions": {
+      "other": "%lld회"
+    },
+    "%lld weeks": {
+      "other": "%lld주"
+    },
+    "Mixed · %lld selected": {
+      "other": "혼합 · %lld개 선택됨"
+    },
+    "Preserving %lld pending uploads": {
+      "other": "대기 중인 업로드 %lld개 보존 중"
+    },
+    "Review %lld entries": {
+      "other": "기록 %lld개 검토"
+    },
+    "Save %lld entries": {
+      "other": "기록 %lld개 저장"
+    },
+    "Save %lld entries for %@": {
+      "other": "%2$@의 기록 %1$lld개 저장"
+    },
+    "Save %lld pumping sessions for %@": {
+      "other": "%2$@의 유축 기록 %1$lld개 저장"
+    },
+    "Save %lld sessions": {
+      "other": "%lld회 기록 저장"
+    },
+    "Verified %lld iCloud records": {
+      "other": "iCloud 기록 %lld개 확인됨"
+    }
+  },
+  "pt-BR": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld sessão",
+      "other": "%@ · %lld sessões"
+    },
+    "%lld bottles": {
+      "one": "%lld mamadeira",
+      "other": "%lld mamadeiras"
+    },
+    "%lld changes": {
+      "one": "%lld troca",
+      "other": "%lld trocas"
+    },
+    "%lld days": {
+      "one": "%lld dia",
+      "other": "%lld dias"
+    },
+    "%lld diaper changes": {
+      "one": "%lld troca de fralda",
+      "other": "%lld trocas de fralda"
+    },
+    "%lld diapers": {
+      "one": "%lld fralda",
+      "other": "%lld fraldas"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld registro importado para %@",
+      "other": "%lld registros importados para %@"
+    },
+    "%lld entries need details before saving.": {
+      "one": "%lld registro precisa de detalhes antes de salvar.",
+      "other": "%lld registros precisam de detalhes antes de salvar."
+    },
+    "%lld feeds": {
+      "one": "%lld alimentação",
+      "other": "%lld alimentações"
+    },
+    "%lld months": {
+      "one": "%lld mês",
+      "other": "%lld meses"
+    },
+    "%lld notes": {
+      "one": "%lld nota",
+      "other": "%lld notas"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld sessão de extração de leite",
+      "other": "%lld sessões de extração de leite"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld sessão de extração de leite importada para %@",
+      "other": "%lld sessões de extração de leite importadas para %@"
+    },
+    "%lld sessions": {
+      "one": "%lld sessão",
+      "other": "%lld sessões"
+    },
+    "%lld weeks": {
+      "one": "%lld semana",
+      "other": "%lld semanas"
+    },
+    "Mixed · %lld selected": {
+      "one": "Misto · %lld selecionado",
+      "other": "Misto · %lld selecionados"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "Preservando %lld envio pendente",
+      "other": "Preservando %lld envios pendentes"
+    },
+    "Review %lld entries": {
+      "one": "Revisar %lld registro",
+      "other": "Revisar %lld registros"
+    },
+    "Save %lld entries": {
+      "one": "Salvar %lld registro",
+      "other": "Salvar %lld registros"
+    },
+    "Save %lld entries for %@": {
+      "one": "Salvar %lld registro para %@",
+      "other": "Salvar %lld registros para %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "Salvar %lld sessão de extração de leite para %@",
+      "other": "Salvar %lld sessões de extração de leite para %@"
+    },
+    "Save %lld sessions": {
+      "one": "Salvar %lld sessão",
+      "other": "Salvar %lld sessões"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld registro do iCloud verificado",
+      "other": "%lld registros do iCloud verificados"
+    }
+  },
+  "ru": {
+    "%@ · %lld sessions": {
+      "few": "%@ · %lld сеанса",
+      "many": "%@ · %lld сеансов",
+      "one": "%@ · %lld сеанс",
+      "other": "%@ · %lld сеансов"
+    },
+    "%lld bottles": {
+      "few": "%lld бутылочки",
+      "many": "%lld бутылочек",
+      "one": "%lld бутылочка",
+      "other": "%lld бутылочек"
+    },
+    "%lld changes": {
+      "few": "%lld смены",
+      "many": "%lld смен",
+      "one": "%lld смена",
+      "other": "%lld смен"
+    },
+    "%lld days": {
+      "few": "%lld дня",
+      "many": "%lld дней",
+      "one": "%lld день",
+      "other": "%lld дней"
+    },
+    "%lld diaper changes": {
+      "few": "%lld смены подгузника",
+      "many": "%lld смен подгузника",
+      "one": "%lld смена подгузника",
+      "other": "%lld смен подгузника"
+    },
+    "%lld diapers": {
+      "few": "%lld подгузника",
+      "many": "%lld подгузников",
+      "one": "%lld подгузник",
+      "other": "%lld подгузников"
+    },
+    "%lld entries imported for %@": {
+      "few": "Импортировано записей: %lld · %@",
+      "many": "Импортировано записей: %lld · %@",
+      "one": "Импортировано записей: %lld · %@",
+      "other": "Импортировано записей: %lld · %@"
+    },
+    "%lld entries need details before saving.": {
+      "few": "Уточните записи перед сохранением: %lld.",
+      "many": "Уточните записи перед сохранением: %lld.",
+      "one": "Уточните записи перед сохранением: %lld.",
+      "other": "Уточните записи перед сохранением: %lld."
+    },
+    "%lld feeds": {
+      "few": "%lld кормления",
+      "many": "%lld кормлений",
+      "one": "%lld кормление",
+      "other": "%lld кормлений"
+    },
+    "%lld months": {
+      "few": "%lld месяца",
+      "many": "%lld месяцев",
+      "one": "%lld месяц",
+      "other": "%lld месяцев"
+    },
+    "%lld notes": {
+      "few": "%lld заметки",
+      "many": "%lld заметок",
+      "one": "%lld заметка",
+      "other": "%lld заметок"
+    },
+    "%lld pumping sessions": {
+      "few": "%lld сцеживания",
+      "many": "%lld сцеживаний",
+      "one": "%lld сцеживание",
+      "other": "%lld сцеживаний"
+    },
+    "%lld pumping sessions imported for %@": {
+      "few": "Импортировано сцеживаний: %lld · %@",
+      "many": "Импортировано сцеживаний: %lld · %@",
+      "one": "Импортировано сцеживаний: %lld · %@",
+      "other": "Импортировано сцеживаний: %lld · %@"
+    },
+    "%lld sessions": {
+      "few": "%lld сеанса",
+      "many": "%lld сеансов",
+      "one": "%lld сеанс",
+      "other": "%lld сеансов"
+    },
+    "%lld weeks": {
+      "few": "%lld недели",
+      "many": "%lld недель",
+      "one": "%lld неделя",
+      "other": "%lld недель"
+    },
+    "Mixed · %lld selected": {
+      "few": "Смешанное происхождение · Выбрано: %lld",
+      "many": "Смешанное происхождение · Выбрано: %lld",
+      "one": "Смешанное происхождение · Выбрано: %lld",
+      "other": "Смешанное происхождение · Выбрано: %lld"
+    },
+    "Preserving %lld pending uploads": {
+      "few": "Сохранение ожидающих отправки записей: %lld",
+      "many": "Сохранение ожидающих отправки записей: %lld",
+      "one": "Сохранение ожидающих отправки записей: %lld",
+      "other": "Сохранение ожидающих отправки записей: %lld"
+    },
+    "Review %lld entries": {
+      "few": "Проверить %lld записи",
+      "many": "Проверить %lld записей",
+      "one": "Проверить %lld запись",
+      "other": "Проверить %lld записей"
+    },
+    "Save %lld entries": {
+      "few": "Сохранить %lld записи",
+      "many": "Сохранить %lld записей",
+      "one": "Сохранить %lld запись",
+      "other": "Сохранить %lld записей"
+    },
+    "Save %lld entries for %@": {
+      "few": "Сохранить %lld записи для %@",
+      "many": "Сохранить %lld записей для %@",
+      "one": "Сохранить %lld запись для %@",
+      "other": "Сохранить %lld записей для %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "few": "Сохранить сцеживания: %lld · %@",
+      "many": "Сохранить сцеживания: %lld · %@",
+      "one": "Сохранить сцеживания: %lld · %@",
+      "other": "Сохранить сцеживания: %lld · %@"
+    },
+    "Save %lld sessions": {
+      "few": "Сохранить %lld сеанса",
+      "many": "Сохранить %lld сеансов",
+      "one": "Сохранить %lld сеанс",
+      "other": "Сохранить %lld сеансов"
+    },
+    "Verified %lld iCloud records": {
+      "few": "Проверено записей iCloud: %lld",
+      "many": "Проверено записей iCloud: %lld",
+      "one": "Проверено записей iCloud: %lld",
+      "other": "Проверено записей iCloud: %lld"
+    }
+  },
+  "so": {
+    "%@ · %lld sessions": {
+      "one": "%@ · %lld kalfadhi",
+      "other": "%@ · %lld kalfadhi"
+    },
+    "%lld bottles": {
+      "one": "%lld dhalo",
+      "other": "%lld dhalo"
+    },
+    "%lld changes": {
+      "one": "%lld beddel",
+      "other": "%lld beddel"
+    },
+    "%lld days": {
+      "one": "%lld maalin",
+      "other": "%lld maalin"
+    },
+    "%lld diaper changes": {
+      "one": "%lld beddel xafaayad",
+      "other": "%lld beddel xafaayad"
+    },
+    "%lld diapers": {
+      "one": "%lld xafaayad",
+      "other": "%lld xafaayad"
+    },
+    "%lld entries imported for %@": {
+      "one": "%lld diiwaan ayaa loo soo dejiyey %@",
+      "other": "%lld diiwaan ayaa loo soo dejiyey %@"
+    },
+    "%lld entries need details before saving.": {
+      "one": "%lld diiwaan ayaa u baahan faahfaahin ka hor kaydinta.",
+      "other": "%lld diiwaan ayaa u baahan faahfaahin ka hor kaydinta."
+    },
+    "%lld feeds": {
+      "one": "%lld quudin",
+      "other": "%lld quudin"
+    },
+    "%lld months": {
+      "one": "%lld bil",
+      "other": "%lld bil"
+    },
+    "%lld notes": {
+      "one": "%lld qoraal",
+      "other": "%lld qoraal"
+    },
+    "%lld pumping sessions": {
+      "one": "%lld kalfadhi lisidda caanaha",
+      "other": "%lld kalfadhi lisidda caanaha"
+    },
+    "%lld pumping sessions imported for %@": {
+      "one": "%lld kalfadhi lisidda caanaha ayaa loo soo dejiyey %@",
+      "other": "%lld kalfadhi lisidda caanaha ayaa loo soo dejiyey %@"
+    },
+    "%lld sessions": {
+      "one": "%lld kalfadhi",
+      "other": "%lld kalfadhi"
+    },
+    "%lld weeks": {
+      "one": "%lld toddobaad",
+      "other": "%lld toddobaad"
+    },
+    "Mixed · %lld selected": {
+      "one": "Isku dhafan · %lld la doortay",
+      "other": "Isku dhafan · %lld la doortay"
+    },
+    "Preserving %lld pending uploads": {
+      "one": "Ilaalinta %lld rarid oo sugaysa",
+      "other": "Ilaalinta %lld rarid oo sugaysa"
+    },
+    "Review %lld entries": {
+      "one": "Dib u eeg %lld diiwaan",
+      "other": "Dib u eeg %lld diiwaan"
+    },
+    "Save %lld entries": {
+      "one": "Kaydi %lld diiwaan",
+      "other": "Kaydi %lld diiwaan"
+    },
+    "Save %lld entries for %@": {
+      "one": "Kaydi %lld diiwaan oo loogu talagalay %@",
+      "other": "Kaydi %lld diiwaan oo loogu talagalay %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "one": "Kaydi %lld kalfadhi lisidda caanaha oo loogu talagalay %@",
+      "other": "Kaydi %lld kalfadhi lisidda caanaha oo loogu talagalay %@"
+    },
+    "Save %lld sessions": {
+      "one": "Kaydi %lld kalfadhi",
+      "other": "Kaydi %lld kalfadhi"
+    },
+    "Verified %lld iCloud records": {
+      "one": "%lld diiwaan iCloud ayaa la xaqiijiyey",
+      "other": "%lld diiwaan iCloud ayaa la xaqiijiyey"
+    }
+  },
+  "vi": {
+    "%@ · %lld sessions": {
+      "other": "%@ · %lld lần"
+    },
+    "%lld bottles": {
+      "other": "%lld bình sữa"
+    },
+    "%lld changes": {
+      "other": "%lld lần thay"
+    },
+    "%lld days": {
+      "other": "%lld ngày"
+    },
+    "%lld diaper changes": {
+      "other": "%lld lần thay tã"
+    },
+    "%lld diapers": {
+      "other": "%lld tã"
+    },
+    "%lld entries imported for %@": {
+      "other": "Đã nhập %lld bản ghi cho %@"
+    },
+    "%lld entries need details before saving.": {
+      "other": "%lld bản ghi cần thêm chi tiết trước khi lưu."
+    },
+    "%lld feeds": {
+      "other": "%lld cữ bú"
+    },
+    "%lld months": {
+      "other": "%lld tháng"
+    },
+    "%lld notes": {
+      "other": "%lld ghi chú"
+    },
+    "%lld pumping sessions": {
+      "other": "%lld lần hút sữa"
+    },
+    "%lld pumping sessions imported for %@": {
+      "other": "Đã nhập %lld lần hút sữa cho %@"
+    },
+    "%lld sessions": {
+      "other": "%lld lần"
+    },
+    "%lld weeks": {
+      "other": "%lld tuần"
+    },
+    "Mixed · %lld selected": {
+      "other": "Hỗn hợp · đã chọn %lld"
+    },
+    "Preserving %lld pending uploads": {
+      "other": "Giữ lại %lld mục chờ tải lên"
+    },
+    "Review %lld entries": {
+      "other": "Xem lại %lld bản ghi"
+    },
+    "Save %lld entries": {
+      "other": "Lưu %lld bản ghi"
+    },
+    "Save %lld entries for %@": {
+      "other": "Lưu %lld bản ghi cho %@"
+    },
+    "Save %lld pumping sessions for %@": {
+      "other": "Lưu %lld lần hút sữa cho %@"
+    },
+    "Save %lld sessions": {
+      "other": "Lưu %lld lần"
+    },
+    "Verified %lld iCloud records": {
+      "other": "Đã xác minh %lld bản ghi iCloud"
+    }
+  },
+  "zh-Hans": {
+    "%@ · %lld sessions": {
+      "other": "%@ · %lld次"
+    },
+    "%lld bottles": {
+      "other": "%lld次瓶喂"
+    },
+    "%lld changes": {
+      "other": "%lld次更换"
+    },
+    "%lld days": {
+      "other": "%lld天"
+    },
+    "%lld diaper changes": {
+      "other": "%lld次换尿布"
+    },
+    "%lld diapers": {
+      "other": "%lld片尿布"
+    },
+    "%lld entries imported for %@": {
+      "other": "已为%2$@导入%1$lld条记录"
+    },
+    "%lld entries need details before saving.": {
+      "other": "%lld条记录需要补充详情后才能保存。"
+    },
+    "%lld feeds": {
+      "other": "%lld次喂养"
+    },
+    "%lld months": {
+      "other": "%lld个月"
+    },
+    "%lld notes": {
+      "other": "%lld条备注"
+    },
+    "%lld pumping sessions": {
+      "other": "%lld次泵奶"
+    },
+    "%lld pumping sessions imported for %@": {
+      "other": "已为%2$@导入%1$lld次泵奶记录"
+    },
+    "%lld sessions": {
+      "other": "%lld次"
+    },
+    "%lld weeks": {
+      "other": "%lld周"
+    },
+    "Mixed · %lld selected": {
+      "other": "混合 · 已选择%lld项"
+    },
+    "Preserving %lld pending uploads": {
+      "other": "保留%lld项待上传内容"
+    },
+    "Review %lld entries": {
+      "other": "检查%lld条记录"
+    },
+    "Save %lld entries": {
+      "other": "保存%lld条记录"
+    },
+    "Save %lld entries for %@": {
+      "other": "为%2$@保存%1$lld条记录"
+    },
+    "Save %lld pumping sessions for %@": {
+      "other": "为%2$@保存%1$lld次泵奶记录"
+    },
+    "Save %lld sessions": {
+      "other": "保存%lld次记录"
+    },
+    "Verified %lld iCloud records": {
+      "other": "已核实%lld条iCloud记录"
+    }
+  }
+}

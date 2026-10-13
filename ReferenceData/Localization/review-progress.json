@@ -1,0 +1,113 @@
+{
+  "reviewer": "Codex",
+  "date": "2026-10-12",
+  "sourceKeys": 1446,
+  "completedAppReview": {
+    "en": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "es": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "fr": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "pt-BR": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "ru": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "zh-Hans": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "ko": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "vi": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "ar": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "fa": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "hi": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "ht": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "so": [
+      [
+        0,
+        1446
+      ]
+    ],
+    "fil": [
+      [
+        0,
+        1446
+      ]
+    ]
+  },
+  "method": "Read source and effective translation for every key; corrections are in editorial-review.json. Plurals, milestones and shortcuts are audited separately.",
+  "reviewedAppCopySHA256": {
+    "ar": "5efb856b0bdfb0477b0d5fdaf215109a3725e6ca160b1d30cc8ebb32df4251e2",
+    "pt-BR": "09939c4f2666dff18b166dc5168bcbe50befb466965a74006cd0814df435f5d8",
+    "fa": "2279a21390716d79bfd7732354fe8009f3430b41dca7f2f20eb209dd26edb71c",
+    "fr": "2e58120453d3d8a5474789f794de8dc0a9a73c982481fe04507b6105052e5c58",
+    "ht": "53fa8d7b069722f162f0a67d47f6f46d07d9a71ea77f9e6bd5c60f686d079949",
+    "hi": "59de9a171198223bbceb1e10620204b98733faaaa4e9fec53d3a77818d34e710",
+    "ko": "362254316a95d67f0ec60293ca190410822a686d221fe7253c0d50b566664296",
+    "zh-Hans": "a3baa7d9f0534690171c8ac70eecaa104aa1f4d883bd0006813f42c14a488a02",
+    "so": "44673fba4837ef6df1948106dfccdf7177cd620752808c315632b9028472ebaa",
+    "fil": "93706dc2b72716162214801cf22c3199c0987e5755ac328c33dfad85dcbc797a",
+    "vi": "ec5e6957745d0967cdead2681c0693c991e169fcd4c20ed6134510de1fd95bb3",
+    "ru": "747e0082cf7742f87ceac7c134e41fc28d894ed0a1d44f3204ee4aaf7ba6fc5a"
+  },
+  "otherReviewedResources": [
+    "Six added age/report strings in all 14 languages",
+    "All plural forms including Russian 1/2/5/11/21 forms",
+    "All 16 Siri phrases per new locale",
+    "100 Russian CDC-based milestone translations",
+    "6 WHO motor titles in each language"
+  ]
+}

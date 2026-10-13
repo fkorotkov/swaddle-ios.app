@@ -1,0 +1,111 @@
+{
+  "features": [
+    "refractivity"
+  ],
+  "fill": {
+    "linear-gradient": [
+      "srgb:0.13333,0.32157,0.25098,1.00000",
+      "srgb:0.06667,0.21569,0.17647,1.00000"
+    ]
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "glass": true,
+          "image-name": "wrap.png",
+          "name": "Wrap",
+          "position": {
+            "scale": 0.82,
+            "translation-in-points": [
+              10,
+              18
+            ]
+          }
+        }
+      ],
+      "name": "Wrap",
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.2,
+        "depth": 0.25
+      },
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.3
+      },
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.2
+      }
+    },
+    {
+      "layers": [
+        {
+          "glass": true,
+          "image-name": "head.png",
+          "name": "Head",
+          "position": {
+            "scale": 0.82,
+            "translation-in-points": [
+              10,
+              18
+            ]
+          }
+        }
+      ],
+      "name": "Head",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.18
+      },
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.04
+      },
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.08,
+        "depth": 0.12
+      }
+    },
+    {
+      "layers": [
+        {
+          "glass": true,
+          "image-name": "body.png",
+          "name": "Body",
+          "position": {
+            "scale": 0.82,
+            "translation-in-points": [
+              10,
+              18
+            ]
+          }
+        }
+      ],
+      "name": "Body",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.25
+      },
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.16
+      },
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.12,
+        "depth": 0.18
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": [
+      "iOS"
+    ]
+  }
+}

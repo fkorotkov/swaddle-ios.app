@@ -1,0 +1,107 @@
+# Original Swaddle illustrations. ID | action | prop | description
+cdc-2-calmsdown|calm|caregiver|A caregiver gently holds a baby as their face relaxes.
+cdc-2-looksface|look-face|caregiver|A baby looks toward the face of their caregiver.
+cdc-2-seemshappy|arrival|caregiver|A caregiver comes closer and the baby’s smile appears.
+cdc-2-smilestalk2|shared-smile|caregiver|A caregiver smiles and the baby smiles back.
+cdc-2-makessoundsotherthancrying|coo|sounds|A baby opens their mouth and makes a soft sound.
+cdc-2-reactstoloudsounds|sound-react|speaker|A sound catches a baby’s attention and their expression changes.
+cdc-2-watchesyoumove|track-person|caregiver|A baby follows a moving caregiver with their eyes.
+cdc-2-lookstoy|look-toy|rattle|A baby keeps looking at a colorful rattle.
+cdc-2-holdsheadup|head-lift|mat|A baby lifts their head while lying on their tummy.
+cdc-2-movesbotharms|limbs|mat|A baby lying on their back moves both arms and both legs.
+cdc-2-openshandsbriefly|open-hand|hand|A baby opens a relaxed hand for a moment.
+cdc-4-smiles_attention|attention-smile|caregiver|A baby smiles to catch their caregiver’s attention.
+cdc-4-chuckles_laugh|chuckle|caregiver|A baby gives a little chuckle during a playful exchange.
+cdc-4-looks_you|get-attention|caregiver|A baby looks toward a caregiver, moves their arms, and makes a sound.
+cdc-4-makes_sounds|vowels|sounds|A baby makes rounded, open-mouth cooing sounds.
+cdc-4-talk_him|answer-sound|caregiver|A caregiver makes a sound and the baby answers.
+cdc-4-turns_head|turn-voice|caregiver|A baby turns their head toward their caregiver’s voice.
+cdc-4-if_hungry|anticipate-bottle|bottle|A baby opens their mouth when a bottle comes into view.
+cdc-4-looks_at_hands|look-hands|hand|A baby lifts their hands and studies them.
+cdc-4-holds_head|steady-head|caregiver|A baby held securely by a caregiver keeps their head steady.
+cdc-4-holds_toy|hold-toy|rattle|A baby holds a rattle in a simple rounded hand.
+cdc-4-uses_arm|bat-toy|mobile|A baby swings an arm toward a hanging toy.
+cdc-4-brings_hands|hand-mouth|hand|A baby brings their hands toward their mouth.
+cdc-4-pushes_up|forearm-push|mat|A baby on their tummy pushes up onto their forearms.
+cdc-6-knows_familiar|recognize|caregiver|A baby recognizes a familiar caregiver and smiles.
+cdc-6-likes_to_look|mirror|mirror|A baby looks at their reflection and smiles.
+cdc-6-laughs_id|laugh|sounds|A baby’s face opens into a laugh with a gentle body bounce.
+cdc-6-takes_turns|take-turns|caregiver|A caregiver and baby take turns making sounds.
+cdc-6-blows_raspberries|raspberry|sounds|A baby sticks out their tongue and blows a raspberry.
+cdc-6-makes_squealing|squeal|sounds|A baby opens their mouth wide to make a squealing sound.
+cdc-6-puts_things|explore-mouth|ring|A baby brings a large teething ring to their mouth.
+cdc-6-reaches_grab|reach-grab|rattle|A baby reaches toward a rattle and brings it closer.
+cdc-6-closes_lips|closed-lips|spoon|A baby closes their lips and turns away from another spoonful.
+cdc-6-rolls_tummy|roll|mat|A baby rolls from their tummy onto their back.
+cdc-6-pushes_up|straight-push|mat|A baby on their tummy pushes up with straight arms.
+cdc-6-leans_hands|supported-sit|mat|A sitting baby leans on their hands for support.
+cdc-9-is_shy|shy|caregiver|A baby leans toward a familiar caregiver when another person approaches.
+cdc-9-shows_several|expressions|faces|A baby’s face changes from happy to sad, surprised, and cross.
+cdc-9-looks_when_called|name-response|caregiver|A baby looks toward the caregiver calling their name.
+cdc-9-reacts_when_leave|caregiver-leaves|caregiver|A baby reaches toward a caregiver who starts to move away.
+cdc-9-smiles_laughs|peekaboo|cloth|A caregiver hides behind a cloth, then appears and makes the baby smile.
+cdc-9-makes_different|babble|sounds|A baby makes a sequence of repeated babbling sounds.
+cdc-9-lifts_arms|arms-up|caregiver|A baby raises both arms toward their caregiver to be picked up.
+cdc-9-looks_objects|dropped-toy|rattle|A toy drops out of view and the baby looks down for it.
+cdc-9-bangs_two|bang-objects|blocks|A baby brings two blocks together and separates them again.
+cdc-9-gets_sitting|get-sitting|mat|A baby moves from a side-lying position into sitting.
+cdc-9-moves_things|hand-transfer|ring|A baby passes a ring from one hand to the other.
+cdc-9-uses_fingers|rake-food|plate|A baby uses their fingers to draw pieces of food closer.
+cdc-9-sits_without|sit-alone|mat|A baby sits upright with their hands free.
+cdc-12-plays_games|pat-a-cake|caregiver|A child and caregiver bring their hands together in pat-a-cake.
+cdc-12-bye_bye|wave|caregiver|A child waves an open hand from side to side.
+cdc-12-calls_parent|parent-name|caregiver|A child looks toward a parent and calls to them.
+cdc-12-understands_no|pause-no|caregiver|A child pauses their reaching hand when a caregiver says no.
+cdc-12-puts_something|put-container|cup|A child places a block inside a container.
+cdc-12-looks_things|find-hidden|cloth|A child lifts a cloth and finds the toy hidden underneath.
+cdc-12-pulls_up|pull-stand|sofa|A child holds onto a sofa and pulls up from sitting to standing.
+cdc-12-walks_holding|cruise|sofa|A child takes sideways steps while holding onto a sofa.
+cdc-12-drinks_cup|held-cup|cup|A caregiver holds an open cup while a child takes a sip.
+cdc-12-picks_things|pincer|plate|A child picks up a small piece of food between finger and thumb.
+cdc-15-copies_other|copy-play|blocks|One child takes a block from a container and another copies the action.
+cdc-15-shows_object|show-toy|rattle|A child holds up a favorite toy for their caregiver to see.
+cdc-15-claps_excited|clap|hands|An excited child brings their palms together to clap.
+cdc-15-hugs_doll|hug-toy|bear|A child draws a soft toy close and wraps both arms around it.
+cdc-15-shows_affection|cuddle|caregiver|A child leans into their caregiver for a cuddle.
+cdc-15-tries_say|object-word|ball|A child points toward a ball and tries saying its name.
+cdc-15-looks_familiar|named-object|ball|A child turns to look at a familiar ball when it is named.
+cdc-15-follows_directions|give-gesture|caregiver|A caregiver holds out a hand and the child gives them a toy.
+cdc-15-points_help|point-help|shelf|A child points toward a toy on a shelf, asking for help.
+cdc-15-tries_use|pretend-phone|phone|A child brings a toy phone to their ear.
+cdc-15-stacks_small|stack|blocks|A child puts one block on top of another.
+cdc-15-takes_steps|first-steps|floor|A child takes a few steps on their own.
+cdc-15-uses_fingers|finger-food|plate|A child picks up food with their fingers and brings it to their mouth.
+cdc-18-moves_away|explore-check|caregiver|A child walks away a little, then looks back toward their caregiver.
+cdc-18-points_show|point-interest|bird|A child points toward a bird to show their caregiver.
+cdc-18-puts_hands|wash-hands|water|A child puts both hands forward as water runs over them.
+cdc-18-looks_pages|read-together|book|A child and caregiver look at a book and turn a page together.
+cdc-18-helps_dress|dress-sleeve|shirt|A child pushes their arm through the sleeve of a shirt.
+cdc-18-tries_words|many-words|objects|A child names several familiar objects using short words.
+cdc-18-follows_directions|give-voice|caregiver|A child responds to spoken words by handing over a toy.
+cdc-18-copies_chores|sweep|broom|A child moves a small broom back and forth, copying a caregiver.
+cdc-18-plays_toys|push-car|car|A child pushes a toy car forward along the floor.
+cdc-18-walks_without|walk|floor|A child walks forward without holding onto anything.
+cdc-18-scribbles|scribble|crayon|A child moves a crayon over paper and leaves a colorful scribble.
+cdc-18-drinks_cup|cup-spill|cup|A child raises an open cup for a sip and a little liquid spills.
+cdc-18-feeds_himself|self-feed|plate|A child picks up food independently and brings it to their mouth.
+cdc-18-tries_spoon|try-spoon|spoon|A child scoops food with a spoon and tries bringing it to their mouth.
+cdc-18-climbs_couch|climb-sofa|sofa|A child climbs onto a low sofa and comes back down.
+cdc-24-notices_others|comfort|caregiver|A child notices a sad person and reaches toward them.
+cdc-24-looks-at-your-face-to-see-how-to-react-in-a-new-situation|check-face|caregiver|A child looks up at a caregiver’s face in a new situation.
+cdc-24-points_things|book-point|book|A child points to the bear pictured in an open book.
+cdc-24-says_words|two-words|bottle|A child combines two words while asking for milk.
+cdc-24-points_body|body-parts|body|A child points to their nose and then to a foot.
+cdc-24-uses_gestures|kiss-nod|heart|A child blows a kiss and nods their head.
+cdc-24-holds_something|open-container|box|A child holds a container in one hand and removes its lid with the other.
+cdc-24-tries_switches|toy-button|switch|A child presses a toy’s button and its light comes on.
+cdc-24-plays_toys|toy-meal|plate|A child moves pretend food onto a toy plate.
+cdc-24-kicks_ball|kick-ball|ball|A child swings a foot forward and kicks a ball.
+cdc-24-runs|run|floor|A child runs with alternating arms and legs.
+cdc-24-walks_climbs|stairs|steps|A child steps upright onto a few low stairs.
+cdc-24-eats_spoon|spoon-feed|spoon|A child scoops food and brings a spoon to their mouth.
+who-sitting|sit-balance|mat|A baby sits upright without support and reaches out with one hand.
+who-standing-assisted|stand-help|caregiver|A child stands while a caregiver supports them.
+who-crawling|crawl|mat|A baby moves forward on their hands and knees.
+who-walking-assisted|walk-help|caregiver|A child takes steps while holding a caregiver’s hand.
+who-standing|stand-balance|floor|A child stands alone and makes a small adjustment to balance.
+who-walking|walk-independent|floor|A child walks forward independently with alternating steps.

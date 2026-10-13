@@ -1,0 +1,2114 @@
+{
+  "version": 5,
+  "status": "Complete catalog; diverse cast and automatically looping while visible",
+  "artwork": "Original Swaddle vector illustrations",
+  "adultVariants": [
+    "neutral",
+    "female",
+    "male"
+  ],
+  "casting": "Balanced, deterministically shuffled artwork; no ethnicity or appearance profile data",
+  "distribution": {
+    "child": {
+      "skinTone": {
+        "brown": 18,
+        "deepBrown": 18,
+        "golden": 18,
+        "light": 18,
+        "tan": 17,
+        "warm": 17
+      },
+      "hairColor": {
+        "auburn": 26,
+        "black": 26,
+        "blonde": 27,
+        "brown": 27
+      },
+      "hairStyle": {
+        "crop": 26,
+        "curls": 26,
+        "waves": 27,
+        "wisps": 27
+      }
+    },
+    "caregiver": {
+      "skinTone": {
+        "brown": 6,
+        "deepBrown": 5,
+        "golden": 5,
+        "light": 5,
+        "tan": 5,
+        "warm": 6
+      },
+      "hairColor": {
+        "auburn": 7,
+        "black": 6,
+        "blonde": 6,
+        "brown": 7,
+        "gray": 6
+      }
+    },
+    "other": {
+      "skinTone": {
+        "golden": 1,
+        "tan": 1
+      },
+      "hairColor": {
+        "black": 1,
+        "blonde": 1
+      },
+      "hairStyle": {
+        "crop": 1,
+        "curls": 1
+      }
+    }
+  },
+  "illustrations": [
+    {
+      "id": "cdc-2-calmsdown",
+      "title": "Calms down when spoken to or picked up",
+      "asset": "milestone-cdc-2-calmsdown",
+      "action": "calm",
+      "description": "A caregiver gently holds a baby as their face relaxes.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "9df9dd041868fdcd03df85cc1029a25631747ba4367966e4558093c703112a33"
+    },
+    {
+      "id": "cdc-2-looksface",
+      "title": "Looks at your face",
+      "asset": "milestone-cdc-2-looksface",
+      "action": "look-face",
+      "description": "A baby looks toward the face of their caregiver.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "auburn",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "golden",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "70ba8852aef857dae6cf2c1e41cf208addf3bca836cb2567286a4359548ec915"
+    },
+    {
+      "id": "cdc-2-seemshappy",
+      "title": "Seems happy to see you when you walk up to her",
+      "asset": "milestone-cdc-2-seemshappy",
+      "action": "arrival",
+      "description": "A caregiver comes closer and the baby’s smile appears.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "tan",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "aa676f07350906b449dbe2d02af15c7281e510e015645c13c8fe8b34428c8f43"
+    },
+    {
+      "id": "cdc-2-smilestalk2",
+      "title": "Smiles when you talk to or smile at her",
+      "asset": "milestone-cdc-2-smilestalk2",
+      "action": "shared-smile",
+      "description": "A caregiver smiles and the baby smiles back.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "light",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "0907d2bd7423fccbdc6df97baf03f86e024732e60742da89ee710882775d2343"
+    },
+    {
+      "id": "cdc-2-makessoundsotherthancrying",
+      "title": "Makes sounds other than crying",
+      "asset": "milestone-cdc-2-makessoundsotherthancrying",
+      "action": "coo",
+      "description": "A baby opens their mouth and makes a soft sound.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "9e7f833857d8db007da64d1cd7b5089091bde6de7b84518b755a1ffd450a7f0e"
+    },
+    {
+      "id": "cdc-2-reactstoloudsounds",
+      "title": "Reacts to loud sounds",
+      "asset": "milestone-cdc-2-reactstoloudsounds",
+      "action": "sound-react",
+      "description": "A sound catches a baby’s attention and their expression changes.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "ba6bd03feee80953f29afd0c65499729fb083a93263a4375740d55319270d34d"
+    },
+    {
+      "id": "cdc-2-watchesyoumove",
+      "title": "Watches you as you move",
+      "asset": "milestone-cdc-2-watchesyoumove",
+      "action": "track-person",
+      "description": "A baby follows a moving caregiver with their eyes.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "gray"
+        }
+      },
+      "sha256": "686dd0ec477b8db331cb9ecf9a58b511c73230ddc09d6acd3f33b80d7409a699"
+    },
+    {
+      "id": "cdc-2-lookstoy",
+      "title": "Looks at a toy for several seconds",
+      "asset": "milestone-cdc-2-lookstoy",
+      "action": "look-toy",
+      "description": "A baby keeps looking at a colorful rattle.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "7195f9d52eb01a00f62da610e43c7f3f038fc20507eeb9b8327f63e5edcbb00f"
+    },
+    {
+      "id": "cdc-2-holdsheadup",
+      "title": "Holds head up when on tummy",
+      "asset": "milestone-cdc-2-holdsheadup",
+      "action": "head-lift",
+      "description": "A baby lifts their head while lying on their tummy.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "db86a0442ca0abc8da14b6e5656011f10259a468b47ab039b8f3710be8ef3250"
+    },
+    {
+      "id": "cdc-2-movesbotharms",
+      "title": "Moves both arms and both legs",
+      "asset": "milestone-cdc-2-movesbotharms",
+      "action": "limbs",
+      "description": "A baby lying on their back moves both arms and both legs.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "4c2db520961b36d72beb5ad46cb6743d824e7206d19f375aec50b723bd0c8946"
+    },
+    {
+      "id": "cdc-2-openshandsbriefly",
+      "title": "Opens hands briefly",
+      "asset": "milestone-cdc-2-openshandsbriefly",
+      "action": "open-hand",
+      "description": "A baby opens a relaxed hand for a moment.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "36d8d1bc2d73b6218c0c17cffa72c070c89420918db39da9b90dbabd81a7b930"
+    },
+    {
+      "id": "cdc-4-smiles_attention",
+      "title": "Smiles on his own to get your attention",
+      "asset": "milestone-cdc-4-smiles_attention",
+      "action": "attention-smile",
+      "description": "A baby smiles to catch their caregiver’s attention.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "golden",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "b844ad62da63f638a1c9602d5539e6c8cac73b2930550bf8602a617c1d171012"
+    },
+    {
+      "id": "cdc-4-chuckles_laugh",
+      "title": "Chuckles (not yet a full laugh) when you try to make him laugh",
+      "asset": "milestone-cdc-4-chuckles_laugh",
+      "action": "chuckle",
+      "description": "A baby gives a little chuckle during a playful exchange.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "b179031172ec151950cd613871d6072f83c114e689bbecbd3ec2d8881db78524"
+    },
+    {
+      "id": "cdc-4-looks_you",
+      "title": "Looks at you, moves, or makes sounds to get or keep your attention",
+      "asset": "milestone-cdc-4-looks_you",
+      "action": "get-attention",
+      "description": "A baby looks toward a caregiver, moves their arms, and makes a sound.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "light",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "510c2e8ff49ba835aabac63ef5e85ce4e579d7c3cc1b19e40070349ca3f33255"
+    },
+    {
+      "id": "cdc-4-makes_sounds",
+      "title": "Makes sounds like “oooo”, “aahh” (cooing)",
+      "asset": "milestone-cdc-4-makes_sounds",
+      "action": "vowels",
+      "description": "A baby makes rounded, open-mouth cooing sounds.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "7957a1b4d22d5c3e7a2bfc0dc4bfe0a0e774873f08674cc828c84735d91270a5"
+    },
+    {
+      "id": "cdc-4-talk_him",
+      "title": "Makes sounds back when you talk to him",
+      "asset": "milestone-cdc-4-talk_him",
+      "action": "answer-sound",
+      "description": "A caregiver makes a sound and the baby answers.",
+      "posterFrame": 77,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "8f39f1e8991234504be49d86e41cd597df178ce8f16ec38e3af76787fa679e22"
+    },
+    {
+      "id": "cdc-4-turns_head",
+      "title": "Turns head towards the sound of your voice",
+      "asset": "milestone-cdc-4-turns_head",
+      "action": "turn-voice",
+      "description": "A baby turns their head toward their caregiver’s voice.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "effcd875611291f7f9b8fde406841274b892bfd27ab5a090b612dd8cc9272a39"
+    },
+    {
+      "id": "cdc-4-if_hungry",
+      "title": "If hungry, opens mouth when he sees breast or bottle",
+      "asset": "milestone-cdc-4-if_hungry",
+      "action": "anticipate-bottle",
+      "description": "A baby opens their mouth when a bottle comes into view.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "04a5dcf3e7d9aaca076cb4d0aecb11aca83f78861e665a81241dbaf601aff660"
+    },
+    {
+      "id": "cdc-4-looks_at_hands",
+      "title": "Looks at her hands with interest",
+      "asset": "milestone-cdc-4-looks_at_hands",
+      "action": "look-hands",
+      "description": "A baby lifts their hands and studies them.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "62e85968065423b4183960b632192ac73227d9ad3f090e707e2256ab609daaf8"
+    },
+    {
+      "id": "cdc-4-holds_head",
+      "title": "Holds head steady without support when you are holding him",
+      "asset": "milestone-cdc-4-holds_head",
+      "action": "steady-head",
+      "description": "A baby held securely by a caregiver keeps their head steady.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "tan",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "d7fdfc3c3d8c6ad3e102961e6d495e33191394fa734382c80fe7dc672733c6e7"
+    },
+    {
+      "id": "cdc-4-holds_toy",
+      "title": "Holds a toy when you put it in his hand",
+      "asset": "milestone-cdc-4-holds_toy",
+      "action": "hold-toy",
+      "description": "A baby holds a rattle in a simple rounded hand.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "d44889a0c509ab86318365ed4525d4cf066c19260f844d68e53dcf9cc2ce6c5c"
+    },
+    {
+      "id": "cdc-4-uses_arm",
+      "title": "Uses his arm to swing at toys",
+      "asset": "milestone-cdc-4-uses_arm",
+      "action": "bat-toy",
+      "description": "A baby swings an arm toward a hanging toy.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "f949fb99db425a2756e4bf4c81434e7e16caaba313150c7c8231c581ee5213ec"
+    },
+    {
+      "id": "cdc-4-brings_hands",
+      "title": "Brings hands to mouth",
+      "asset": "milestone-cdc-4-brings_hands",
+      "action": "hand-mouth",
+      "description": "A baby brings their hands toward their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "fe7fd96ea0e07292c343018252bdcaf874ba3d0a351c5064f729c625bc9c95f6"
+    },
+    {
+      "id": "cdc-4-pushes_up",
+      "title": "Pushes up onto elbows/forearms when on tummy",
+      "asset": "milestone-cdc-4-pushes_up",
+      "action": "forearm-push",
+      "description": "A baby on their tummy pushes up onto their forearms.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "c62092ca5b2ba7266aee0434b52e5c9f01a2aeb1b9f87ba6cbed874f4e83e60d"
+    },
+    {
+      "id": "cdc-6-knows_familiar",
+      "title": "Knows familiar people",
+      "asset": "milestone-cdc-6-knows_familiar",
+      "action": "recognize",
+      "description": "A baby recognizes a familiar caregiver and smiles.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "5d4d6cb379461fe02472d2235b75e6464d129e28cddf407dbe4762f282a6e895"
+    },
+    {
+      "id": "cdc-6-likes_to_look",
+      "title": "Likes to look at self in a mirror",
+      "asset": "milestone-cdc-6-likes_to_look",
+      "action": "mirror",
+      "description": "A baby looks at their reflection and smiles.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "30fa82a0ef6cb4652e1268ae3b58e6244f55181c84c323a6980d9ca24411779e"
+    },
+    {
+      "id": "cdc-6-laughs_id",
+      "title": "Laughs",
+      "asset": "milestone-cdc-6-laughs_id",
+      "action": "laugh",
+      "description": "A baby’s face opens into a laugh with a gentle body bounce.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "c4225ace10cc8e77a1e87682f3d18f28ab303861d85ddd1554e480ccdc2625db"
+    },
+    {
+      "id": "cdc-6-takes_turns",
+      "title": "Takes turns making sounds with you",
+      "asset": "milestone-cdc-6-takes_turns",
+      "action": "take-turns",
+      "description": "A caregiver and baby take turns making sounds.",
+      "posterFrame": 77,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "deepBrown",
+          "hairColor": "gray"
+        }
+      },
+      "sha256": "0242072f560abd931cb99a64cea0a6d8b2c14b8ae5b07878b3da203411e5285f"
+    },
+    {
+      "id": "cdc-6-blows_raspberries",
+      "title": "Blows “raspberries” (sticks tongue out and blows)",
+      "asset": "milestone-cdc-6-blows_raspberries",
+      "action": "raspberry",
+      "description": "A baby sticks out their tongue and blows a raspberry.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "6378b829e06b6159303bdfc9449c93a4d0e78f50ce028bdfbda706ab9bdda0db"
+    },
+    {
+      "id": "cdc-6-makes_squealing",
+      "title": "Makes squealing noises",
+      "asset": "milestone-cdc-6-makes_squealing",
+      "action": "squeal",
+      "description": "A baby opens their mouth wide to make a squealing sound.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "blonde",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "81ac275ebfff7edd165aaa68912237e3b364d9d5bee942272a99f9a9f34615a0"
+    },
+    {
+      "id": "cdc-6-puts_things",
+      "title": "Puts things in her mouth to explore them",
+      "asset": "milestone-cdc-6-puts_things",
+      "action": "explore-mouth",
+      "description": "A baby brings a large teething ring to their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "e6055a1eb5314039c05f68229362b643049b1e21e5811094a06cc7fcf6239234"
+    },
+    {
+      "id": "cdc-6-reaches_grab",
+      "title": "Reaches to grab a toy she wants",
+      "asset": "milestone-cdc-6-reaches_grab",
+      "action": "reach-grab",
+      "description": "A baby reaches toward a rattle and brings it closer.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "fbc919eb314b3ff8520d311de2380ac219f51df0bf61e03d7c3bd38443b40723"
+    },
+    {
+      "id": "cdc-6-closes_lips",
+      "title": "Closes lips to show she doesn’t want more food",
+      "asset": "milestone-cdc-6-closes_lips",
+      "action": "closed-lips",
+      "description": "A baby closes their lips and turns away from another spoonful.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "57d0d9f078b32771df12cfc175beb82700acf05c42d6d1d4586721a1921d7596"
+    },
+    {
+      "id": "cdc-6-rolls_tummy",
+      "title": "Rolls from tummy to back",
+      "asset": "milestone-cdc-6-rolls_tummy",
+      "action": "roll",
+      "description": "A baby rolls from their tummy onto their back.",
+      "posterFrame": 122,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "10cf60ab112a4ecc16930eadbb5505078f50c7ea263f590966fd940651c82fa1"
+    },
+    {
+      "id": "cdc-6-pushes_up",
+      "title": "Pushes up with straight arms when on tummy",
+      "asset": "milestone-cdc-6-pushes_up",
+      "action": "straight-push",
+      "description": "A baby on their tummy pushes up with straight arms.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "c1a81d978ed50bcb66ac457780dd8afe9e08dfa01224b1bcc1ea5acae451146f"
+    },
+    {
+      "id": "cdc-6-leans_hands",
+      "title": "Leans on hands to support herself when sitting",
+      "asset": "milestone-cdc-6-leans_hands",
+      "action": "supported-sit",
+      "description": "A sitting baby leans on their hands for support.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "011d9b67b5059402c65d9f63bb9705df4582354af6063b6641342a1b21f0d67e"
+    },
+    {
+      "id": "cdc-9-is_shy",
+      "title": "Is shy, clingy, or fearful around strangers",
+      "asset": "milestone-cdc-9-is_shy",
+      "action": "shy",
+      "description": "A baby leans toward a familiar caregiver when another person approaches.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "gray"
+        },
+        "other": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "408e8eb7158a80f09474f30daa60b7a3b68118679334c1a0841b1ef0a4368e1e"
+    },
+    {
+      "id": "cdc-9-shows_several",
+      "title": "Shows several facial expressions, like happy, sad, angry, and surprised",
+      "asset": "milestone-cdc-9-shows_several",
+      "action": "expressions",
+      "description": "A baby’s face changes from happy to sad, surprised, and cross.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "0bb9d6833a428b4fe926b4558bcbbe687dfe840aa146a804a0d36b35f94aee49"
+    },
+    {
+      "id": "cdc-9-looks_when_called",
+      "title": "Looks when you call her name",
+      "asset": "milestone-cdc-9-looks_when_called",
+      "action": "name-response",
+      "description": "A baby looks toward the caregiver calling their name.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "light",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "1c00f7517d521fcbbbc01b0dee6027206282adc8e17e22e3204db0c65b6734c3"
+    },
+    {
+      "id": "cdc-9-reacts_when_leave",
+      "title": "Reacts when you leave (looks, reaches for you, or cries)",
+      "asset": "milestone-cdc-9-reacts_when_leave",
+      "action": "caregiver-leaves",
+      "description": "A baby reaches toward a caregiver who starts to move away.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "tan",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "4fddfc5371b6d590bf81f0b6c809fa9524dbe69b3c9123e536e64b922fdd0b0d"
+    },
+    {
+      "id": "cdc-9-smiles_laughs",
+      "title": "Smiles or laughs when you play peek-a-boo",
+      "asset": "milestone-cdc-9-smiles_laughs",
+      "action": "peekaboo",
+      "description": "A caregiver hides behind a cloth, then appears and makes the baby smile.",
+      "posterFrame": 82,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "tan",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "d5e1483936ebc07b01b182eee4ef2f8ba590867e72644e40ef9aef6b5858a703"
+    },
+    {
+      "id": "cdc-9-makes_different",
+      "title": "Makes a lot of different sounds like “mamamama” and “bababababa”",
+      "asset": "milestone-cdc-9-makes_different",
+      "action": "babble",
+      "description": "A baby makes a sequence of repeated babbling sounds.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "e9fd31ae2820abe1201bcc71d73af48b8a417baaff04cc36ab03e56f1c89d54c"
+    },
+    {
+      "id": "cdc-9-lifts_arms",
+      "title": "Lifts arms up to be picked up",
+      "asset": "milestone-cdc-9-lifts_arms",
+      "action": "arms-up",
+      "description": "A baby raises both arms toward their caregiver to be picked up.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "black",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "deepBrown",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "f3f8e163a309239cb4635a214a5d93bd61ad3149b228b085c6f238f7ce3e42e6"
+    },
+    {
+      "id": "cdc-9-looks_objects",
+      "title": "Looks for objects when dropped out of sight (like his spoon or toy)",
+      "asset": "milestone-cdc-9-looks_objects",
+      "action": "dropped-toy",
+      "description": "A toy drops out of view and the baby looks down for it.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "93668feb5c5466bab4774afa2a58263187b82dce75ebe54cfef5c5486dd058f1"
+    },
+    {
+      "id": "cdc-9-bangs_two",
+      "title": "Bangs two things together",
+      "asset": "milestone-cdc-9-bangs_two",
+      "action": "bang-objects",
+      "description": "A baby brings two blocks together and separates them again.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "e1455df53588209e3159f4b0927b23fa1d9e07b60e2b5f584a01b3f28c3c51a0"
+    },
+    {
+      "id": "cdc-9-gets_sitting",
+      "title": "Gets to a sitting position by herself",
+      "asset": "milestone-cdc-9-gets_sitting",
+      "action": "get-sitting",
+      "description": "A baby moves from a side-lying position into sitting.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "dd7a4b7c3c261beaac4fd49ca71413cb39a8cd577848823b26d9d63446394c00"
+    },
+    {
+      "id": "cdc-9-moves_things",
+      "title": "Moves things from one hand to her other hand",
+      "asset": "milestone-cdc-9-moves_things",
+      "action": "hand-transfer",
+      "description": "A baby passes a ring from one hand to the other.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "395f132e50865297a60ee65b43ce0ed400f353e7ec6ba8f854915f2930446520"
+    },
+    {
+      "id": "cdc-9-uses_fingers",
+      "title": "Uses fingers to “rake” food towards himself",
+      "asset": "milestone-cdc-9-uses_fingers",
+      "action": "rake-food",
+      "description": "A baby uses their fingers to draw pieces of food closer.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "106176e318d4e0b3300e9aedefe8b6463ead56fda0dad3956fc384526f9c7083"
+    },
+    {
+      "id": "cdc-9-sits_without",
+      "title": "Sits without support",
+      "asset": "milestone-cdc-9-sits_without",
+      "action": "sit-alone",
+      "description": "A baby sits upright with their hands free.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "50f4bb3fa57711eb8b6deca7fe1a28afd2b9d0b1e18cc4dc45ae78f19f9f64de"
+    },
+    {
+      "id": "cdc-12-plays_games",
+      "title": "Plays games with you, like pat-a-cake",
+      "asset": "milestone-cdc-12-plays_games",
+      "action": "pat-a-cake",
+      "description": "A child and caregiver bring their hands together in pat-a-cake.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "tan",
+          "hairColor": "blonde"
+        }
+      },
+      "sha256": "4433d69ae1a6eb6e54f8206e22226accb8c5b1e39e4575e40707840df8503459"
+    },
+    {
+      "id": "cdc-12-bye_bye",
+      "title": "Waves “bye-bye”",
+      "asset": "milestone-cdc-12-bye_bye",
+      "action": "wave",
+      "description": "A child waves an open hand from side to side.",
+      "posterFrame": 95,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "03375c7a13661c7aa4b0c0d9512b826a62e53e3edba2e6bf09bcfea4a14e82bb"
+    },
+    {
+      "id": "cdc-12-calls_parent",
+      "title": "Calls a parent “mama” or “dada” or another special name",
+      "asset": "milestone-cdc-12-calls_parent",
+      "action": "parent-name",
+      "description": "A child looks toward a parent and calls to them.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "ee980657c867686b2a47a509d04d91206b64fba79113266e072bf9e154636f5c"
+    },
+    {
+      "id": "cdc-12-understands_no",
+      "title": "Understands “no” (pauses briefly or stops when you say it)",
+      "asset": "milestone-cdc-12-understands_no",
+      "action": "pause-no",
+      "description": "A child pauses their reaching hand when a caregiver says no.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "gray"
+        }
+      },
+      "sha256": "23e37a3e5745a954f538026af6fe82c093fd1e48bc01ea8eb1dee526d76d50aa"
+    },
+    {
+      "id": "cdc-12-puts_something",
+      "title": "Puts something in a container, like a block in a cup",
+      "asset": "milestone-cdc-12-puts_something",
+      "action": "put-container",
+      "description": "A child places a block inside a container.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "6a1485fafd739f71c24993b66c3d5ea3201bdaadf13425ef1850a5856b1e11dc"
+    },
+    {
+      "id": "cdc-12-looks_things",
+      "title": "Looks for things he sees you hide, like a toy under a blanket",
+      "asset": "milestone-cdc-12-looks_things",
+      "action": "find-hidden",
+      "description": "A child lifts a cloth and finds the toy hidden underneath.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "4dc65e9c61ece19e2d293488a20e547ced52bcb5b9180cb67db39b770d69a378"
+    },
+    {
+      "id": "cdc-12-pulls_up",
+      "title": "Pulls up to stand",
+      "asset": "milestone-cdc-12-pulls_up",
+      "action": "pull-stand",
+      "description": "A child holds onto a sofa and pulls up from sitting to standing.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "605af409c5a300b6e12faba90927cfbe0bf38a29fe65eebdef2fe44866d6081e"
+    },
+    {
+      "id": "cdc-12-walks_holding",
+      "title": "Walks, holding on to furniture",
+      "asset": "milestone-cdc-12-walks_holding",
+      "action": "cruise",
+      "description": "A child takes sideways steps while holding onto a sofa.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "609067b6df0c11f796f4392df75e708ffe1fcec2ff289a2eefd6098a3efa182e"
+    },
+    {
+      "id": "cdc-12-drinks_cup",
+      "title": "Drinks from a cup without a lid, as you hold it",
+      "asset": "milestone-cdc-12-drinks_cup",
+      "action": "held-cup",
+      "description": "A caregiver holds an open cup while a child takes a sip.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "light",
+          "hairColor": "gray"
+        }
+      },
+      "sha256": "ee6b45a31ebdc6b5eee173946d9fa5ac1a782198b24a0fb040ae687094fbd83b"
+    },
+    {
+      "id": "cdc-12-picks_things",
+      "title": "Picks things up between thumb and pointer finger, like small bits of food",
+      "asset": "milestone-cdc-12-picks_things",
+      "action": "pincer",
+      "description": "A child picks up a small piece of food between finger and thumb.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "auburn",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "bdf82652a7cda6c114e80257f1bcb363ef736ec74e561ef671ef2289ff620fd6"
+    },
+    {
+      "id": "cdc-15-copies_other",
+      "title": "Copies other children while playing, like taking toys out of a container when another child does",
+      "asset": "milestone-cdc-15-copies_other",
+      "action": "copy-play",
+      "description": "One child takes a block from a container and another copies the action.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        },
+        "other": {
+          "skinTone": "tan",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "5f1f8600bf805586454c6834f447ecfa454a54a3b0deee3e0214f292b75ff28f"
+    },
+    {
+      "id": "cdc-15-shows_object",
+      "title": "Shows you an object she likes",
+      "asset": "milestone-cdc-15-shows_object",
+      "action": "show-toy",
+      "description": "A child holds up a favorite toy for their caregiver to see.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "light",
+          "hairColor": "gray"
+        }
+      },
+      "sha256": "9f9e94bd396c411dfcdc0dc06403ed11b41d9607e6bd1e41b67c42f2aa71c53b"
+    },
+    {
+      "id": "cdc-15-claps_excited",
+      "title": "Claps when excited",
+      "asset": "milestone-cdc-15-claps_excited",
+      "action": "clap",
+      "description": "An excited child brings their palms together to clap.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "d1daed55f3706c464f32106d84df4fc8f44436cd73ea647d12b80ebe5c460d95"
+    },
+    {
+      "id": "cdc-15-hugs_doll",
+      "title": "Hugs stuffed doll or other toy",
+      "asset": "milestone-cdc-15-hugs_doll",
+      "action": "hug-toy",
+      "description": "A child draws a soft toy close and wraps both arms around it.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "b8999f4ce85c3c98c574204095a2339a58173d89a06f8fd807f89c854a184262"
+    },
+    {
+      "id": "cdc-15-shows_affection",
+      "title": "Shows you affection (hugs, cuddles, or kisses you)",
+      "asset": "milestone-cdc-15-shows_affection",
+      "action": "cuddle",
+      "description": "A child leans into their caregiver for a cuddle.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "golden",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "4cea5761fb077eead6b3eae0d66feff05077c648e34ab220f9863575701f265c"
+    },
+    {
+      "id": "cdc-15-tries_say",
+      "title": "Tries to say one or two words besides “mama” or “dada,” like “ba” for ball or “da” for dog",
+      "asset": "milestone-cdc-15-tries_say",
+      "action": "object-word",
+      "description": "A child points toward a ball and tries saying its name.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "00884a4e3941d3dccaed63b6ccb6948f887308af1b2f0d04506a0814b69cddae"
+    },
+    {
+      "id": "cdc-15-looks_familiar",
+      "title": "Looks at a familiar object when you name it",
+      "asset": "milestone-cdc-15-looks_familiar",
+      "action": "named-object",
+      "description": "A child turns to look at a familiar ball when it is named.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "bac2e4fb297ce5966c41e1c6c53db734acdd4903a24ea09cf9f1a43981fc1f6e"
+    },
+    {
+      "id": "cdc-15-follows_directions",
+      "title": "Follows directions given with both a gesture and words. For example, he gives you a toy when you hold out your hand and say, “Give me the toy.”",
+      "asset": "milestone-cdc-15-follows_directions",
+      "action": "give-gesture",
+      "description": "A caregiver holds out a hand and the child gives them a toy.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "5edd0559d28fd90a7ad3e75cc9bcda75902c182c464469f4c41cd8e20b7dfd76"
+    },
+    {
+      "id": "cdc-15-points_help",
+      "title": "Points to ask for something or to get help",
+      "asset": "milestone-cdc-15-points_help",
+      "action": "point-help",
+      "description": "A child points toward a toy on a shelf, asking for help.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "499bccfde5bb08d2466616d5961d1da06d102685b19cb318e822e5058874b145"
+    },
+    {
+      "id": "cdc-15-tries_use",
+      "title": "Tries to use things the right way, like a phone, cup, or book",
+      "asset": "milestone-cdc-15-tries_use",
+      "action": "pretend-phone",
+      "description": "A child brings a toy phone to their ear.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "d32d00954bcc42a9401db87bae320841ba2adcbbec0a32aca43788ee9ef8c87d"
+    },
+    {
+      "id": "cdc-15-stacks_small",
+      "title": "Stacks at least two small objects, like blocks",
+      "asset": "milestone-cdc-15-stacks_small",
+      "action": "stack",
+      "description": "A child puts one block on top of another.",
+      "posterFrame": 147,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "b4cbe7b7f156878bd59d44dd76e471bfec55446f1afe218d416d9dabad7bb3fb"
+    },
+    {
+      "id": "cdc-15-takes_steps",
+      "title": "Takes a few steps on his own",
+      "asset": "milestone-cdc-15-takes_steps",
+      "action": "first-steps",
+      "description": "A child takes a few steps on their own.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "black",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "8f3e6d1eb9779ba1787c1fbac772eee4aa4182a293cd925e499fd8de5f4a183f"
+    },
+    {
+      "id": "cdc-15-uses_fingers",
+      "title": "Uses fingers to feed herself some food",
+      "asset": "milestone-cdc-15-uses_fingers",
+      "action": "finger-food",
+      "description": "A child picks up food with their fingers and brings it to their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "73e812d4da4580e86dcb7b750ae8bb0a215cda2bb39686c05dcd93f063eef81d"
+    },
+    {
+      "id": "cdc-18-moves_away",
+      "title": "Moves away from you, but looks to make sure you are close by",
+      "asset": "milestone-cdc-18-moves_away",
+      "action": "explore-check",
+      "description": "A child walks away a little, then looks back toward their caregiver.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "7b3df600b60e74e8bc3dea84f3142c0c67cb1703f21f8d274e9653eea5eae9ea"
+    },
+    {
+      "id": "cdc-18-points_show",
+      "title": "Points to show you something interesting",
+      "asset": "milestone-cdc-18-points_show",
+      "action": "point-interest",
+      "description": "A child points toward a bird to show their caregiver.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "7bddc5efe8cf38aebb1963384df17cf6df8ae6480a3e7984cd1dd06b215e3856"
+    },
+    {
+      "id": "cdc-18-puts_hands",
+      "title": "Puts hands out for you to wash them",
+      "asset": "milestone-cdc-18-puts_hands",
+      "action": "wash-hands",
+      "description": "A child puts both hands forward as water runs over them.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "4d76e001b5f00c994752f2c56c0c571d488e892cc92bd84820a81d07af5ac8dc"
+    },
+    {
+      "id": "cdc-18-looks_pages",
+      "title": "Looks at a few pages in a book with you",
+      "asset": "milestone-cdc-18-looks_pages",
+      "action": "read-together",
+      "description": "A child and caregiver look at a book and turn a page together.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "warm",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "e50eb28f3670746f48de6f4f3f88127d1ffca77525bcac4cdf5e169a4a8cda67"
+    },
+    {
+      "id": "cdc-18-helps_dress",
+      "title": "Helps you dress him by pushing arm through sleeve or lifting up foot",
+      "asset": "milestone-cdc-18-helps_dress",
+      "action": "dress-sleeve",
+      "description": "A child pushes their arm through the sleeve of a shirt.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "f17640bf1697e6514e141d98f7dcb8e8cae71f7c5effdb1c2661e4848d5fb0e5"
+    },
+    {
+      "id": "cdc-18-tries_words",
+      "title": "Tries to say three or more words besides “mama” or “dada”",
+      "asset": "milestone-cdc-18-tries_words",
+      "action": "many-words",
+      "description": "A child names several familiar objects using short words.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "8d04adf989ad5d4b6335e253d3beba914c204a97d37825ccd8ea5b7d27262bd5"
+    },
+    {
+      "id": "cdc-18-follows_directions",
+      "title": "Follows one-step directions without any gestures, like giving you the toy when you say, “Give it to me.”",
+      "asset": "milestone-cdc-18-follows_directions",
+      "action": "give-voice",
+      "description": "A child responds to spoken words by handing over a toy.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        },
+        "caregiver": {
+          "skinTone": "deepBrown",
+          "hairColor": "black"
+        }
+      },
+      "sha256": "47af57b93e5e02d8be8c23641721660549d0129b14f24c300cf8b7f56a1ce9c8"
+    },
+    {
+      "id": "cdc-18-copies_chores",
+      "title": "Copies you doing chores, like sweeping with a broom",
+      "asset": "milestone-cdc-18-copies_chores",
+      "action": "sweep",
+      "description": "A child moves a small broom back and forth, copying a caregiver.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "389d5abd7b9530d7c02f8ce7b93b3fa0b8ff2de2aadf59f8db3b3ea3998e2d5b"
+    },
+    {
+      "id": "cdc-18-plays_toys",
+      "title": "Plays with toys in a simple way, like pushing a toy car",
+      "asset": "milestone-cdc-18-plays_toys",
+      "action": "push-car",
+      "description": "A child pushes a toy car forward along the floor.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "7d20731e53757c1ef418e92cc286855122ce63524cc60e31b1cfe85615d9e485"
+    },
+    {
+      "id": "cdc-18-walks_without",
+      "title": "Walks without holding on to anyone or anything",
+      "asset": "milestone-cdc-18-walks_without",
+      "action": "walk",
+      "description": "A child walks forward without holding onto anything.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "blonde",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "7c5476d3d6ffcbcf842e851f400bfa1042a2b8837f84e5a11bede4876066b854"
+    },
+    {
+      "id": "cdc-18-scribbles",
+      "title": "Scribbles",
+      "asset": "milestone-cdc-18-scribbles",
+      "action": "scribble",
+      "description": "A child moves a crayon over paper and leaves a colorful scribble.",
+      "posterFrame": 125,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "black",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "84bad5ac3273b297214654da73246fd9373f5b61de366a75aab3fb2aac231ff0"
+    },
+    {
+      "id": "cdc-18-drinks_cup",
+      "title": "Drinks from a cup without a lid and may spill sometimes",
+      "asset": "milestone-cdc-18-drinks_cup",
+      "action": "cup-spill",
+      "description": "A child raises an open cup for a sip and a little liquid spills.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "4799735d8b107adb7e4db2825b773db4992ccf2d653ff6445aad23f42be987db"
+    },
+    {
+      "id": "cdc-18-feeds_himself",
+      "title": "Feeds himself with his fingers",
+      "asset": "milestone-cdc-18-feeds_himself",
+      "action": "self-feed",
+      "description": "A child picks up food independently and brings it to their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "799c8c65fea9f7024c0d68895ba4f6765bdfea3d2c1687b723303090d314ab96"
+    },
+    {
+      "id": "cdc-18-tries_spoon",
+      "title": "Tries to use a spoon",
+      "asset": "milestone-cdc-18-tries_spoon",
+      "action": "try-spoon",
+      "description": "A child scoops food with a spoon and tries bringing it to their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "e9dfb4afe84fbe1021be6eab985622f05219ebc518e6a58355030b51a7a7bdbf"
+    },
+    {
+      "id": "cdc-18-climbs_couch",
+      "title": "Climbs on and off a couch or chair without help",
+      "asset": "milestone-cdc-18-climbs_couch",
+      "action": "climb-sofa",
+      "description": "A child climbs onto a low sofa and comes back down.",
+      "posterFrame": 146,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "269037335b7d056ee1981078e8bf735ee1eb54b0898ea93950c5b375dd4e939b"
+    },
+    {
+      "id": "cdc-24-notices_others",
+      "title": "Notices when others are hurt or upset, like pausing or looking sad when someone is crying",
+      "asset": "milestone-cdc-24-notices_others",
+      "action": "comfort",
+      "description": "A child notices a sad person and reaches toward them.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "blonde",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "golden",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "b14130dadca71e7e1bd387589e09ab9a05f6fcc71278bd26c5255a52e0a14119"
+    },
+    {
+      "id": "cdc-24-looks-at-your-face-to-see-how-to-react-in-a-new-situation",
+      "title": "Looks at your face to see how to react in a new situation",
+      "asset": "milestone-cdc-24-looks-at-your-face-to-see-how-to-react-in-a-new-situation",
+      "action": "check-face",
+      "description": "A child looks up at a caregiver’s face in a new situation.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "brown"
+        }
+      },
+      "sha256": "dab1b6e42f22a0d01277c7c240ac72158419fe91e513675f99f1a29dc0c42b4e"
+    },
+    {
+      "id": "cdc-24-points_things",
+      "title": "Points to things in a book when you ask, like “Where is the bear?”",
+      "asset": "milestone-cdc-24-points_things",
+      "action": "book-point",
+      "description": "A child points to the bear pictured in an open book.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "deepBrown",
+          "hairColor": "brown",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "9b5523a66e2d0be5d24764402f141ca85a0bd245cd11cf237a797ca8fa7ab8a9"
+    },
+    {
+      "id": "cdc-24-says_words",
+      "title": "Says at least two words together, like “More milk.”",
+      "asset": "milestone-cdc-24-says_words",
+      "action": "two-words",
+      "description": "A child combines two words while asking for milk.",
+      "posterFrame": 39,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "0bc5bffa2ff1c48836b0e439dcbfc380641d2143b6108c75a14a68c125956af9"
+    },
+    {
+      "id": "cdc-24-points_body",
+      "title": "Points to at least two body parts when you ask him to show you",
+      "asset": "milestone-cdc-24-points_body",
+      "action": "body-parts",
+      "description": "A child points to their nose and then to a foot.",
+      "posterFrame": 65,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "black",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "578e35ffd65baaf74a4230426d2a4ba6cc4f108c29aa8c198c0345de5eec8bf7"
+    },
+    {
+      "id": "cdc-24-uses_gestures",
+      "title": "Uses more gestures than just waving and pointing, like blowing a kiss or nodding yes",
+      "asset": "milestone-cdc-24-uses_gestures",
+      "action": "kiss-nod",
+      "description": "A child blows a kiss and nods their head.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "black",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "3dc7441b404132b246a31abd5a6b06ff74753a9289fc70c310549011c350cdd0"
+    },
+    {
+      "id": "cdc-24-holds_something",
+      "title": "Holds something in one hand while using the other hand; for example, holding a container and taking the lid off",
+      "asset": "milestone-cdc-24-holds_something",
+      "action": "open-container",
+      "description": "A child holds a container in one hand and removes its lid with the other.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "dadd057322e6b665f84daf0ce75b80443e6b02bc6829ae1d83921205bb8eb71e"
+    },
+    {
+      "id": "cdc-24-tries_switches",
+      "title": "Tries to use switches, knobs, or buttons on a toy",
+      "asset": "milestone-cdc-24-tries_switches",
+      "action": "toy-button",
+      "description": "A child presses a toy’s button and its light comes on.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "tan",
+          "hairColor": "black",
+          "hairStyle": "waves"
+        }
+      },
+      "sha256": "8ab3703f487bc6a2dedf6c7deddc081dc3d0acc70d61a91dd8c52ec97ff93cfb"
+    },
+    {
+      "id": "cdc-24-plays_toys",
+      "title": "Plays with more than one toy at the same time, like putting toy food on a toy plate",
+      "asset": "milestone-cdc-24-plays_toys",
+      "action": "toy-meal",
+      "description": "A child moves pretend food onto a toy plate.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "3369e7c15108fa5467eb142a62d782cfcb42089dcd459e973cf646b170e1471f"
+    },
+    {
+      "id": "cdc-24-kicks_ball",
+      "title": "Kicks a ball",
+      "asset": "milestone-cdc-24-kicks_ball",
+      "action": "kick-ball",
+      "description": "A child swings a foot forward and kicks a ball.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "brown",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "da6f383cd78b82f1bf05cb66ec0bbb0879ab87ab36bfaf5c6d892acb7e681ad2"
+    },
+    {
+      "id": "cdc-24-runs",
+      "title": "Runs",
+      "asset": "milestone-cdc-24-runs",
+      "action": "run",
+      "description": "A child runs with alternating arms and legs.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "d9cbd6287ca61091bf09afcb0bd232ffb6e4eb522548ded8763c4cb68b60c8a8"
+    },
+    {
+      "id": "cdc-24-walks_climbs",
+      "title": "Walks (not climbs) up a few stairs with or without help",
+      "asset": "milestone-cdc-24-walks_climbs",
+      "action": "stairs",
+      "description": "A child steps upright onto a few low stairs.",
+      "posterFrame": 125,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "blonde",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "b2eb95103517a09158ae9b639c28b10f969b6fc83042e82b2bbedaa4ea6389ec"
+    },
+    {
+      "id": "cdc-24-eats_spoon",
+      "title": "Eats with a spoon",
+      "asset": "milestone-cdc-24-eats_spoon",
+      "action": "spoon-feed",
+      "description": "A child scoops food and brings a spoon to their mouth.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "blonde",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "7e77d3a09ee6cf446a99627aa942fb13242731f1f1283c57227ab7e70885c239"
+    },
+    {
+      "id": "who-sitting",
+      "title": "Sitting without support",
+      "asset": "milestone-who-sitting",
+      "action": "sit-balance",
+      "description": "A baby sits upright without support and reaches out with one hand.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "light",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "5e236237596c6fc2fa3704a861017b0e98c0f9ebb50d56b5f2d05253289348b0"
+    },
+    {
+      "id": "who-standing-assisted",
+      "title": "Standing with assistance",
+      "asset": "milestone-who-standing-assisted",
+      "action": "stand-help",
+      "description": "A child stands while a caregiver supports them.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "golden",
+          "hairColor": "brown",
+          "hairStyle": "waves"
+        },
+        "caregiver": {
+          "skinTone": "golden",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "4af48730c8c1e6c57373253ce086afcfe1fb0bd1467df5fb1a570a7d0f8ec80d"
+    },
+    {
+      "id": "who-crawling",
+      "title": "Hands-and-knees crawling",
+      "asset": "milestone-who-crawling",
+      "action": "crawl",
+      "description": "A baby moves forward on their hands and knees.",
+      "posterFrame": 112,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "warm",
+          "hairColor": "black",
+          "hairStyle": "crop"
+        }
+      },
+      "sha256": "074802cb5eb6d646d1ab0f1644f3d3611c6a5487701094ec22031dbad68315a0"
+    },
+    {
+      "id": "who-walking-assisted",
+      "title": "Walking with assistance",
+      "asset": "milestone-who-walking-assisted",
+      "action": "walk-help",
+      "description": "A child takes steps while holding a caregiver’s hand.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "brown",
+          "hairStyle": "wisps"
+        },
+        "caregiver": {
+          "skinTone": "brown",
+          "hairColor": "auburn"
+        }
+      },
+      "sha256": "2503a562958ce8c8c21e756d4d9960a22ca7ddf8a6b0acec410ddbfad71eb7ea"
+    },
+    {
+      "id": "who-standing",
+      "title": "Standing alone",
+      "asset": "milestone-who-standing",
+      "action": "stand-balance",
+      "description": "A child stands alone and makes a small adjustment to balance.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "auburn",
+          "hairStyle": "curls"
+        }
+      },
+      "sha256": "b82cc2528752c2ab08bab1dc286f1388add8b362a42517e2795b55d7e4e8f5de"
+    },
+    {
+      "id": "who-walking",
+      "title": "Walking alone",
+      "asset": "milestone-who-walking",
+      "action": "walk-independent",
+      "description": "A child walks forward independently with alternating steps.",
+      "posterFrame": 100,
+      "duration": 6.0,
+      "loop": "gentle hidden reset",
+      "cast": {
+        "child": {
+          "skinTone": "brown",
+          "hairColor": "auburn",
+          "hairStyle": "wisps"
+        }
+      },
+      "sha256": "e720d85df5b7efe671ac4cf1d674a39aef8c61c419f93e4960c7fa2427d213e6"
+    }
+  ]
+}

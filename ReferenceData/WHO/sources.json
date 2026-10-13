@@ -1,0 +1,27 @@
+{
+  "retrieved": "2026-10-10",
+  "publisher": "World Health Organization",
+  "standard": "WHO Child Growth Standards 2006, weight-for-age",
+  "files": [
+    {
+      "file": "wfa-girls-zscore-expanded-tables.xlsx",
+      "url": "https://cdn.who.int/media/docs/default-source/child-growth/child-growth-standards/indicators/weight-for-age/expanded-tables/wfa-girls-zscore-expanded-tables.xlsx?sfvrsn=f01bc813_10",
+      "sha256": "ee3ae12cb96c6c5541cdf43665c03ce6c984f877859a183a5f6104eb06a49a6e"
+    },
+    {
+      "file": "wfa-boys-zscore-expanded-tables.xlsx",
+      "url": "https://cdn.who.int/media/docs/default-source/child-growth/child-growth-standards/indicators/weight-for-age/expanded-tables/wfa-boys-zscore-expanded-tables.xlsx?sfvrsn=65cce121_10",
+      "sha256": "b5b4748c6bfa5230e2eddafa1767629c349178b08d457f400b59422b8bfef86c"
+    },
+    {
+      "file": "wfa-girls-percentiles-expanded-tables.xlsx",
+      "url": "https://cdn.who.int/media/docs/default-source/child-growth/child-growth-standards/indicators/weight-for-age/expanded-tables/wfa-girls-percentiles-expanded-tables.xlsx?sfvrsn=54cfa5e8_9",
+      "sha256": "5bdfd79de222d0f660c1662adc02995e879374f5b3260571a357a2ec771da629"
+    },
+    {
+      "file": "wfa-boys-percentiles-expanded-tables.xlsx",
+      "url": "https://cdn.who.int/media/docs/default-source/child-growth/child-growth-standards/indicators/weight-for-age/expanded-tables/wfa-boys-percentiles-expanded-tables.xlsx?sfvrsn=c2f79259_11",
+      "sha256": "c4e251201c6cd352fbdd7797a7a298aff8c78b7525bd242fedec4494f3ccb095"
+    }
+  ]
+}

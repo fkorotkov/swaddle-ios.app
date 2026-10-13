@@ -1,0 +1,911 @@
+{
+  "version": "cdc-2026-10-10",
+  "pages": [
+    {
+      "months": 2,
+      "url": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "cd437d5fa1e527d8f5ef100990fe4379083c1aceaaaa95161c546acf9d68ebe9",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 4,
+        "language": 2,
+        "cognitive": 2,
+        "movement": 3
+      }
+    },
+    {
+      "months": 4,
+      "url": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "cee260708bbbc40c1632ed2e4f25ff6e54ad61a08a75144012ca0f8ba1658c33",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 3,
+        "language": 3,
+        "cognitive": 2,
+        "movement": 5
+      }
+    },
+    {
+      "months": 6,
+      "url": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "0c9f09aa6c7e700a1bcd6bd9102f94b104760ffcd5578e1b42c51ada4517f16f",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 3,
+        "language": 3,
+        "cognitive": 3,
+        "movement": 3
+      }
+    },
+    {
+      "months": 9,
+      "url": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "cb34ee7fa6ff4640ebeaf9613926370147611709813837c3719dc83e36259724",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 5,
+        "language": 2,
+        "cognitive": 2,
+        "movement": 4
+      }
+    },
+    {
+      "months": 12,
+      "url": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "retrieved": "2026-10-10",
+      "sha256": "23743229d0b498d58930c6d1b414a2da6831047f5f8fee62ffff00ee4210f5c8",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 1,
+        "language": 3,
+        "cognitive": 2,
+        "movement": 4
+      }
+    },
+    {
+      "months": 15,
+      "url": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "675695c3cb9b6b237bd8c6ae4c0aacd26ecf71d139095a234f515d2604e37a77",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 5,
+        "language": 4,
+        "cognitive": 2,
+        "movement": 2
+      }
+    },
+    {
+      "months": 18,
+      "url": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "retrieved": "2026-10-10",
+      "sha256": "bfce96671db938cc59f3629f6a2ef6a60bcb65e8d84e98c8cf7b7747238bd5f0",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 5,
+        "language": 2,
+        "cognitive": 2,
+        "movement": 6
+      }
+    },
+    {
+      "months": 24,
+      "url": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "retrieved": "2026-10-10",
+      "sha256": "867a1bf1cfd3eb5cc443bf2d324532d739a6bacc1f794fa9c8a8eae2a692297c",
+      "updated": "May 16, 2026",
+      "counts": {
+        "social": 2,
+        "language": 4,
+        "cognitive": 3,
+        "movement": 4
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "cdc-2-calmsdown",
+      "months": 2,
+      "domain": "social",
+      "title": "Calms down when spoken to or picked up",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-looksface",
+      "months": 2,
+      "domain": "social",
+      "title": "Looks at your face",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-seemshappy",
+      "months": 2,
+      "domain": "social",
+      "title": "Seems happy to see you when you walk up to her",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-smilestalk2",
+      "months": 2,
+      "domain": "social",
+      "title": "Smiles when you talk to or smile at her",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-makessoundsotherthancrying",
+      "months": 2,
+      "domain": "language",
+      "title": "Makes sounds other than crying",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-reactstoloudsounds",
+      "months": 2,
+      "domain": "language",
+      "title": "Reacts to loud sounds",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-watchesyoumove",
+      "months": 2,
+      "domain": "cognitive",
+      "title": "Watches you as you move",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-lookstoy",
+      "months": 2,
+      "domain": "cognitive",
+      "title": "Looks at a toy for several seconds",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-holdsheadup",
+      "months": 2,
+      "domain": "movement",
+      "title": "Holds head up when on tummy",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-movesbotharms",
+      "months": 2,
+      "domain": "movement",
+      "title": "Moves both arms and both legs",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-2-openshandsbriefly",
+      "months": 2,
+      "domain": "movement",
+      "title": "Opens hands briefly",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-smiles_attention",
+      "months": 4,
+      "domain": "social",
+      "title": "Smiles on his own to get your attention",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-chuckles_laugh",
+      "months": 4,
+      "domain": "social",
+      "title": "Chuckles (not yet a full laugh) when you try to make him laugh",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-looks_you",
+      "months": 4,
+      "domain": "social",
+      "title": "Looks at you, moves, or makes sounds to get or keep your attention",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-makes_sounds",
+      "months": 4,
+      "domain": "language",
+      "title": "Makes sounds like “oooo”, “aahh” (cooing)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-talk_him",
+      "months": 4,
+      "domain": "language",
+      "title": "Makes sounds back when you talk to him",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-turns_head",
+      "months": 4,
+      "domain": "language",
+      "title": "Turns head towards the sound of your voice",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-if_hungry",
+      "months": 4,
+      "domain": "cognitive",
+      "title": "If hungry, opens mouth when he sees breast or bottle",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-looks_at_hands",
+      "months": 4,
+      "domain": "cognitive",
+      "title": "Looks at her hands with interest",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-holds_head",
+      "months": 4,
+      "domain": "movement",
+      "title": "Holds head steady without support when you are holding him",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-holds_toy",
+      "months": 4,
+      "domain": "movement",
+      "title": "Holds a toy when you put it in his hand",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-uses_arm",
+      "months": 4,
+      "domain": "movement",
+      "title": "Uses his arm to swing at toys",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-brings_hands",
+      "months": 4,
+      "domain": "movement",
+      "title": "Brings hands to mouth",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-4-pushes_up",
+      "months": 4,
+      "domain": "movement",
+      "title": "Pushes up onto elbows/forearms when on tummy",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-knows_familiar",
+      "months": 6,
+      "domain": "social",
+      "title": "Knows familiar people",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-likes_to_look",
+      "months": 6,
+      "domain": "social",
+      "title": "Likes to look at self in a mirror",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-laughs_id",
+      "months": 6,
+      "domain": "social",
+      "title": "Laughs",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-takes_turns",
+      "months": 6,
+      "domain": "language",
+      "title": "Takes turns making sounds with you",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-blows_raspberries",
+      "months": 6,
+      "domain": "language",
+      "title": "Blows “raspberries” (sticks tongue out and blows)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-makes_squealing",
+      "months": 6,
+      "domain": "language",
+      "title": "Makes squealing noises",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-puts_things",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Puts things in her mouth to explore them",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-reaches_grab",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Reaches to grab a toy she wants",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-closes_lips",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Closes lips to show she doesn’t want more food",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-rolls_tummy",
+      "months": 6,
+      "domain": "movement",
+      "title": "Rolls from tummy to back",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-pushes_up",
+      "months": 6,
+      "domain": "movement",
+      "title": "Pushes up with straight arms when on tummy",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-6-leans_hands",
+      "months": 6,
+      "domain": "movement",
+      "title": "Leans on hands to support herself when sitting",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-is_shy",
+      "months": 9,
+      "domain": "social",
+      "title": "Is shy, clingy, or fearful around strangers",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-shows_several",
+      "months": 9,
+      "domain": "social",
+      "title": "Shows several facial expressions, like happy, sad, angry, and surprised",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-looks_when_called",
+      "months": 9,
+      "domain": "social",
+      "title": "Looks when you call her name",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-reacts_when_leave",
+      "months": 9,
+      "domain": "social",
+      "title": "Reacts when you leave (looks, reaches for you, or cries)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-smiles_laughs",
+      "months": 9,
+      "domain": "social",
+      "title": "Smiles or laughs when you play peek-a-boo",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-makes_different",
+      "months": 9,
+      "domain": "language",
+      "title": "Makes a lot of different sounds like “mamamama” and “bababababa”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-lifts_arms",
+      "months": 9,
+      "domain": "language",
+      "title": "Lifts arms up to be picked up",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-looks_objects",
+      "months": 9,
+      "domain": "cognitive",
+      "title": "Looks for objects when dropped out of sight (like his spoon or toy)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-bangs_two",
+      "months": 9,
+      "domain": "cognitive",
+      "title": "Bangs two things together",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-gets_sitting",
+      "months": 9,
+      "domain": "movement",
+      "title": "Gets to a sitting position by herself",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-moves_things",
+      "months": 9,
+      "domain": "movement",
+      "title": "Moves things from one hand to her other hand",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-uses_fingers",
+      "months": 9,
+      "domain": "movement",
+      "title": "Uses fingers to “rake” food towards himself",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-9-sits_without",
+      "months": 9,
+      "domain": "movement",
+      "title": "Sits without support",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-plays_games",
+      "months": 12,
+      "domain": "social",
+      "title": "Plays games with you, like pat-a-cake",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-bye_bye",
+      "months": 12,
+      "domain": "language",
+      "title": "Waves “bye-bye”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-calls_parent",
+      "months": 12,
+      "domain": "language",
+      "title": "Calls a parent “mama” or “dada” or another special name",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-understands_no",
+      "months": 12,
+      "domain": "language",
+      "title": "Understands “no” (pauses briefly or stops when you say it)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-puts_something",
+      "months": 12,
+      "domain": "cognitive",
+      "title": "Puts something in a container, like a block in a cup",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-looks_things",
+      "months": 12,
+      "domain": "cognitive",
+      "title": "Looks for things he sees you hide, like a toy under a blanket",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-pulls_up",
+      "months": 12,
+      "domain": "movement",
+      "title": "Pulls up to stand",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-walks_holding",
+      "months": 12,
+      "domain": "movement",
+      "title": "Walks, holding on to furniture",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-drinks_cup",
+      "months": 12,
+      "domain": "movement",
+      "title": "Drinks from a cup without a lid, as you hold it",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-12-picks_things",
+      "months": 12,
+      "domain": "movement",
+      "title": "Picks things up between thumb and pointer finger, like small bits of food",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-copies_other",
+      "months": 15,
+      "domain": "social",
+      "title": "Copies other children while playing, like taking toys out of a container when another child does",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-shows_object",
+      "months": 15,
+      "domain": "social",
+      "title": "Shows you an object she likes",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-claps_excited",
+      "months": 15,
+      "domain": "social",
+      "title": "Claps when excited",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-hugs_doll",
+      "months": 15,
+      "domain": "social",
+      "title": "Hugs stuffed doll or other toy",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-shows_affection",
+      "months": 15,
+      "domain": "social",
+      "title": "Shows you affection (hugs, cuddles, or kisses you)",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-tries_say",
+      "months": 15,
+      "domain": "language",
+      "title": "Tries to say one or two words besides “mama” or “dada,” like “ba” for ball or “da” for dog",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-looks_familiar",
+      "months": 15,
+      "domain": "language",
+      "title": "Looks at a familiar object when you name it",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-follows_directions",
+      "months": 15,
+      "domain": "language",
+      "title": "Follows directions given with both a gesture and words. For example, he gives you a toy when you hold out your hand and say, “Give me the toy.”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-points_help",
+      "months": 15,
+      "domain": "language",
+      "title": "Points to ask for something or to get help",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-tries_use",
+      "months": 15,
+      "domain": "cognitive",
+      "title": "Tries to use things the right way, like a phone, cup, or book",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-stacks_small",
+      "months": 15,
+      "domain": "cognitive",
+      "title": "Stacks at least two small objects, like blocks",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-takes_steps",
+      "months": 15,
+      "domain": "movement",
+      "title": "Takes a few steps on his own",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-15-uses_fingers",
+      "months": 15,
+      "domain": "movement",
+      "title": "Uses fingers to feed herself some food",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-moves_away",
+      "months": 18,
+      "domain": "social",
+      "title": "Moves away from you, but looks to make sure you are close by",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-points_show",
+      "months": 18,
+      "domain": "social",
+      "title": "Points to show you something interesting",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-puts_hands",
+      "months": 18,
+      "domain": "social",
+      "title": "Puts hands out for you to wash them",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-looks_pages",
+      "months": 18,
+      "domain": "social",
+      "title": "Looks at a few pages in a book with you",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-helps_dress",
+      "months": 18,
+      "domain": "social",
+      "title": "Helps you dress him by pushing arm through sleeve or lifting up foot",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-tries_words",
+      "months": 18,
+      "domain": "language",
+      "title": "Tries to say three or more words besides “mama” or “dada”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-follows_directions",
+      "months": 18,
+      "domain": "language",
+      "title": "Follows one-step directions without any gestures, like giving you the toy when you say, “Give it to me.”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-copies_chores",
+      "months": 18,
+      "domain": "cognitive",
+      "title": "Copies you doing chores, like sweeping with a broom",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-plays_toys",
+      "months": 18,
+      "domain": "cognitive",
+      "title": "Plays with toys in a simple way, like pushing a toy car",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-walks_without",
+      "months": 18,
+      "domain": "movement",
+      "title": "Walks without holding on to anyone or anything",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-scribbles",
+      "months": 18,
+      "domain": "movement",
+      "title": "Scribbles",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-drinks_cup",
+      "months": 18,
+      "domain": "movement",
+      "title": "Drinks from a cup without a lid and may spill sometimes",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-feeds_himself",
+      "months": 18,
+      "domain": "movement",
+      "title": "Feeds himself with his fingers",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-tries_spoon",
+      "months": 18,
+      "domain": "movement",
+      "title": "Tries to use a spoon",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-18-climbs_couch",
+      "months": 18,
+      "domain": "movement",
+      "title": "Climbs on and off a couch or chair without help",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-notices_others",
+      "months": 24,
+      "domain": "social",
+      "title": "Notices when others are hurt or upset, like pausing or looking sad when someone is crying",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-looks-at-your-face-to-see-how-to-react-in-a-new-situation",
+      "months": 24,
+      "domain": "social",
+      "title": "Looks at your face to see how to react in a new situation",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-points_things",
+      "months": 24,
+      "domain": "language",
+      "title": "Points to things in a book when you ask, like “Where is the bear?”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-says_words",
+      "months": 24,
+      "domain": "language",
+      "title": "Says at least two words together, like “More milk.”",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-points_body",
+      "months": 24,
+      "domain": "language",
+      "title": "Points to at least two body parts when you ask him to show you",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-uses_gestures",
+      "months": 24,
+      "domain": "language",
+      "title": "Uses more gestures than just waving and pointing, like blowing a kiss or nodding yes",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-holds_something",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Holds something in one hand while using the other hand; for example, holding a container and taking the lid off",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-tries_switches",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Tries to use switches, knobs, or buttons on a toy",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-plays_toys",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Plays with more than one toy at the same time, like putting toy food on a toy plate",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-kicks_ball",
+      "months": 24,
+      "domain": "movement",
+      "title": "Kicks a ball",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-runs",
+      "months": 24,
+      "domain": "movement",
+      "title": "Runs",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-walks_climbs",
+      "months": 24,
+      "domain": "movement",
+      "title": "Walks (not climbs) up a few stairs with or without help",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    },
+    {
+      "id": "cdc-24-eats_spoon",
+      "months": 24,
+      "domain": "movement",
+      "title": "Eats with a spoon",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10"
+    }
+  ]
+}

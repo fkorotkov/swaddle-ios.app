@@ -1,0 +1,1110 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Get recent activity in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "اعرض النشاط الأخير في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Get recent activity in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Consultar actividad reciente en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "فعالیت‌های اخیر را در ${applicationName} نشان بده"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ipakita ang kamakailang aktibidad sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Afficher l’activité récente dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में हाल की गतिविधि दिखाएँ"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Wè aktivite resan nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 최근 활동 보여 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Consultar atividades recentes no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Покажи последние записи в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ka eeg hawlihii u dambeeyay ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Xem hoạt động gần đây trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}查看最近活动"
+            ]
+          }
+        }
+      }
+    },
+    "How much did my baby eat in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "كم شرب طفلي في ${applicationName}",
+              "كم شرب ${child} في ${applicationName}",
+              "اعرض إجمالي الرضعات في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "How much did my baby eat in ${applicationName}",
+              "How much did ${child} eat in ${applicationName}",
+              "Get feeding totals in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Cuánto comió mi bebé en ${applicationName}",
+              "Cuánto comió ${child} en ${applicationName}",
+              "Consultar totales de alimentación en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "کودکم در ${applicationName} چقدر شیر خورده",
+              "${child} در ${applicationName} چقدر شیر خورده",
+              "مجموع تغذیه را در ${applicationName} نشان بده"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Gaano karami ang nainom ng aking sanggol sa ${applicationName}",
+              "Gaano karami ang nainom ni ${child} sa ${applicationName}",
+              "Ipakita ang kabuuang pagpapakain sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Combien mon bébé a bu dans ${applicationName}",
+              "Combien ${child} a bu dans ${applicationName}",
+              "Afficher les totaux d’alimentation dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में मेरे शिशु ने कितना दूध पिया",
+              "${applicationName} में ${child} ने कितना दूध पिया",
+              "${applicationName} में कुल दूध की मात्रा दिखाएँ"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Konbyen tibebe mwen bwè nan ${applicationName}",
+              "Konbyen ${child} bwè nan ${applicationName}",
+              "Wè total manje nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 우리 아기가 얼마나 먹었어",
+              "${applicationName}에서 ${child} 얼마나 먹었어",
+              "${applicationName}에서 총 수유량 보여 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Quanto meu bebê mamou no ${applicationName}",
+              "Quanto ${child} mamou no ${applicationName}",
+              "Consultar totais de alimentação no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Сколько съел мой ребёнок в ${applicationName}",
+              "Сколько съел ${child} в ${applicationName}",
+              "Покажи итоги кормлений в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Intee caano ayuu ilmahaygu ka cabbay ${applicationName}",
+              "Intee caano ayuu ${child} ka cabbay ${applicationName}",
+              "Ka eeg wadarta quudinta ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Bé của tôi đã uống bao nhiêu sữa trong ${applicationName}",
+              "${child} đã uống bao nhiêu sữa trong ${applicationName}",
+              "Xem tổng lượng sữa trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}我的宝宝喝了多少奶",
+              "在${applicationName}${child}喝了多少奶",
+              "在${applicationName}查看总喂奶量"
+            ]
+          }
+        }
+      }
+    },
+    "Log a ${contents} diaper in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "سجّل حفاض ${contents} في ${applicationName}",
+              "دوّن حفاض ${contents} في ${applicationName}",
+              "سجّل حفاضا في ${applicationName}",
+              "دوّن حفاضا باستخدام ${applicationName}",
+              "سجّل ${contents} في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Log a ${contents} diaper in ${applicationName}",
+              "Record a ${contents} diaper in ${applicationName}",
+              "Record a diaper in ${applicationName}",
+              "Log a diaper with ${applicationName}",
+              "Record ${contents} in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anota en ${applicationName} un pañal: ${contents}",
+              "Registra en ${applicationName} un pañal: ${contents}",
+              "Registrar un pañal en ${applicationName}",
+              "Anotar un pañal con ${applicationName}",
+              "Registrar ${contents} en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "پوشک ${contents} را در ${applicationName} ثبت کن",
+              "پوشک ${contents} را در ${applicationName} یادداشت کن",
+              "یک پوشک در ${applicationName} ثبت کن",
+              "با ${applicationName} یک پوشک یادداشت کن",
+              "${contents} را در ${applicationName} ثبت کن"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Itala sa ${applicationName} ang diaper: ${contents}",
+              "Ilista sa ${applicationName} ang diaper: ${contents}",
+              "Magtala ng diaper sa ${applicationName}",
+              "Ilista ang diaper gamit ang ${applicationName}",
+              "Itala ang ${contents} sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Note une couche ${contents} dans ${applicationName}",
+              "Enregistre une couche ${contents} dans ${applicationName}",
+              "Enregistrer un change dans ${applicationName}",
+              "Noter un change avec ${applicationName}",
+              "Enregistrer ${contents} dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में ${contents} वाला डायपर दर्ज करो",
+              "${applicationName} में ${contents} वाला डायपर नोट करो",
+              "${applicationName} में डायपर दर्ज करें",
+              "${applicationName} से डायपर नोट करें",
+              "${applicationName} में ${contents} दर्ज करें"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anrejistre yon kouchèt ${contents} nan ${applicationName}",
+              "Note yon kouchèt ${contents} nan ${applicationName}",
+              "Anrejistre yon kouchèt nan ${applicationName}",
+              "Note yon kouchèt avèk ${applicationName}",
+              "Anrejistre ${contents} nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 ${contents} 기저귀 기록해 줘",
+              "${applicationName}에 ${contents} 기저귀 적어 줘",
+              "${applicationName}에서 기저귀 기록해 줘",
+              "${applicationName}으로 기저귀 적어 줘",
+              "${applicationName}에서 ${contents} 기록해 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anote no ${applicationName} uma fralda: ${contents}",
+              "Registre no ${applicationName} uma fralda: ${contents}",
+              "Registrar uma fralda no ${applicationName}",
+              "Anotar uma fralda com ${applicationName}",
+              "Registrar ${contents} no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Запиши подгузник в ${applicationName}: ${contents}",
+              "Добавь подгузник в ${applicationName}: ${contents}",
+              "Запиши подгузник в ${applicationName}",
+              "Добавь подгузник через ${applicationName}",
+              "Запиши ${contents} в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Diiwaangeli xafaayad ${contents} gudaha ${applicationName}",
+              "Qor xafaayad ${contents} gudaha ${applicationName}",
+              "Diiwaangeli xafaayad gudaha ${applicationName}",
+              "Ku qor xafaayad adigoo adeegsanaya ${applicationName}",
+              "Diiwaangeli ${contents} gudaha ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ghi tã ${contents} trong ${applicationName}",
+              "Ghi lại tã ${contents} trong ${applicationName}",
+              "Ghi lại tã trong ${applicationName}",
+              "Ghi nhận tã bằng ${applicationName}",
+              "Ghi lại ${contents} trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}记录${contents}的尿布",
+              "在${applicationName}记下${contents}的尿布",
+              "在${applicationName}记录尿布",
+              "用${applicationName}记下换尿布",
+              "在${applicationName}记录${contents}"
+            ]
+          }
+        }
+      }
+    },
+    "Log expressed milk in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "سجّل الحليب المشفوط في ${applicationName}",
+              "سجّل جلسة شفط حليب في ${applicationName}",
+              "سجّل شفط الحليب في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Log expressed milk in ${applicationName}",
+              "Log a pumping session in ${applicationName}",
+              "Record pumping in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anota leche extraída en ${applicationName}",
+              "Anota una sesión de extracción en ${applicationName}",
+              "Registrar extracción en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "شیر دوشیده‌شده را در ${applicationName} ثبت کن",
+              "یک نوبت دوشیدن شیر را در ${applicationName} ثبت کن",
+              "دوشیدن شیر را در ${applicationName} ثبت کن"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Itala ang na-pump na gatas sa ${applicationName}",
+              "Itala ang isang sesyon ng pag-pump sa ${applicationName}",
+              "Magtala ng pag-pump ng gatas sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Note le lait tiré dans ${applicationName}",
+              "Note une séance de tirage dans ${applicationName}",
+              "Enregistrer un tirage dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में निकाला हुआ दूध दर्ज करो",
+              "${applicationName} में दूध निकालने का एक सत्र दर्ज करो",
+              "${applicationName} में दूध निकालना दर्ज करें"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anrejistre lèt ki tire nan ${applicationName}",
+              "Anrejistre yon sesyon tire lèt nan ${applicationName}",
+              "Anrejistre lèt tire nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 유축한 모유 기록해 줘",
+              "${applicationName}에서 유축 세션 기록해 줘",
+              "${applicationName}에서 유축 기록해 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anote leite extraído no ${applicationName}",
+              "Anote uma sessão de extração no ${applicationName}",
+              "Registrar extração de leite no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Запиши сцеженное молоко в ${applicationName}",
+              "Запиши сеанс сцеживания в ${applicationName}",
+              "Запиши сцеживание в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Diiwaangeli caanaha la lisay gudaha ${applicationName}",
+              "Diiwaangeli fadhi lisid caano gudaha ${applicationName}",
+              "Diiwaangeli lisidda caanaha gudaha ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ghi sữa đã hút trong ${applicationName}",
+              "Ghi một cữ hút sữa trong ${applicationName}",
+              "Ghi lại hút sữa trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}记录挤出的母乳",
+              "在${applicationName}记录一次吸奶",
+              "在${applicationName}记录泵奶"
+            ]
+          }
+        }
+      }
+    },
+    "Record a bottle in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "سجّل رضّاعة في ${applicationName}",
+              "سجّل الرضّاعة في ${applicationName}",
+              "دوّن رضّاعة في ${applicationName}",
+              "دوّن رضّاعة باستخدام ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Record a bottle in ${applicationName}",
+              "Record the bottle in ${applicationName}",
+              "Log a bottle in ${applicationName}",
+              "Log a bottle with ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Registrar un biberón en ${applicationName}",
+              "Registrar el biberón en ${applicationName}",
+              "Anotar un biberón en ${applicationName}",
+              "Anotar un biberón con ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "یک شیشه شیر در ${applicationName} ثبت کن",
+              "شیشه شیر را در ${applicationName} ثبت کن",
+              "یک شیشه شیر در ${applicationName} یادداشت کن",
+              "با ${applicationName} یک شیشه شیر یادداشت کن"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Magtala ng isang bote sa ${applicationName}",
+              "Itala ang bote sa ${applicationName}",
+              "Ilista ang isang bote sa ${applicationName}",
+              "Ilista ang isang bote gamit ang ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Enregistrer un biberon dans ${applicationName}",
+              "Enregistrer le biberon dans ${applicationName}",
+              "Noter un biberon dans ${applicationName}",
+              "Noter un biberon avec ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में एक बोतल दर्ज करें",
+              "${applicationName} में यह बोतल दर्ज करें",
+              "${applicationName} में एक बोतल नोट करें",
+              "${applicationName} से बोतल का रिकॉर्ड बनाएँ"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anrejistre yon bibwon nan ${applicationName}",
+              "Anrejistre bibwon an nan ${applicationName}",
+              "Note yon bibwon nan ${applicationName}",
+              "Note yon bibwon avèk ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 젖병 수유 기록해 줘",
+              "${applicationName}에서 이번 젖병 기록해 줘",
+              "${applicationName}에서 젖병 수유 적어 줘",
+              "${applicationName}으로 젖병 수유 적어 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Registrar uma mamadeira no ${applicationName}",
+              "Registrar a mamadeira no ${applicationName}",
+              "Anotar uma mamadeira no ${applicationName}",
+              "Anotar uma mamadeira com ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Запиши бутылочку в ${applicationName}",
+              "Запиши эту бутылочку в ${applicationName}",
+              "Добавь бутылочку в ${applicationName}",
+              "Запиши кормление из бутылочки через ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Diiwaangeli dhalo gudaha ${applicationName}",
+              "Diiwaangeli dhalada gudaha ${applicationName}",
+              "Ku qor dhalo ${applicationName}",
+              "Ku qor dhalo adigoo adeegsanaya ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ghi lại bình sữa trong ${applicationName}",
+              "Ghi lại bình sữa này trong ${applicationName}",
+              "Ghi nhận bình sữa trong ${applicationName}",
+              "Ghi nhận bình sữa bằng ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}记录奶瓶喂养",
+              "用${applicationName}记录这次奶瓶喂养",
+              "在${applicationName}记下奶瓶喂养",
+              "通过${applicationName}记下奶瓶喂养"
+            ]
+          }
+        }
+      }
+    },
+    "Record the usual bottle in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "سجّل الرضّاعة المعتادة في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Record the usual bottle in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Registrar el biberón habitual en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "شیشه شیر همیشگی را در ${applicationName} ثبت کن"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Itala ang karaniwang bote sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Enregistrer le biberon habituel dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में रोज़ की बोतल दर्ज करें"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Anrejistre bibwon abityèl la nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 평소 젖병 수유 기록해 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Registrar a mamadeira habitual no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Запиши обычную бутылочку в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Diiwaangeli dhaladii caadiga ahayd gudaha ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ghi lại bình sữa thường dùng trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}记录平时的奶瓶喂养"
+            ]
+          }
+        }
+      }
+    },
+    "Start breastfeeding in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "ابدأ الرضاعة الطبيعية في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "Start breastfeeding in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Iniciar lactancia en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "شیردهی را در ${applicationName} شروع کن"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Simulan ang pagpapasuso sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Commencer l’allaitement dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में स्तनपान शुरू करें"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Kòmanse bay tete nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 모유 수유 시작해 줘"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Iniciar amamentação no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Начни кормление грудью в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ku bilow naasnuujinta ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Bắt đầu cho bú mẹ trong ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}开始母乳喂养"
+            ]
+          }
+        }
+      }
+    },
+    "When was the last feed in ${applicationName}": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ar": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "متى كانت آخر رضعة في ${applicationName}",
+              "متى شرب ${child} آخر مرة في ${applicationName}"
+            ]
+          }
+        },
+        "en": {
+          "stringSet": {
+            "state": "new",
+            "values": [
+              "When was the last feed in ${applicationName}",
+              "When did ${child} last eat in ${applicationName}"
+            ]
+          }
+        },
+        "es": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Cuándo fue la última toma en ${applicationName}",
+              "Cuándo comió ${child} por última vez en ${applicationName}"
+            ]
+          }
+        },
+        "fa": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "آخرین تغذیه در ${applicationName} کی بود",
+              "${child} آخرین بار در ${applicationName} کی شیر خورد"
+            ]
+          }
+        },
+        "fil": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Kailan ang huling pagpapakain sa ${applicationName}",
+              "Kailan huling uminom si ${child} sa ${applicationName}"
+            ]
+          }
+        },
+        "fr": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Quand était la dernière tétée dans ${applicationName}",
+              "Quand ${child} a bu pour la dernière fois dans ${applicationName}"
+            ]
+          }
+        },
+        "hi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName} में पिछली बार दूध कब पिया था",
+              "${applicationName} में ${child} ने आखिरी बार दूध कब पिया था"
+            ]
+          }
+        },
+        "ht": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Ki lè dènye manje a te fèt nan ${applicationName}",
+              "Ki lè ${child} te bwè dènye fwa nan ${applicationName}"
+            ]
+          }
+        },
+        "ko": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "${applicationName}에서 마지막 수유가 언제였어",
+              "${applicationName}에서 ${child} 마지막으로 언제 먹었어"
+            ]
+          }
+        },
+        "pt-BR": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Quando foi a última mamada no ${applicationName}",
+              "Quando ${child} mamou pela última vez no ${applicationName}"
+            ]
+          }
+        },
+        "ru": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Когда было последнее кормление в ${applicationName}",
+              "Когда ${child} ел в последний раз в ${applicationName}"
+            ]
+          }
+        },
+        "so": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Goorma ayay ahayd quudintii u dambaysay gudaha ${applicationName}",
+              "Goorma ayuu ${child} caano cabbay markii u dambaysay gudaha ${applicationName}"
+            ]
+          }
+        },
+        "vi": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "Lần bú gần nhất trong ${applicationName} là khi nào",
+              "${child} uống sữa lần gần nhất trong ${applicationName} là khi nào"
+            ]
+          }
+        },
+        "zh-Hans": {
+          "stringSet": {
+            "state": "translated",
+            "values": [
+              "在${applicationName}上次喂奶是什么时候",
+              "在${applicationName}${child}上次喝奶是什么时候"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

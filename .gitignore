@@ -1,0 +1,32 @@
+.DS_Store
+.build/
+DerivedData/
+.release/
+*.xcuserstate
+xcuserdata/
+__pycache__/
+
+# Local build, design, and release evidence; never part of the source upload.
+artifacts/
+design/
+store-release/
+website-qa/
+QA.md
+RELEASE.md
+*.xcarchive/
+*.xcresult/
+*.ipa
+*.dSYM/
+*.log
+
+# Signing material, local credentials, and private data exports.
+.env
+.env.*
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

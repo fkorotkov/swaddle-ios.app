@@ -1,0 +1,912 @@
+{
+  "version": "swaddle-ru-cdc-2026-10-12",
+  "language": "ru",
+  "publisher": "CDC",
+  "translationPublisher": "Swaddle",
+  "officialTranslation": false,
+  "reviewed": "2026-10-12",
+  "sourceURL": "https://www.cdc.gov/act-early/milestones/",
+  "translationNotes": "Russian translation by Swaddle, reviewed against all 100 English source titles. Examples of early words are localized without changing the skill criteria. CDC does not publish this translation or endorse Swaddle.",
+  "skills": [
+    {
+      "id": "cdc-2-calmsdown",
+      "months": 2,
+      "domain": "social",
+      "title": "Успокаивается, когда с ним разговаривают или берут на руки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Calms down when spoken to or picked up"
+    },
+    {
+      "id": "cdc-2-looksface",
+      "months": 2,
+      "domain": "social",
+      "title": "Смотрит на ваше лицо",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at your face"
+    },
+    {
+      "id": "cdc-2-seemshappy",
+      "months": 2,
+      "domain": "social",
+      "title": "Радуется, когда вы подходите",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Seems happy to see you when you walk up to her"
+    },
+    {
+      "id": "cdc-2-smilestalk2",
+      "months": 2,
+      "domain": "social",
+      "title": "Улыбается, когда вы разговариваете с ним или улыбаетесь ему",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Smiles when you talk to or smile at her"
+    },
+    {
+      "id": "cdc-2-makessoundsotherthancrying",
+      "months": 2,
+      "domain": "language",
+      "title": "Издаёт звуки, помимо плача",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Makes sounds other than crying"
+    },
+    {
+      "id": "cdc-2-reactstoloudsounds",
+      "months": 2,
+      "domain": "language",
+      "title": "Реагирует на громкие звуки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Reacts to loud sounds"
+    },
+    {
+      "id": "cdc-2-watchesyoumove",
+      "months": 2,
+      "domain": "cognitive",
+      "title": "Следит за вами, когда вы двигаетесь",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Watches you as you move"
+    },
+    {
+      "id": "cdc-2-lookstoy",
+      "months": 2,
+      "domain": "cognitive",
+      "title": "Смотрит на игрушку несколько секунд",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at a toy for several seconds"
+    },
+    {
+      "id": "cdc-2-holdsheadup",
+      "months": 2,
+      "domain": "movement",
+      "title": "Поднимает голову, лёжа на животе",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Holds head up when on tummy"
+    },
+    {
+      "id": "cdc-2-movesbotharms",
+      "months": 2,
+      "domain": "movement",
+      "title": "Двигает обеими руками и обеими ногами",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Moves both arms and both legs"
+    },
+    {
+      "id": "cdc-2-openshandsbriefly",
+      "months": 2,
+      "domain": "movement",
+      "title": "Ненадолго раскрывает ладони",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Opens hands briefly"
+    },
+    {
+      "id": "cdc-4-smiles_attention",
+      "months": 4,
+      "domain": "social",
+      "title": "Улыбается сам, чтобы привлечь ваше внимание",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Smiles on his own to get your attention"
+    },
+    {
+      "id": "cdc-4-chuckles_laugh",
+      "months": 4,
+      "domain": "social",
+      "title": "Тихонько посмеивается, когда вы пытаетесь его рассмешить, но ещё не смеётся в полный голос",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Chuckles (not yet a full laugh) when you try to make him laugh"
+    },
+    {
+      "id": "cdc-4-looks_you",
+      "months": 4,
+      "domain": "social",
+      "title": "Смотрит на вас, двигается или издаёт звуки, чтобы привлечь или удержать ваше внимание",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at you, moves, or makes sounds to get or keep your attention"
+    },
+    {
+      "id": "cdc-4-makes_sounds",
+      "months": 4,
+      "domain": "language",
+      "title": "Издаёт звуки вроде «у-у-у» и «а-а-а» — гулит",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Makes sounds like “oooo”, “aahh” (cooing)"
+    },
+    {
+      "id": "cdc-4-talk_him",
+      "months": 4,
+      "domain": "language",
+      "title": "Отвечает звуками, когда вы с ним разговариваете",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Makes sounds back when you talk to him"
+    },
+    {
+      "id": "cdc-4-turns_head",
+      "months": 4,
+      "domain": "language",
+      "title": "Поворачивает голову на звук вашего голоса",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Turns head towards the sound of your voice"
+    },
+    {
+      "id": "cdc-4-if_hungry",
+      "months": 4,
+      "domain": "cognitive",
+      "title": "Если голоден, открывает рот при виде груди или бутылочки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "If hungry, opens mouth when he sees breast or bottle"
+    },
+    {
+      "id": "cdc-4-looks_at_hands",
+      "months": 4,
+      "domain": "cognitive",
+      "title": "С интересом рассматривает свои руки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at her hands with interest"
+    },
+    {
+      "id": "cdc-4-holds_head",
+      "months": 4,
+      "domain": "movement",
+      "title": "Уверенно держит голову без поддержки, когда вы держите его на руках",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Holds head steady without support when you are holding him"
+    },
+    {
+      "id": "cdc-4-holds_toy",
+      "months": 4,
+      "domain": "movement",
+      "title": "Держит игрушку, которую вы вкладываете ему в руку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Holds a toy when you put it in his hand"
+    },
+    {
+      "id": "cdc-4-uses_arm",
+      "months": 4,
+      "domain": "movement",
+      "title": "Размахивает рукой, пытаясь ударить по игрушке",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Uses his arm to swing at toys"
+    },
+    {
+      "id": "cdc-4-brings_hands",
+      "months": 4,
+      "domain": "movement",
+      "title": "Подносит руки ко рту",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Brings hands to mouth"
+    },
+    {
+      "id": "cdc-4-pushes_up",
+      "months": 4,
+      "domain": "movement",
+      "title": "Лёжа на животе, приподнимается, опираясь на локти или предплечья",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/4-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Pushes up onto elbows/forearms when on tummy"
+    },
+    {
+      "id": "cdc-6-knows_familiar",
+      "months": 6,
+      "domain": "social",
+      "title": "Узнаёт знакомых людей",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Knows familiar people"
+    },
+    {
+      "id": "cdc-6-likes_to_look",
+      "months": 6,
+      "domain": "social",
+      "title": "Любит смотреть на себя в зеркало",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Likes to look at self in a mirror"
+    },
+    {
+      "id": "cdc-6-laughs_id",
+      "months": 6,
+      "domain": "social",
+      "title": "Смеётся",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Laughs"
+    },
+    {
+      "id": "cdc-6-takes_turns",
+      "months": 6,
+      "domain": "language",
+      "title": "По очереди с вами издаёт звуки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Takes turns making sounds with you"
+    },
+    {
+      "id": "cdc-6-blows_raspberries",
+      "months": 6,
+      "domain": "language",
+      "title": "Высовывает язык и дует, издавая звук вроде «бр-р-р»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Blows “raspberries” (sticks tongue out and blows)"
+    },
+    {
+      "id": "cdc-6-makes_squealing",
+      "months": 6,
+      "domain": "language",
+      "title": "Издаёт визжащие звуки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Makes squealing noises"
+    },
+    {
+      "id": "cdc-6-puts_things",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Тянет предметы в рот, чтобы их изучить",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Puts things in her mouth to explore them"
+    },
+    {
+      "id": "cdc-6-reaches_grab",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Тянется за игрушкой, которую хочет взять",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Reaches to grab a toy she wants"
+    },
+    {
+      "id": "cdc-6-closes_lips",
+      "months": 6,
+      "domain": "cognitive",
+      "title": "Смыкает губы, показывая, что больше не хочет есть",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Closes lips to show she doesn’t want more food"
+    },
+    {
+      "id": "cdc-6-rolls_tummy",
+      "months": 6,
+      "domain": "movement",
+      "title": "Переворачивается с живота на спину",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Rolls from tummy to back"
+    },
+    {
+      "id": "cdc-6-pushes_up",
+      "months": 6,
+      "domain": "movement",
+      "title": "Лёжа на животе, приподнимается на выпрямленных руках",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Pushes up with straight arms when on tummy"
+    },
+    {
+      "id": "cdc-6-leans_hands",
+      "months": 6,
+      "domain": "movement",
+      "title": "Сидя, опирается на руки, чтобы удержаться",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/6-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Leans on hands to support herself when sitting"
+    },
+    {
+      "id": "cdc-9-is_shy",
+      "months": 9,
+      "domain": "social",
+      "title": "Стесняется, жмётся к вам или пугается рядом с незнакомыми людьми",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Is shy, clingy, or fearful around strangers"
+    },
+    {
+      "id": "cdc-9-shows_several",
+      "months": 9,
+      "domain": "social",
+      "title": "Выражает лицом разные эмоции: радость, грусть, злость, удивление",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Shows several facial expressions, like happy, sad, angry, and surprised"
+    },
+    {
+      "id": "cdc-9-looks_when_called",
+      "months": 9,
+      "domain": "social",
+      "title": "Смотрит на вас, когда вы зовёте его по имени",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks when you call her name"
+    },
+    {
+      "id": "cdc-9-reacts_when_leave",
+      "months": 9,
+      "domain": "social",
+      "title": "Реагирует, когда вы уходите: смотрит вслед, тянется к вам или плачет",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Reacts when you leave (looks, reaches for you, or cries)"
+    },
+    {
+      "id": "cdc-9-smiles_laughs",
+      "months": 9,
+      "domain": "social",
+      "title": "Улыбается или смеётся, когда вы играете в «ку-ку»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Smiles or laughs when you play peek-a-boo"
+    },
+    {
+      "id": "cdc-9-makes_different",
+      "months": 9,
+      "domain": "language",
+      "title": "Издаёт много разных звуков, например «мамамама» и «бабабаба»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Makes a lot of different sounds like “mamamama” and “bababababa”"
+    },
+    {
+      "id": "cdc-9-lifts_arms",
+      "months": 9,
+      "domain": "language",
+      "title": "Поднимает руки, чтобы его взяли на руки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Lifts arms up to be picked up"
+    },
+    {
+      "id": "cdc-9-looks_objects",
+      "months": 9,
+      "domain": "cognitive",
+      "title": "Ищет предмет, который упал и исчез из поля зрения, например ложку или игрушку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks for objects when dropped out of sight (like his spoon or toy)"
+    },
+    {
+      "id": "cdc-9-bangs_two",
+      "months": 9,
+      "domain": "cognitive",
+      "title": "Стучит двумя предметами друг о друга",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Bangs two things together"
+    },
+    {
+      "id": "cdc-9-gets_sitting",
+      "months": 9,
+      "domain": "movement",
+      "title": "Самостоятельно садится",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Gets to a sitting position by herself"
+    },
+    {
+      "id": "cdc-9-moves_things",
+      "months": 9,
+      "domain": "movement",
+      "title": "Перекладывает предметы из одной руки в другую",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Moves things from one hand to her other hand"
+    },
+    {
+      "id": "cdc-9-uses_fingers",
+      "months": 9,
+      "domain": "movement",
+      "title": "Пальцами подгребает к себе еду",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Uses fingers to “rake” food towards himself"
+    },
+    {
+      "id": "cdc-9-sits_without",
+      "months": 9,
+      "domain": "movement",
+      "title": "Сидит без поддержки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/9-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Sits without support"
+    },
+    {
+      "id": "cdc-12-plays_games",
+      "months": 12,
+      "domain": "social",
+      "title": "Играет с вами, например в ладушки",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Plays games with you, like pat-a-cake"
+    },
+    {
+      "id": "cdc-12-bye_bye",
+      "months": 12,
+      "domain": "language",
+      "title": "Машет рукой на прощание",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Waves “bye-bye”"
+    },
+    {
+      "id": "cdc-12-calls_parent",
+      "months": 12,
+      "domain": "language",
+      "title": "Называет родителя «мама», «папа» или другим особым словом",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Calls a parent “mama” or “dada” or another special name"
+    },
+    {
+      "id": "cdc-12-understands_no",
+      "months": 12,
+      "domain": "language",
+      "title": "Понимает «нет»: ненадолго замирает или останавливается, когда вы это говорите",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Understands “no” (pauses briefly or stops when you say it)"
+    },
+    {
+      "id": "cdc-12-puts_something",
+      "months": 12,
+      "domain": "cognitive",
+      "title": "Кладёт предмет в ёмкость, например кубик в чашку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Puts something in a container, like a block in a cup"
+    },
+    {
+      "id": "cdc-12-looks_things",
+      "months": 12,
+      "domain": "cognitive",
+      "title": "Ищет вещи, которые вы спрятали у него на глазах, например игрушку под одеялом",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks for things he sees you hide, like a toy under a blanket"
+    },
+    {
+      "id": "cdc-12-pulls_up",
+      "months": 12,
+      "domain": "movement",
+      "title": "Встаёт, подтягиваясь за опору",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Pulls up to stand"
+    },
+    {
+      "id": "cdc-12-walks_holding",
+      "months": 12,
+      "domain": "movement",
+      "title": "Ходит, держась за мебель",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Walks, holding on to furniture"
+    },
+    {
+      "id": "cdc-12-drinks_cup",
+      "months": 12,
+      "domain": "movement",
+      "title": "Пьёт из чашки без крышки, которую вы держите",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Drinks from a cup without a lid, as you hold it"
+    },
+    {
+      "id": "cdc-12-picks_things",
+      "months": 12,
+      "domain": "movement",
+      "title": "Берёт предметы большим и указательным пальцами, например маленькие кусочки еды",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/1-year.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Picks things up between thumb and pointer finger, like small bits of food"
+    },
+    {
+      "id": "cdc-15-copies_other",
+      "months": 15,
+      "domain": "social",
+      "title": "Подражает другим детям в игре, например вынимает игрушки из коробки вслед за другим ребёнком",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Copies other children while playing, like taking toys out of a container when another child does"
+    },
+    {
+      "id": "cdc-15-shows_object",
+      "months": 15,
+      "domain": "social",
+      "title": "Показывает вам предмет, который ему нравится",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Shows you an object she likes"
+    },
+    {
+      "id": "cdc-15-claps_excited",
+      "months": 15,
+      "domain": "social",
+      "title": "Хлопает в ладоши от радости",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Claps when excited"
+    },
+    {
+      "id": "cdc-15-hugs_doll",
+      "months": 15,
+      "domain": "social",
+      "title": "Обнимает мягкую куклу или другую игрушку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Hugs stuffed doll or other toy"
+    },
+    {
+      "id": "cdc-15-shows_affection",
+      "months": 15,
+      "domain": "social",
+      "title": "Проявляет к вам нежность: обнимает, прижимается или целует",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Shows you affection (hugs, cuddles, or kisses you)"
+    },
+    {
+      "id": "cdc-15-tries_say",
+      "months": 15,
+      "domain": "language",
+      "title": "Пытается произнести одно-два слова, кроме «мама» и «папа», например «мя» вместо «мяч» или «со» вместо «собака»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Tries to say one or two words besides “mama” or “dada,” like “ba” for ball or “da” for dog"
+    },
+    {
+      "id": "cdc-15-looks_familiar",
+      "months": 15,
+      "domain": "language",
+      "title": "Смотрит на знакомый предмет, когда вы его называете",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at a familiar object when you name it"
+    },
+    {
+      "id": "cdc-15-follows_directions",
+      "months": 15,
+      "domain": "language",
+      "title": "Выполняет просьбу, сопровождаемую словами и жестом. Например, отдаёт игрушку, когда вы протягиваете руку и говорите: «Дай мне игрушку»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Follows directions given with both a gesture and words. For example, he gives you a toy when you hold out your hand and say, “Give me the toy.”"
+    },
+    {
+      "id": "cdc-15-points_help",
+      "months": 15,
+      "domain": "language",
+      "title": "Показывает пальцем, чтобы попросить что-то или получить помощь",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Points to ask for something or to get help"
+    },
+    {
+      "id": "cdc-15-tries_use",
+      "months": 15,
+      "domain": "cognitive",
+      "title": "Пытается использовать предметы по назначению, например телефон, чашку или книгу",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Tries to use things the right way, like a phone, cup, or book"
+    },
+    {
+      "id": "cdc-15-stacks_small",
+      "months": 15,
+      "domain": "cognitive",
+      "title": "Ставит друг на друга хотя бы два небольших предмета, например кубики",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Stacks at least two small objects, like blocks"
+    },
+    {
+      "id": "cdc-15-takes_steps",
+      "months": 15,
+      "domain": "movement",
+      "title": "Самостоятельно делает несколько шагов",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Takes a few steps on his own"
+    },
+    {
+      "id": "cdc-15-uses_fingers",
+      "months": 15,
+      "domain": "movement",
+      "title": "Берёт еду пальцами и подносит ко рту",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/15-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Uses fingers to feed herself some food"
+    },
+    {
+      "id": "cdc-18-moves_away",
+      "months": 18,
+      "domain": "social",
+      "title": "Отходит от вас, но оглядывается, чтобы убедиться, что вы рядом",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Moves away from you, but looks to make sure you are close by"
+    },
+    {
+      "id": "cdc-18-points_show",
+      "months": 18,
+      "domain": "social",
+      "title": "Показывает пальцем, чтобы обратить ваше внимание на что-то интересное",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Points to show you something interesting"
+    },
+    {
+      "id": "cdc-18-puts_hands",
+      "months": 18,
+      "domain": "social",
+      "title": "Протягивает руки, чтобы вы их помыли",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Puts hands out for you to wash them"
+    },
+    {
+      "id": "cdc-18-looks_pages",
+      "months": 18,
+      "domain": "social",
+      "title": "Рассматривает с вами несколько страниц книги",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at a few pages in a book with you"
+    },
+    {
+      "id": "cdc-18-helps_dress",
+      "months": 18,
+      "domain": "social",
+      "title": "Помогает одевать себя: просовывает руку в рукав или поднимает ногу",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Helps you dress him by pushing arm through sleeve or lifting up foot"
+    },
+    {
+      "id": "cdc-18-tries_words",
+      "months": 18,
+      "domain": "language",
+      "title": "Пытается произнести не менее трёх слов, кроме «мама» и «папа»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Tries to say three or more words besides “mama” or “dada”"
+    },
+    {
+      "id": "cdc-18-follows_directions",
+      "months": 18,
+      "domain": "language",
+      "title": "Выполняет простую просьбу без жестов, например отдаёт игрушку, когда вы говорите: «Дай мне»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Follows one-step directions without any gestures, like giving you the toy when you say, “Give it to me.”"
+    },
+    {
+      "id": "cdc-18-copies_chores",
+      "months": 18,
+      "domain": "cognitive",
+      "title": "Подражает вам в домашних делах, например подметает веником",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Copies you doing chores, like sweeping with a broom"
+    },
+    {
+      "id": "cdc-18-plays_toys",
+      "months": 18,
+      "domain": "cognitive",
+      "title": "Играет с игрушками простым способом, например катает машинку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Plays with toys in a simple way, like pushing a toy car"
+    },
+    {
+      "id": "cdc-18-walks_without",
+      "months": 18,
+      "domain": "movement",
+      "title": "Ходит, ни за кого и ни за что не держась",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Walks without holding on to anyone or anything"
+    },
+    {
+      "id": "cdc-18-scribbles",
+      "months": 18,
+      "domain": "movement",
+      "title": "Рисует каракули",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Scribbles"
+    },
+    {
+      "id": "cdc-18-drinks_cup",
+      "months": 18,
+      "domain": "movement",
+      "title": "Пьёт из чашки без крышки, иногда проливая",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Drinks from a cup without a lid and may spill sometimes"
+    },
+    {
+      "id": "cdc-18-feeds_himself",
+      "months": 18,
+      "domain": "movement",
+      "title": "Ест самостоятельно, беря еду пальцами",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Feeds himself with his fingers"
+    },
+    {
+      "id": "cdc-18-tries_spoon",
+      "months": 18,
+      "domain": "movement",
+      "title": "Пытается пользоваться ложкой",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Tries to use a spoon"
+    },
+    {
+      "id": "cdc-18-climbs_couch",
+      "months": 18,
+      "domain": "movement",
+      "title": "Самостоятельно залезает на диван или стул и слезает с него",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/18-months.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Climbs on and off a couch or chair without help"
+    },
+    {
+      "id": "cdc-24-notices_others",
+      "months": 24,
+      "domain": "social",
+      "title": "Замечает, когда другим больно или грустно: например, замирает или грустит, когда кто-то плачет",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Notices when others are hurt or upset, like pausing or looking sad when someone is crying"
+    },
+    {
+      "id": "cdc-24-looks-at-your-face-to-see-how-to-react-in-a-new-situation",
+      "months": 24,
+      "domain": "social",
+      "title": "Смотрит на ваше лицо, чтобы понять, как реагировать в новой ситуации",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Looks at your face to see how to react in a new situation"
+    },
+    {
+      "id": "cdc-24-points_things",
+      "months": 24,
+      "domain": "language",
+      "title": "По вашей просьбе показывает предметы на картинке, например в ответ на «Где мишка?»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Points to things in a book when you ask, like “Where is the bear?”"
+    },
+    {
+      "id": "cdc-24-says_words",
+      "months": 24,
+      "domain": "language",
+      "title": "Соединяет хотя бы два слова, например «Ещё молока»",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Says at least two words together, like “More milk.”"
+    },
+    {
+      "id": "cdc-24-points_body",
+      "months": 24,
+      "domain": "language",
+      "title": "По просьбе показывает не менее двух частей тела",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Points to at least two body parts when you ask him to show you"
+    },
+    {
+      "id": "cdc-24-uses_gestures",
+      "months": 24,
+      "domain": "language",
+      "title": "Использует жесты не только для прощания и указания: например, посылает воздушный поцелуй или кивает в знак согласия",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Uses more gestures than just waving and pointing, like blowing a kiss or nodding yes"
+    },
+    {
+      "id": "cdc-24-holds_something",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Держит предмет одной рукой и действует другой: например, держит ёмкость и снимает с неё крышку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Holds something in one hand while using the other hand; for example, holding a container and taking the lid off"
+    },
+    {
+      "id": "cdc-24-tries_switches",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Пытается пользоваться переключателями, ручками или кнопками на игрушке",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Tries to use switches, knobs, or buttons on a toy"
+    },
+    {
+      "id": "cdc-24-plays_toys",
+      "months": 24,
+      "domain": "cognitive",
+      "title": "Играет с несколькими игрушками одновременно, например кладёт игрушечную еду на игрушечную тарелку",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Plays with more than one toy at the same time, like putting toy food on a toy plate"
+    },
+    {
+      "id": "cdc-24-kicks_ball",
+      "months": 24,
+      "domain": "movement",
+      "title": "Пинает мяч",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Kicks a ball"
+    },
+    {
+      "id": "cdc-24-runs",
+      "months": 24,
+      "domain": "movement",
+      "title": "Бегает",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Runs"
+    },
+    {
+      "id": "cdc-24-walks_climbs",
+      "months": 24,
+      "domain": "movement",
+      "title": "Поднимается по нескольким ступенькам шагами, а не ползком, с помощью или без неё",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Walks (not climbs) up a few stairs with or without help"
+    },
+    {
+      "id": "cdc-24-eats_spoon",
+      "months": 24,
+      "domain": "movement",
+      "title": "Ест ложкой",
+      "sourceURL": "https://www.cdc.gov/act-early/milestones/2-years.html",
+      "sourceVersion": "cdc-2026-10-10",
+      "sourceTitle": "Eats with a spoon"
+    }
+  ]
+}
