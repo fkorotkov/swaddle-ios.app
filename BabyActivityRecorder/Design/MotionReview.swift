@@ -111,13 +111,18 @@
                   occurredAt: now.addingTimeInterval(-Double(index * 18000 + 4500)),
                   authorID: alex.id, payload: .diaper(Diaper(pee: true, poo: index == 0)))))
           }
-          for (day, grams) in [(20, 3360), (16, 3290), (12, 3420), (7, 3600), (0, 3860)] {
-            let weight = has("--growth-comparisons") && day == 0 ? 4180 : grams + (has("--store-listing") ? 1500 : 0)
+          // Marketing examples use a steady, fictional series near the middle
+          // of the WHO reference. Keep the newborn QA scenarios independent.
+          let weights = has("--store-listing")
+            ? [(20, 5140), (16, 5280), (12, 5450), (7, 5620), (0, 5830)]
+            : [(20, 3360), (16, 3290), (12, 3420), (7, 3600), (0, 3860)]
+          for (day, grams) in weights {
+            let weight = has("--growth-comparisons") && day == 0 ? 4180 : grams
             try store.save(
               .activity(
                 Activity(
                   familyID: child.familyID, childID: child.id,
-                  occurredAt: now.addingTimeInterval(-Double(day * 86400 + 3600)),
+                  occurredAt: now.addingTimeInterval(-Double(day * 86400 + (has("--store-listing") ? 0 : 3600))),
                   authorID: store.caregiverID, payload: .weight(
                     grams: Decimal(has("--growth-transition") ? weight + 3500 : weight), unit: "kg")))
             )
