@@ -8,6 +8,7 @@ struct WeightChart: View {
   let showTable: Bool
   let canEditProfile: Bool
   let editProfile: () -> Void
+  @Environment(\.careWideLayout) private var wide
   @State private var selectedDate: Date?
   @Environment(\.babyPalette) private var palette
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -39,21 +40,26 @@ struct WeightChart: View {
         VStack(alignment: .leading, spacing: 18) {
           Text("Growing, at their pace").font(LogStyle.heading(.title2))
           if let latest = series.measurements.last {
-            readout(selected ?? latest)
-            if let comparison = (selected ?? latest).whoAgeComparison {
-              WeightAgeComparisonView(comparison: comparison)
-            }
-            if let unavailable = (selected ?? latest).unavailable {
-              Text(unavailable).font(.subheadline).foregroundStyle(LogStyle.muted)
-                .fixedSize(horizontal: false, vertical: true)
-            }
-            if !showTable {
-              plot
-              if !series.curves.isEmpty {
-                WeightReferenceGuide()
+            CareChartColumns(readoutFirstWhenCompact: true, showsPlot: !showTable) {
+              if !showTable {
+                plot
+                if !series.curves.isEmpty {
+                  WeightReferenceGuide()
+                }
+                Label("Tap a measurement for its age and percentiles", systemImage: "hand.tap")
+                  .font(.caption).foregroundStyle(LogStyle.muted)
               }
-              Label("Tap a measurement for its age and percentiles", systemImage: "hand.tap")
-                .font(.caption).foregroundStyle(LogStyle.muted)
+            } detail: {
+              VStack(alignment: .leading, spacing: 18) {
+                readout(selected ?? latest)
+                if let comparison = (selected ?? latest).whoAgeComparison {
+                  WeightAgeComparisonView(comparison: comparison)
+                }
+                if let unavailable = (selected ?? latest).unavailable {
+                  Text(unavailable).font(.subheadline).foregroundStyle(LogStyle.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+                }
+              }
             }
           } else {
             Text("No weight entries in this period.").foregroundStyle(LogStyle.muted)
@@ -198,7 +204,7 @@ struct WeightChart: View {
     .chartDateSelection($selectedDate, byDay: false)
     // Rebuild chart scales on a unit change; selection stays in the parent readout.
     .id(unit)
-    .frame(height: 240).accessibilityLabel("Weight and growth reference percentiles")
+    .frame(height: wide ? 340 : 240).accessibilityLabel("Weight and growth reference percentiles")
   }
 
   private func readout(_ point: WeightGrowthSeries.Measurement) -> some View {

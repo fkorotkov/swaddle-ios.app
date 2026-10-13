@@ -57,11 +57,24 @@ struct MilestonePersistenceTests {
             skillID: skill.id, sourceVersion: skill.sourceVersion, skillTitle: skill.title,
             status: .unsure, authorID: store.caregiverID)
         try store.save(.milestone(value))
-        let parents = Set(try #require(store.snapshot.record(value.id)).heads.map(\.id))
+        let draft = MilestoneCheckInDraft(route: .init(child: child, skill: skill, observation: value), snapshot: store.snapshot)
+        #expect(!draft.isDirty)
+        let commandID = draft.commandID
+        draft.note = "First device correction"
+        draft.firstDate = Date(timeIntervalSince1970: 1_700_000_000)
+        draft.includeDate = true
+        draft.status = .seen
+        #expect(draft.isDirty)
         value.note = "Second device correction"
         try store.save(.milestone(value))
-        value.note = "First device correction"
-        try store.save(.milestone(value), parentIDs: parents)
+        // Both display columns use this same draft. A refresh must not reseed its
+        // input or move its opening heads forward to the other caregiver's edit.
+        #expect(draft.note == "First device correction")
+        #expect(draft.commandID == commandID)
+        value.note = draft.note
+        value.status = try #require(draft.status)
+        value.firstNoticedAt = draft.firstDate
+        try store.save(.milestone(value), parentIDs: draft.parents, commandID: draft.commandID)
         #expect(store.snapshot.record(value.id)?.hasConflict == true)
         #expect(store.snapshot.record(value.id)?.heads.count == 2)
         #expect(store.history(for: value.id).count == 3)

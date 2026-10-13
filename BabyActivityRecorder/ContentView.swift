@@ -50,12 +50,10 @@ struct ContentView: View {
                         TrendsView(store: store, settingsPresentation: $showingSettings)
                     }
                     Tab("Milestones", systemImage: "leaf.fill", value: 2) {
-                        NavigationStack {
-                            MilestoneJourneyView(store: store, settingsPresentation: $showingSettings,
-                                                 checkpointRequest: milestoneRequest)
-                                .environment(\.calendar, familyCalendar)
-                                .environment(\.timeZone, familyCalendar.timeZone)
-                        }
+                        MilestoneJourneyView(store: store, settingsPresentation: $showingSettings,
+                                             checkpointRequest: milestoneRequest)
+                            .environment(\.calendar, familyCalendar)
+                            .environment(\.timeZone, familyCalendar.timeZone)
                     }
                 }
             }

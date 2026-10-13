@@ -31,7 +31,8 @@ struct PumpingTrendsView: View {
             }
             let days = LogAnalytics.pumpingDays(sessions: store.snapshot.pumps, familyID: family.id,
                                                motherID: mother.id, count: dayCount, now: end, timeZone: timeZone)
-            DailyPumpingChart(days: days, caregiverName: mother.name, unit: store.volumeUnit, showTable: showTable)
+            DailyPumpingChart(days: days, caregiverName: mother.name, unit: store.volumeUnit, showTable: showTable,
+                sessions: store.snapshot.pumps.filter { $0.motherID == mother.id && $0.familyID == family.id })
                 .id(mother.id)
             NavigationLink { PumpHistoryView(store: store, mother: mother) } label: {
                 Label("All pumping sessions", systemImage: "list.bullet")
@@ -52,6 +53,8 @@ struct DailyPumpingChart: View {
     let caregiverName: String
     let unit: VolumeUnit
     let showTable: Bool
+    var sessions: [PumpSession] = []
+    @Environment(\.careWideLayout) private var wide
     @State private var selectedDate: Date?
     @Environment(\.calendar) private var calendar
     @Environment(\.dynamicTypeSize) private var typeSize
@@ -117,7 +120,7 @@ struct DailyPumpingChart: View {
                                 AxisValueLabel(format: .dateTime.month(.abbreviated).day())
                             }
                         }
-                        .chartDateSelection($selectedDate).frame(height: 220)
+                        .chartDateSelection($selectedDate).frame(height: wide ? 340 : 220)
                         .accessibilityLabel("Daily pumped volume for \(caregiverName)")
                         .chartSelectionDetails(
                             date: selectedDay?.date,
@@ -126,7 +129,12 @@ struct DailyPumpingChart: View {
                             detail: selectedDay.map { $0.sessions == 0
                                 ? String(localized: "No pumping recorded")
                                 : String(localized: "\($0.sessions) sessions") + " · " + caregiverName } ?? "",
-                            selection: $selectedDate)
+                            selection: $selectedDate,
+                            records: selectedDay.map { day in
+                                sessions.filter { calendar.isDate($0.occurredAt, inSameDayAs: day.date) }
+                                    .sorted { $0.occurredAt < $1.occurredAt }
+                                    .map { ChartSelectionRecord(id: $0.id, date: $0.occurredAt, value: unit.chartQuantity($0.totalML)) }
+                            } ?? [])
 
                     }
                 }

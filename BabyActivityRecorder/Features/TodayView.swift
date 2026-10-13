@@ -25,6 +25,7 @@ struct TodayView: View {
   private enum Destination: Hashable { case siri, overlappingFeeds, pumping(UUID) }
   @State private var navigationPath: [Destination] = []
   @State private var scrollPosition = ScrollPosition(edge: .top)
+  @State private var overviewPosition = ScrollPosition(edge: .top)
   @State private var route: LogRoute?
   @State private var calendarDay = false
   @State private var now = Date.now
@@ -83,118 +84,46 @@ struct TodayView: View {
         LogRules.overlappingNursing(in: entries, childID: $0.id, now: now)
       } ?? []
     NavigationStack(path: $navigationPath) {
-      ScrollView {
-        VStack(alignment: .leading, spacing: 20) {
-          identity
-          if let child {
-            VStack(spacing: 16) {
-              summaryControls
-              SummaryCards(
-                summary: ActivitySummary(
-                  activities: entries, childID: child.id, start: start, end: now),
-                unit: store.volumeUnit,
-                lastBottleAt: entries.filter { $0.payload.kind == .bottle && $0.occurredAt <= now }.map(\.occurredAt).max()
-              )
-              .modifier(
-                FeedingReportContext(
-                  store: store, child: child, period: calendarDay ? .today : .last24Hours, now: now))
-            }.modifier(CocoonSummarySurface(saveID: saveMotionID))
-            if let pumpingSummary {
-              NavigationLink(value: Destination.pumping(pumpingSummary.caregiver.id)) {
-                PumpingSummaryCard(summary: pumpingSummary, unit: store.volumeUnit)
+      AdaptiveCarePage { wide in
+        Group {
+          if wide, let child {
+            HStack(alignment: .top, spacing: 24) {
+              ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                  identity
+                  overview(child: child, entries: entries, overlapping: overlapping)
+                }.padding(.top, 8).padding(.bottom, 24)
               }
-              .buttonStyle(.plain)
-              .accessibilityHint("Opens your pumping history")
-              .accessibilityIdentifier("today.pumpingSummary")
-            }
-            quickActions(child)
-            quickDiapers(child)
-            if !overlapping.isEmpty {
-              NavigationLink(value: Destination.overlappingFeeds) {
-                Label(
-                  "Some breastfeeding sessions overlap. Review the entries.",
-                  systemImage: "clock.badge.questionmark"
-                )
-                .font(.callout).frame(maxWidth: .infinity, alignment: .leading)
+              .scrollPosition($overviewPosition)
+              .refreshable { await store.syncCloud() }
+              .frame(maxWidth: .infinity)
+              ScrollView {
+                timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
+                  .padding(.top, 8).padding(.bottom, 24)
               }
-            }
-            ForEach(entries.filter { !$0.payload.isComplete }) { activity in
-              Button {
-                show(activity)
-              } label: {
-                LogCard(color: palette.surface) {
-                  HStack {
-                    Image(systemName: "timer").font(.title2)
-                    VStack(alignment: .leading, spacing: 5) {
-                      Text("Feeding in progress").font(.headline)
-                      Text(activity.detail(unit: store.volumeUnit, at: now)).font(.subheadline)
-                    }
-                    Spacer()
-                    Image(systemName: "chevron.forward")
-                  }
-                }
-              }.buttonStyle(.plain)
-            }
-            HStack {
-              Text("The little moments").font(LogStyle.heading(.title3)).accessibilityAddTraits(.isHeader)
-              Spacer()
-              Menu {
-                moreActivities(child)
-              } label: {
-                Label("More", systemImage: "plus").font(.caption.weight(.semibold))
-                  .frame(minWidth: 44, minHeight: 44).contentShape(.rect)
-              }.accessibilityLabel("More activities").disabled(!store.canEdit)
-            }
-            if recentCare.isEmpty {
-              ContentUnavailableView(
-                "A fresh page", systemImage: "leaf",
-                description: Text(
-                  "Your first entry will appear here. Start with whatever just happened."))
-            } else {
-              let searchDocuments =
-                store.siriDiscoveryEnabled
-                ? Dictionary(
-                  uniqueKeysWithValues: CareSearchCatalog.documents(
-                    in: store.snapshot, recordIDs: Set(visibleCare.map(\.id))
-                  ).map {
-                    ($0.key.recordID, $0)
-                  }) : [:]
-              LazyVStack(spacing: 0) {
-                ForEach(dayGroups) { group in
-                  VStack(alignment: .leading, spacing: 0) {
-                    if group.date != calendar.startOfDay(for: now) {
-                      Text(dayTitle(group.date)).font(.subheadline.weight(.semibold))
-                        .padding(.top, 14).padding(.bottom, 4)
-                        .accessibilityAddTraits(.isHeader)
-                    }
-                    ForEach(group.entries) { entry in
-                      VStack(spacing: 0) {
-                        Button {
-                          show(entry)
-                        } label: {
-                          CompactCareRow(
-                            entry: entry, snapshot: store.snapshot, unit: store.volumeUnit,
-                            connectsToNext: entry.id != group.entries.last?.id)
-                        }.buttonStyle(.plain)
-                          .modifier(
-                            CareRecordContext(document: searchDocuments[entry.id], store: store))
-                        if typeSize.isAccessibilitySize { Divider() }
-                      }.transition(reduceMotion ? .opacity : .opacity.combined(with: .offset(y: -6)))
-                    }
-                  }
-                }
-              }.animation(reduceMotion ? nil : .smooth(duration: 0.28), value: store.undoID)
-            }
+              .scrollPosition($scrollPosition)
+              .refreshable { await store.syncCloud() }
+              .frame(maxWidth: .infinity)
+            }.padding(.horizontal, 22).frame(maxWidth: 1240)
           } else {
-            ContentUnavailableView(
-              "Add a child", systemImage: "person.crop.circle.badge.plus",
-              description: Text("Open Settings to add a child to your shared log."))
+            ScrollView {
+              VStack(alignment: .leading, spacing: 20) {
+                identity
+                if let child {
+                  overview(child: child, entries: entries, overlapping: overlapping)
+                  timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
+                } else {
+                  ContentUnavailableView("Add a child", systemImage: "person.crop.circle.badge.plus",
+                    description: Text("Open Settings to add a child to your shared log."))
+                }
+              }.padding(.horizontal, 22).padding(.top, 8).padding(.bottom, 32)
+                .frame(maxWidth: 640).frame(maxWidth: .infinity)
+            }
+            .scrollPosition($scrollPosition)
+            .refreshable { await store.syncCloud() }
           }
-        }.padding(.horizontal, 22).padding(.top, 8)
-          .padding(.bottom, typeSize.isAccessibilitySize ? 180 : 96)
+        }
       }
-      .scrollPosition($scrollPosition)
-      .refreshable { await store.syncCloud() }
       .background(LogStyle.canvas).navigationTitle("").navigationBarTitleDisplayMode(.inline)
       .environment(\.calendar, calendar).environment(\.timeZone, calendar.timeZone)
       .toolbarVisibility(.hidden, for: .navigationBar)
@@ -321,8 +250,115 @@ struct TodayView: View {
       calendarDay = false
       now = .now
       scrollPosition.scrollTo(edge: .top)
+      overviewPosition.scrollTo(edge: .top)
     }
   }
+  @ViewBuilder private func overview(child: ChildProfile, entries: [Activity], overlapping: Set<UUID>) -> some View {
+    VStack(spacing: 16) {
+      summaryControls
+      SummaryCards(
+        summary: ActivitySummary(
+          activities: entries, childID: child.id, start: start, end: now),
+        unit: store.volumeUnit,
+        lastBottleAt: entries.filter { $0.payload.kind == .bottle && $0.occurredAt <= now }.map(\.occurredAt).max()
+      )
+      .modifier(
+        FeedingReportContext(
+          store: store, child: child, period: calendarDay ? .today : .last24Hours, now: now))
+    }.modifier(CocoonSummarySurface(saveID: saveMotionID))
+    if let pumpingSummary {
+      NavigationLink(value: Destination.pumping(pumpingSummary.caregiver.id)) {
+        PumpingSummaryCard(summary: pumpingSummary, unit: store.volumeUnit)
+      }
+      .buttonStyle(.plain)
+      .accessibilityHint("Opens your pumping history")
+      .accessibilityIdentifier("today.pumpingSummary")
+    }
+    quickActions(child)
+    quickDiapers(child)
+    if !overlapping.isEmpty {
+      NavigationLink(value: Destination.overlappingFeeds) {
+        Label(
+          "Some breastfeeding sessions overlap. Review the entries.",
+          systemImage: "clock.badge.questionmark"
+        )
+        .font(.callout).frame(maxWidth: .infinity, alignment: .leading)
+      }
+    }
+    ForEach(entries.filter { !$0.payload.isComplete }) { activity in
+      Button {
+        show(activity)
+      } label: {
+        LogCard(color: palette.surface) {
+          HStack {
+            Image(systemName: "timer").font(.title2)
+            VStack(alignment: .leading, spacing: 5) {
+              Text("Feeding in progress").font(.headline)
+              Text(activity.detail(unit: store.volumeUnit, at: now)).font(.subheadline)
+            }
+            Spacer()
+            Image(systemName: "chevron.forward")
+          }
+        }
+      }.buttonStyle(.plain)
+    }
+  }
+
+  private func timeline(child: ChildProfile, recentCare: [RecentCareEntry], visibleCare: [RecentCareEntry], dayGroups: [RecentCareDay]) -> some View {
+    VStack(alignment: .leading, spacing: 20) {
+      HStack {
+        Text("The little moments").font(LogStyle.heading(.title3)).accessibilityAddTraits(.isHeader)
+        Spacer()
+        Menu {
+          moreActivities(child)
+        } label: {
+          Label("More", systemImage: "plus").font(.caption.weight(.semibold))
+            .frame(minWidth: 44, minHeight: 44).contentShape(.rect)
+        }.accessibilityLabel("More activities").disabled(!store.canEdit)
+      }
+      if recentCare.isEmpty {
+        ContentUnavailableView(
+          "A fresh page", systemImage: "leaf",
+          description: Text(
+            "Your first entry will appear here. Start with whatever just happened."))
+      } else {
+        let searchDocuments =
+          store.siriDiscoveryEnabled
+          ? Dictionary(
+            uniqueKeysWithValues: CareSearchCatalog.documents(
+              in: store.snapshot, recordIDs: Set(visibleCare.map(\.id))
+            ).map {
+              ($0.key.recordID, $0)
+            }) : [:]
+        LazyVStack(spacing: 0) {
+          ForEach(dayGroups) { group in
+            VStack(alignment: .leading, spacing: 0) {
+              if group.date != calendar.startOfDay(for: now) {
+                Text(dayTitle(group.date)).font(.subheadline.weight(.semibold))
+                  .padding(.top, 14).padding(.bottom, 4)
+                  .accessibilityAddTraits(.isHeader)
+              }
+              ForEach(group.entries) { entry in
+                VStack(spacing: 0) {
+                  Button {
+                    show(entry)
+                  } label: {
+                    CompactCareRow(
+                      entry: entry, snapshot: store.snapshot, unit: store.volumeUnit,
+                      connectsToNext: entry.id != group.entries.last?.id)
+                  }.buttonStyle(.plain)
+                    .modifier(
+                      CareRecordContext(document: searchDocuments[entry.id], store: store))
+                  if typeSize.isAccessibilitySize { Divider() }
+                }.transition(reduceMotion ? .opacity : .opacity.combined(with: .offset(y: -6)))
+              }
+            }
+          }
+        }.animation(reduceMotion ? nil : .smooth(duration: 0.28), value: store.undoID)
+      }
+    }.scrollTargetLayout()
+  }
+
   private func presentBirthdayIfNeeded() {
     guard scenePhase == .active, celebrationCanPlay, store.toast == nil else { return }
     guard let eligibleBirthday else { birthday = nil; return }
@@ -385,6 +421,7 @@ struct TodayView: View {
       SettingsButton(store: store, presentation: settingsPresentation)
         .buttonStyle(.plain).logGlass(in: .circle, interactive: true)
     }.foregroundStyle(LogStyle.forest)
+      .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
   }
   private var summaryControls: some View {
     ViewThatFits(in: .horizontal) {

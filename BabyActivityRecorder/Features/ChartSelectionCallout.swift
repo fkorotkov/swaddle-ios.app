@@ -1,11 +1,18 @@
 import Charts
 import SwiftUI
 
+struct ChartSelectionRecord: Identifiable {
+  let id: UUID
+  let date: Date
+  let value: String
+}
+
 struct ChartSelectionCallout: View {
   let date: Date
   let value: String
   let detail: String
   var includesTime = false
+  @Environment(\.careWideLayout) private var wide
   @Binding var selection: Date?
 
   var body: some View {
@@ -30,10 +37,10 @@ struct ChartSelectionCallout: View {
         .buttonStyle(.plain)
         .accessibilityIdentifier("chart.details.dismiss")
       }
-      Text(value).font(.system(.title3, design: .rounded, weight: .semibold)).monospacedDigit()
+      Text(value).font(.system(wide ? .largeTitle : .title3, design: .rounded, weight: .semibold)).monospacedDigit()
         .logValueTransition(value: value)
       if !detail.isEmpty {
-        Text(detail).font(.caption).foregroundStyle(LogStyle.muted).lineLimit(3)
+        Text(detail).font(wide ? .subheadline : .caption).foregroundStyle(LogStyle.muted).fixedSize(horizontal: false, vertical: true)
       }
     }
     .frame(maxWidth: .infinity, alignment: .leading)
@@ -44,15 +51,16 @@ struct ChartSelectionCallout: View {
 }
 
 extension View {
-  /// Keep precise values beneath the plot, in a space reserved before selection.
+  /// Reserve selection space beside wide charts and beneath compact charts.
   func chartSelectionDetails(
     date: Date?, value: String, detail: String, includesTime: Bool = false,
-    selection: Binding<Date?>
+    selection: Binding<Date?>, records: [ChartSelectionRecord] = []
   ) -> some View {
-    VStack(alignment: .leading, spacing: 16) {
+    CareChartColumns {
       self
+    } detail: {
       ChartSelectionReadout(date: date, value: value, detail: detail,
-                            includesTime: includesTime, selection: selection)
+                            includesTime: includesTime, selection: selection, records: records)
     }
   }
 
@@ -73,26 +81,45 @@ private struct ChartSelectionReadout: View {
   let detail: String
   let includesTime: Bool
   @Binding var selection: Date?
+  var records: [ChartSelectionRecord] = []
+  @Environment(\.careWideLayout) private var wide
   @ScaledMetric(relativeTo: .subheadline) private var reservedHeight = 156
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   var body: some View {
-    VStack(alignment: .leading, spacing: 0) {
-      Divider().padding(.bottom, 8)
+    Group {
+      if wide {
+        ScrollView { readout }.frame(height: 340)
+      } else {
+        readout.frame(minHeight: reservedHeight, alignment: .topLeading)
+      }
+    }
+    .animation(reduceMotion ? nil : .easeOut(duration: 0.16), value: date != nil)
+    .sensoryFeedback(.selection, trigger: date) { _, new in new != nil }
+  }
+
+  private var readout: some View {
+    VStack(alignment: .leading, spacing: 16) {
+      if !wide { Divider() }
       if let date {
         ChartSelectionCallout(date: date, value: value, detail: detail,
                               includesTime: includesTime, selection: $selection)
-        .transition(.opacity)
+        if wide {
+          ForEach(records) { record in
+            Divider()
+            VStack(alignment: .leading, spacing: 4) {
+              Text(record.date, format: .dateTime.hour().minute())
+                .font(.caption).foregroundStyle(LogStyle.muted)
+              Text(record.value).font(.subheadline.weight(.medium))
+                .fixedSize(horizontal: false, vertical: true)
+            }.accessibilityElement(children: .combine)
+          }
+        }
       } else {
         Label(includesTime ? String(localized: "Tap a measurement for exact values") : String(localized: "Tap a day for exact values"), systemImage: "hand.tap")
-          .font(.subheadline).foregroundStyle(LogStyle.muted)
-          .padding(.top, 16)
-        .transition(.opacity)
+          .font(.subheadline).foregroundStyle(LogStyle.muted).padding(.top, 16)
       }
-      Spacer(minLength: 0)
-    }.frame(height: reservedHeight, alignment: .topLeading)
-      .animation(reduceMotion ? nil : .easeOut(duration: 0.16), value: date != nil)
-      .sensoryFeedback(.selection, trigger: date) { _, new in new != nil }
+    }.frame(maxWidth: .infinity, alignment: .leading)
   }
 }
 

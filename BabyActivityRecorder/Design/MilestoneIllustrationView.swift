@@ -7,16 +7,18 @@ struct MilestoneIllustrationView: View {
     let skill: MilestoneSkill
     var caregiverSex: CaregiverSex?
     var showsStillImage = false
+    var maximumArtworkWidth: CGFloat = 420
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.scenePhase) private var scenePhase
     @State private var visible = false
     @State private var userPaused = false
     @State private var playback: LottiePlaybackMode
 
-    init(skill: MilestoneSkill, caregiverSex: CaregiverSex? = nil, showsStillImage: Bool = false) {
+    init(skill: MilestoneSkill, caregiverSex: CaregiverSex? = nil, showsStillImage: Bool = false, maximumArtworkWidth: CGFloat = 420) {
         self.skill = skill
         self.caregiverSex = caregiverSex
         self.showsStillImage = showsStillImage
+        self.maximumArtworkWidth = maximumArtworkWidth
         _playback = State(initialValue: .paused(at: .progress(0)))
     }
 
@@ -40,7 +42,7 @@ struct MilestoneIllustrationView: View {
                     .playbackMode(reduceMotion || showsStillImage ? .paused(at: .frame(poster)) : playback)
                     .backgroundBehavior(.pause)
                     .aspectRatio(1.5, contentMode: .fit)
-                    .frame(maxWidth: 420)
+                    .frame(maxWidth: maximumArtworkWidth)
                     .frame(maxWidth: .infinity)
                     .accessibilityLabel(MilestoneIllustrationCatalog.descriptions[skill.id] ?? skill.title)
                     .accessibilityIdentifier("milestone-illustration-\(skill.id)")

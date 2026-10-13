@@ -10,6 +10,7 @@ struct MeasurementChart: View {
   let canEdit: Bool
   let editProfile: () -> Void
   let addMeasurement: () -> Void
+  @Environment(\.careWideLayout) private var wide
   @State private var selectedDate: Date?
   @Environment(\.babyPalette) private var palette
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -48,24 +49,29 @@ struct MeasurementChart: View {
           }
           if let latest = series.measurements.last {
             let point = selected ?? latest
-            readout(point)
-            if let comparison = point.whoAgeComparison {
-              AgePercentileComparisonView(reference: comparison.reference,
-                actualPercentile: comparison.actual.percentile, actualDays: comparison.actual.days,
-                correctedPercentile: comparison.corrected?.percentile, correctedDays: comparison.correctedDays,
-                measurementName: metric.comparisonName)
-            }
-            if let unavailable = point.unavailable {
-              Text(unavailable).font(.subheadline).foregroundStyle(LogStyle.muted)
-                .fixedSize(horizontal: false, vertical: true)
-            }
-            if !showTable {
-              plot
-              if !series.curves.isEmpty {
-                WeightReferenceGuide()
+            CareChartColumns(readoutFirstWhenCompact: true, showsPlot: !showTable) {
+              if !showTable {
+                plot
+                if !series.curves.isEmpty {
+                  WeightReferenceGuide()
+                }
+                Label("Tap a measurement for its age and percentiles", systemImage: "hand.tap")
+                  .font(.caption).foregroundStyle(LogStyle.muted)
               }
-              Label("Tap a measurement for its age and percentiles", systemImage: "hand.tap")
-                .font(.caption).foregroundStyle(LogStyle.muted)
+            } detail: {
+              VStack(alignment: .leading, spacing: 18) {
+                readout(point)
+                if let comparison = point.whoAgeComparison {
+                  AgePercentileComparisonView(reference: comparison.reference,
+                    actualPercentile: comparison.actual.percentile, actualDays: comparison.actual.days,
+                    correctedPercentile: comparison.corrected?.percentile, correctedDays: comparison.correctedDays,
+                    measurementName: metric.comparisonName)
+                }
+                if let unavailable = point.unavailable {
+                  Text(unavailable).font(.subheadline).foregroundStyle(LogStyle.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+                }
+              }
             }
           } else {
             Text("No \(metric.comparisonName) entries in this period.").foregroundStyle(LogStyle.muted)
@@ -152,7 +158,7 @@ struct MeasurementChart: View {
       }
     }
     .chartDateSelection($selectedDate, byDay: false)
-    .frame(height: 240).accessibilityLabel("\(metric.title) and growth reference percentiles")
+    .frame(height: wide ? 340 : 240).accessibilityLabel("\(metric.title) and growth reference percentiles")
   }
   private func readout(_ point: MeasurementGrowthSeries.Measurement) -> some View {
     HStack(alignment: .top, spacing: 8) {

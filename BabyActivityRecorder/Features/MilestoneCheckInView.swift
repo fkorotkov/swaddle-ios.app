@@ -4,45 +4,30 @@ struct MilestoneCheckInView: View {
     let store: LogStore
     let route: MilestoneCheckInRoute
     let onSave: (UUID) -> Void
-    @State private var status: MilestoneStatus?
-    @State private var note: String
-    @State private var noteExpanded: Bool
-    @State private var includeDate: Bool
-    @State private var firstDate: Date
-    @State private var concern: Bool
+    @State private var draft: MilestoneCheckInDraft
     @State private var error: String?
     @State private var discard = false
-    @State private var commandID = UUID()
+    private let onClose: (() -> Void)?
     @FocusState private var noteFocused: Bool
     @Environment(\.dismiss) private var dismiss
     @Environment(\.calendar) private var calendar
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.colorScheme) private var scheme
-    private let parents: Set<UUID>?
+    @Environment(\.careWideLayout) private var wide
 
-    // A sheet owns one draft; remote changes do not replace unsaved input. The
+    // A check-in owns one draft; remote changes do not replace unsaved input. The
     // opening revision heads are preserved so simultaneous corrections conflict.
-    init(store: LogStore, route: MilestoneCheckInRoute, onSave: @escaping (UUID) -> Void) {
-        self.store = store; self.route = route; self.onSave = onSave
+    init(store: LogStore, route: MilestoneCheckInRoute, draft: MilestoneCheckInDraft? = nil, onClose: (() -> Void)? = nil, onSave: @escaping (UUID) -> Void) {
+        self.store = store; self.route = route; self.onSave = onSave; self.onClose = onClose
         #if DEBUG && targetEnvironment(simulator)
         let reviewStatus: MilestoneStatus? = MotionReview.has("--milestone-seen") ? .seen : MotionReview.has("--milestone-unsure") ? .unsure : nil
         #else
         let reviewStatus: MilestoneStatus? = nil
         #endif
-        status = route.observation?.status ?? reviewStatus
-        note = route.observation?.note ?? ""
-        noteExpanded = !(route.observation?.note.isEmpty ?? true)
-        includeDate = route.observation?.firstNoticedAt != nil || reviewStatus == .seen
-        firstDate = route.observation?.firstNoticedAt ?? route.observation?.recordedAt ?? .now
-        concern = route.observation?.hasConcern ?? false
-        parents = route.observation.map { Set(store.snapshot.record($0.id)?.heads.map(\.id) ?? []) }
+        _draft = State(initialValue: draft ?? MilestoneCheckInDraft(route: route, snapshot: store.snapshot, initialStatus: reviewStatus))
     }
-    private var isDirty: Bool {
-        status != route.observation?.status || note != (route.observation?.note ?? "")
-            || concern != (route.observation?.hasConcern ?? false)
-            || (status == .seen && includeDate ? firstDate : nil) != route.observation?.firstNoticedAt
-    }
+    private var isDirty: Bool { draft.isDirty }
     private var familyObservations: [MilestoneObservation] {
         store.snapshot.milestoneObservations.filter { $0.childID == route.child.id && $0.skillID == route.skill.id }
     }
@@ -56,9 +41,9 @@ struct MilestoneCheckInView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 22) {
+                VStack(alignment: .leading, spacing: wide ? 14 : 22) {
                     heading
-                    MilestoneIllustrationView(skill: route.skill, caregiverSex: illustrationCaregiverSex)
+                    MilestoneIllustrationView(skill: route.skill, caregiverSex: illustrationCaregiverSex, maximumArtworkWidth: wide ? 260 : 420)
                     if let window = route.skill.motorWindow { motorWindow(window) }
                     else if let months = route.skill.months {
                         Text("From CDC’s \(MilestoneCatalog.title(at: months).lowercased()) checklist. These are skills most children (75% or more) show by that age.")
@@ -106,12 +91,13 @@ struct MilestoneCheckInView: View {
                     .frame(maxWidth: 600).frame(maxWidth: .infinity)
             }.scrollDismissesKeyboard(.interactively)
                 .background(LogStyle.canvas)
-                .navigationTitle(route.observation == nil ? String(localized: "Check-in for \(route.child.name)") : String(localized: "Observation"))
+                .navigationTitle(onClose != nil || route.observation == nil ? String(localized: "Check-in for \(route.child.name)") : String(localized: "Observation"))
                 .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden(onClose != nil)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button(store.canEdit ? String(localized: "Cancel") : String(localized: "Done")) {
-                            if isDirty { discard = true } else { dismiss() }
+                            if isDirty { discard = true } else { close() }
                         }
                     }
                     ToolbarItemGroup(placement: .keyboard) {
@@ -120,14 +106,14 @@ struct MilestoneCheckInView: View {
                 }
                 .safeAreaInset(edge: .bottom, spacing: 0) {
                     if store.canEdit {
-                        PrimaryButton(title: route.observation == nil ? String(localized: "Save observation") : String(localized: "Save changes"), disabled: status == nil || note.count > 2000) { save() }
+                        PrimaryButton(title: route.observation == nil ? String(localized: "Save observation") : String(localized: "Save changes"), disabled: draft.status == nil || draft.note.count > 2000) { save() }
                             .frame(maxWidth: 556).padding(.horizontal, 22).padding(.vertical, 14)
                             .frame(maxWidth: .infinity).background(.bar)
                     }
                 }
                 .interactiveDismissDisabled(isDirty)
                 .confirmationDialog("Discard your changes?", isPresented: $discard, titleVisibility: .visible) {
-                    Button("Discard changes", role: .destructive) { dismiss() }
+                    Button("Discard changes", role: .destructive) { close() }
                     Button("Keep editing", role: .cancel) {}
                 }
         }
@@ -135,7 +121,7 @@ struct MilestoneCheckInView: View {
 
     private var heading: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(route.observation?.localizedTitle ?? route.skill.localizedTitle).font(LogStyle.heading(.largeTitle))
+            Text(route.observation?.localizedTitle ?? route.skill.localizedTitle).font(LogStyle.heading(wide ? .title2 : .largeTitle))
                 .tracking(-0.5).fixedSize(horizontal: false, vertical: true)
             Label("\(route.skill.publisher) · \(route.skill.domain.title)", systemImage: route.skill.domain.symbol)
                 .font(.caption.weight(.medium)).foregroundStyle(LogStyle.forest)
@@ -154,57 +140,63 @@ struct MilestoneCheckInView: View {
     private var observationForm: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Your observation").font(.headline)
-            VStack(spacing: 8) {
-                ForEach(MilestoneStatus.allCases) { choice in statusButton(choice) }
-            }
-            if status == .seen {
+            if wide && !typeSize.isAccessibilitySize {
+                LazyVGrid(columns: [.init(.flexible()), .init(.flexible())], spacing: 8) {
+                    ForEach(MilestoneStatus.allCases) { choice in statusButton(choice) }
+                }
+            } else {
                 VStack(spacing: 8) {
-                    Toggle("Add first-noticed date", isOn: $includeDate).font(.subheadline).frame(minHeight: 44)
-                    if includeDate {
-                        LogDatePicker(title: String(localized: "First noticed"), selection: $firstDate, range: dateRange, displayedComponents: .date)
+                    ForEach(MilestoneStatus.allCases) { choice in statusButton(choice) }
+                }
+            }
+            if draft.status == .seen {
+                VStack(spacing: 8) {
+                    Toggle("Add first-noticed date", isOn: $draft.includeDate).font(.subheadline).frame(minHeight: 44)
+                    if draft.includeDate {
+                        LogDatePicker(title: String(localized: "First noticed"), selection: $draft.firstDate, range: dateRange, displayedComponents: .date)
                             .transition(.opacity)
                     }
-                }.animation(reduceMotion ? nil : .smooth(duration: 0.22), value: includeDate)
+                }.animation(reduceMotion ? nil : .smooth(duration: 0.22), value: draft.includeDate)
             }
-            DisclosureGroup(isExpanded: $noteExpanded) {
-                TextField("What would you like to remember?", text: $note, axis: .vertical).lineLimit(3...6)
+            DisclosureGroup(isExpanded: $draft.noteExpanded) {
+                TextField("What would you like to remember?", text: $draft.note, axis: .vertical).lineLimit(3...6)
                     .focused($noteFocused).padding(.top, 10)
                     .accessibilityIdentifier("milestones.note")
-                if note.count > 1800 { Text("\(note.count)/2,000 characters").font(.caption).foregroundStyle(note.count > 2000 ? .red : LogStyle.muted) }
+                if draft.note.count > 1800 { Text("\(draft.note.count)/2,000 characters").font(.caption).foregroundStyle(draft.note.count > 2000 ? .red : LogStyle.muted) }
             } label: {
-                Label(note.isEmpty ? String(localized: "Add a note (optional)") : String(localized: "Your note"), systemImage: "note.text")
+                Label(draft.note.isEmpty ? String(localized: "Add a note (optional)") : String(localized: "Your note"), systemImage: "note.text")
                     .font(.subheadline).foregroundStyle(LogStyle.ink).frame(minHeight: 44)
             }
             .padding(.horizontal, 14).padding(.vertical, 8).background { MilestonePaper() }
-            .animation(reduceMotion ? nil : .smooth(duration: 0.22), value: noteExpanded)
-            Toggle("I have a concern", isOn: $concern).font(.subheadline).frame(minHeight: 44)
-            if concern || status == .lost {
+            .animation(reduceMotion ? nil : .smooth(duration: 0.22), value: draft.noteExpanded)
+            Toggle("I have a concern", isOn: $draft.concern).font(.subheadline).frame(minHeight: 44)
+            if draft.concern || draft.status == .lost {
                 LogCard(color: LogStyle.apricot, verticalPadding: 16) {
                     Text("If a skill has been lost or you have a concern, contact your child’s doctor and ask about developmental screening. Don’t wait for the next chapter.")
                         .font(.subheadline)
                 }
             }
-        }.sensoryFeedback(.selection, trigger: status)
+        }.sensoryFeedback(.selection, trigger: draft.status)
     }
 
     private func statusButton(_ choice: MilestoneStatus) -> some View {
         Button {
-            withAnimation(reduceMotion ? nil : .smooth(duration: 0.22)) { status = choice }
+            withAnimation(reduceMotion ? nil : .smooth(duration: 0.22)) { draft.status = choice }
         } label: {
             HStack(spacing: 12) {
-                Image(systemName: status == choice ? "checkmark.circle.fill" : "circle")
+                Image(systemName: draft.status == choice ? "checkmark.circle.fill" : "circle")
                     .contentTransition(.symbolEffect(.replace)).symbolEffectsRemoved(reduceMotion)
-                    .font(.title3).foregroundStyle(status == choice ? LogStyle.forest : LogStyle.muted)
-                Text(choice.title).font(.body.weight(status == choice ? .semibold : .regular))
+                    .font(.title3).foregroundStyle(draft.status == choice ? LogStyle.forest : LogStyle.muted)
+                Text(choice.title).font(.body.weight(draft.status == choice ? .semibold : .regular))
                 Spacer(minLength: 0)
             }.foregroundStyle(LogStyle.ink)
                 .padding(.horizontal, 14).padding(.vertical, 11).frame(maxWidth: .infinity, minHeight: 48)
-                .background(status == choice ? LogStyle.sage : LogStyle.card.opacity(scheme == .dark ? 0.7 : 0.35), in: .rect(cornerRadius: 18))
+                .background(draft.status == choice ? LogStyle.sage : LogStyle.card.opacity(scheme == .dark ? 0.7 : 0.35), in: .rect(cornerRadius: 18))
                 .overlay {
-                    RoundedRectangle(cornerRadius: 18).strokeBorder(status == choice ? LogStyle.forest : LogStyle.muted.opacity(0.25), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: 18).strokeBorder(draft.status == choice ? LogStyle.forest : LogStyle.muted.opacity(0.25), lineWidth: 1)
                 }
         }.buttonStyle(LogPressStyle())
-            .accessibilityAddTraits(status == choice ? .isSelected : [])
+            .accessibilityAddTraits(draft.status == choice ? .isSelected : [])
             .accessibilityIdentifier("milestones.status.\(choice.rawValue)")
     }
 
@@ -231,20 +223,24 @@ struct MilestoneCheckInView: View {
         .accessibilityLabel("WHO observed achievement window, \(range.lowerBound.formatted()) to \(range.upperBound.formatted()) months. First to ninety-ninth percentile. A broad reference range, not a due date or a score for your child.")
     }
 
+    private func close() {
+        if let onClose { onClose() } else { dismiss() }
+    }
+
     private func save() {
-        guard let status else { return }
+        guard let status = draft.status else { return }
         do {
             var observation = route.observation ?? MilestoneObservation(
                 id: route.id, familyID: route.child.familyID, childID: route.child.id, skillID: route.skill.id,
                 sourceVersion: route.skill.sourceVersion, skillTitle: route.skill.title,
                 status: status, authorID: store.caregiverID)
             observation.status = status
-            observation.firstNoticedAt = status == .seen && includeDate ? firstDate : nil
-            observation.note = note.trimmingCharacters(in: .whitespacesAndNewlines)
-            observation.hasConcern = concern
-            try store.save(.milestone(observation), parentIDs: parents, commandID: commandID)
+            observation.firstNoticedAt = draft.status == .seen && draft.includeDate ? draft.firstDate : nil
+            observation.note = draft.note.trimmingCharacters(in: .whitespacesAndNewlines)
+            observation.hasConcern = draft.concern
+            try store.save(.milestone(observation), parentIDs: draft.parents, commandID: draft.commandID)
             onSave(observation.id)
-            dismiss()
+            close()
         } catch { self.error = error.localizedDescription }
     }
 }

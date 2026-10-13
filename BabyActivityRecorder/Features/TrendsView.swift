@@ -61,61 +61,63 @@ struct TrendsView: View {
     }
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    if typeSize.isAccessibilitySize { childHeading }
-                    chartControls
-                    if days == 0 {
-                        LogDatePicker(title: String(localized: "From"), selection: $customStart, range: .distantPast...customEnd, displayedComponents: .date)
-                        LogDatePicker(title: String(localized: "Through"), selection: $customEnd, range: customStart...Date.now, displayedComponents: .date)
-                    }
-                    if routine {
-                        if entries.isEmpty { emptyActivity }
-                        else {
-                            RoutineChart(
-                                entries: entries.filter {
-                                    [.bottle, .diaper, .breastfeeding].contains($0.payload.kind)
-                                }, days: data, calendar: calendar, unit: store.volumeUnit,
-                                showTable: typeSize.isAccessibilitySize || showTable
-                            ).id(store.selectedChild?.id)
+            AdaptiveCarePage { wide in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 18) {
+                        if typeSize.isAccessibilitySize { childHeading }
+                        chartControls
+                        if days == 0 {
+                            LogDatePicker(title: String(localized: "From"), selection: $customStart, range: .distantPast...customEnd, displayedComponents: .date)
+                            LogDatePicker(title: String(localized: "Through"), selection: $customEnd, range: customStart...Date.now, displayedComponents: .date)
                         }
-                    } else {
-                        if metric == .pumping {
-                            PumpingTrendsView(store: store, dayCount: count, end: end, timeZone: timeZone, showTable: showTable || typeSize.isAccessibilitySize)
-                        } else if let measurement = metric.growthMeasurement, let child = store.selectedChild {
-                            MeasurementChart(entries: entries, child: child, metric: measurement, unit: measurementUnit,
-                                interval: DateInterval(start: data.first?.date ?? end, end: end), calendar: calendar,
-                                showTable: showTable || typeSize.isAccessibilitySize, canEdit: store.canEdit,
-                                editProfile: { childEditor = ChildEditRoute(child: child) },
-                                addMeasurement: { measurementEditor = LogRoute(kind: measurement.kind, childID: child.id) }
-                            ).id("\(child.id)-\(measurement.rawValue)")
-                        } else if metric == .weight, let child = store.selectedChild {
-                            WeightChart(
-                                entries: entries, child: child, unit: weightUnit,
-                                interval: DateInterval(start: data.first?.date ?? end, end: end),
-                                calendar: calendar,
-                                showTable: showTable || typeSize.isAccessibilitySize,
-                                canEditProfile: store.canEdit,
-                                editProfile: { childEditor = ChildEditRoute(child: child) }
-                            ).id(child.id)
-                        } else if entries.isEmpty { emptyActivity }
-                        else {
-                            DailyActivityChart(
-                                days: data, kind: metric == .bottles ? .bottle : .diaper,
-                                unit: store.volumeUnit,
-                                showTable: showTable || typeSize.isAccessibilitySize
-                            ).id(store.selectedChild?.id)
+                        if routine {
+                            if entries.isEmpty { emptyActivity }
+                            else {
+                                RoutineChart(
+                                    entries: entries.filter {
+                                        [.bottle, .diaper, .breastfeeding].contains($0.payload.kind)
+                                    }, days: data, calendar: calendar, unit: store.volumeUnit,
+                                    showTable: typeSize.isAccessibilitySize || showTable
+                                ).id(store.selectedChild?.id)
+                            }
+                        } else {
+                            if metric == .pumping {
+                                PumpingTrendsView(store: store, dayCount: count, end: end, timeZone: timeZone, showTable: showTable || typeSize.isAccessibilitySize)
+                            } else if let measurement = metric.growthMeasurement, let child = store.selectedChild {
+                                MeasurementChart(entries: entries, child: child, metric: measurement, unit: measurementUnit,
+                                    interval: DateInterval(start: data.first?.date ?? end, end: end), calendar: calendar,
+                                    showTable: showTable || typeSize.isAccessibilitySize, canEdit: store.canEdit,
+                                    editProfile: { childEditor = ChildEditRoute(child: child) },
+                                    addMeasurement: { measurementEditor = LogRoute(kind: measurement.kind, childID: child.id) }
+                                ).id("\(child.id)-\(measurement.rawValue)")
+                            } else if metric == .weight, let child = store.selectedChild {
+                                WeightChart(
+                                    entries: entries, child: child, unit: weightUnit,
+                                    interval: DateInterval(start: data.first?.date ?? end, end: end),
+                                    calendar: calendar,
+                                    showTable: showTable || typeSize.isAccessibilitySize,
+                                    canEditProfile: store.canEdit,
+                                    editProfile: { childEditor = ChildEditRoute(child: child) }
+                                ).id(child.id)
+                            } else if entries.isEmpty { emptyActivity }
+                            else {
+                                DailyActivityChart(
+                                    days: data, kind: metric == .bottles ? .bottle : .diaper,
+                                    unit: store.volumeUnit,
+                                    showTable: showTable || typeSize.isAccessibilitySize, entries: entries
+                                ).id(store.selectedChild?.id)
+                            }
+                            if !metric.isGrowth {
+                                Text("The current day is partial. Days without records mean “no entries.”")
+                                    .font(.caption).foregroundStyle(.secondary)
+                            }
                         }
-                        if !metric.isGrowth {
-                            Text("The current day is partial. Days without records mean “no entries.”")
-                                .font(.caption).foregroundStyle(.secondary)
-                        }
-                    }
-                    if !typeSize.isAccessibilitySize { Toggle("Show data as a list", isOn: $showTable).font(.subheadline) }
-                    Text("Calendar days use \(timeZone.identifier.replacingOccurrences(of: "_", with: " ")).")
-                        .font(.caption).foregroundStyle(.secondary)
-                }.padding(.horizontal, 22).padding(.top, 12).padding(.bottom, 24)
-                    .frame(maxWidth: 720).frame(maxWidth: .infinity)
+                        if !typeSize.isAccessibilitySize { Toggle("Show data as a list", isOn: $showTable).font(.subheadline) }
+                        Text("Calendar days use \(timeZone.identifier.replacingOccurrences(of: "_", with: " ")).")
+                            .font(.caption).foregroundStyle(.secondary)
+                    }.padding(.horizontal, 22).padding(.top, 12).padding(.bottom, 24)
+                        .frame(maxWidth: wide ? 1240 : 720).frame(maxWidth: .infinity)
+                }
             }.background(LogStyle.canvas).navigationTitle("Trends").navigationBarTitleDisplayMode(.inline)
                 .environment(\.calendar, calendar).environment(\.timeZone, timeZone)
                 .sheet(item: $childEditor) { ChildEditor(store: store, existing: $0.child) }
@@ -220,6 +222,8 @@ struct DailyActivityChart: View {
     let kind: ActivityKind
     let unit: VolumeUnit
     let showTable: Bool
+    var entries: [Activity] = []
+    @Environment(\.careWideLayout) private var wide
     @State private var selectedDate: Date?
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.calendar) private var calendar
@@ -285,11 +289,16 @@ struct DailyActivityChart: View {
                     .chartForegroundStyleScale(domain: series, mapping: color(for:))
                     .chartYAxis { AxisMarks(position: .leading) }
                     .chartXAxis { AxisMarks(values: .stride(by: .day, count: days.count > 7 ? max(1, days.count / 5) : 1)) { _ in AxisValueLabel(format: .dateTime.day()) } }
-                    .chartDateSelection($selectedDate).frame(height: 220)
+                    .chartDateSelection($selectedDate).frame(height: wide ? 340 : 220)
                     .accessibilityLabel(title)
                     .chartSelectionDetails(
                         date: selectedDay?.date, value: selectedDay.map(selectedValue) ?? "",
-                        detail: selectedDay.map(dayText) ?? "", selection: $selectedDate)
+                        detail: selectedDay.map(dayText) ?? "", selection: $selectedDate,
+                        records: selectedDay.map { day in
+                            entries.filter { $0.payload.kind == kind && calendar.isDate($0.occurredAt, inSameDayAs: day.date) }
+                                .sorted { $0.occurredAt < $1.occurredAt }
+                                .map { ChartSelectionRecord(id: $0.id, date: $0.occurredAt, value: $0.detail(unit: unit)) }
+                        } ?? [])
 
                 }
             }
@@ -332,6 +341,7 @@ struct RoutineChart: View {
     let calendar: Calendar
     let unit: VolumeUnit
     let showTable: Bool
+    @Environment(\.careWideLayout) private var wide
     @State private var selectedDate: Date?
     private var selectedDay: DailySummary? {
         let date = ChartSelection.day(

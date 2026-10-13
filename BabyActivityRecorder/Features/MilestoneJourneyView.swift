@@ -18,20 +18,56 @@ struct MilestoneJourneyView: View {
     var settingsPresentation: Binding<Bool>? = nil
     var checkpointRequest: MilestoneCheckpointRequest? = nil
     @State private var route: MilestoneCheckInRoute?
+    @State private var draft: MilestoneCheckInDraft?
+    @State private var pendingRoute: MilestoneCheckInRoute?
+    @State private var confirmReplacement = false
+    @State private var compactColumn: NavigationSplitViewColumn = .sidebar
+    @State private var columnVisibility: NavigationSplitViewVisibility = .all
     @State private var childEditor: ChildEditRoute?
     @State private var scrollAnchor: String?
     @State private var savedID: UUID?
     @State private var confirmation: String?
     @State private var error: String?
+    @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.calendar) private var calendar
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var typeSize
     @ScaledMetric(relativeTo: .largeTitle) private var storyTitleSize = 34
+    private var usesColumns: Bool { sizeClass == .regular && !typeSize.isAccessibilitySize }
     private var observations: [MilestoneObservation] {
         store.snapshot.milestoneObservations.filter { $0.childID == store.selectedChild?.id }
     }
 
     var body: some View {
+        NavigationSplitView(columnVisibility: $columnVisibility, preferredCompactColumn: $compactColumn) {
+            journeyContent
+                .navigationSplitViewColumnWidth(min: 300, ideal: 360, max: 440)
+        } detail: {
+            if let route, let draft {
+                MilestoneCheckInView(store: store, route: route, draft: draft, onClose: closeCheckIn) { id in
+                    savedID = id
+                    withAnimation(.easeOut(duration: 0.18)) { confirmation = String(localized: "Observation saved") }
+                }.id(route.id).environment(\.careWideLayout, usesColumns)
+            } else {
+                VStack(spacing: 24) {
+                    CocoonOpeningMark(size: 120).frame(width: 90, height: 120)
+                    Text("Their unfolding\nstory.").font(LogStyle.heading(.largeTitle)).multilineTextAlignment(.center)
+                    Text("Explore any chapter").font(.title3).foregroundStyle(LogStyle.muted)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity).background(LogStyle.canvas)
+            }
+        }
+        .navigationSplitViewStyle(.balanced)
+        .environment(\.horizontalSizeClass, typeSize.isAccessibilitySize ? .compact : sizeClass)
+        .confirmationDialog("Discard your changes?", isPresented: $confirmReplacement, titleVisibility: .visible) {
+            Button("Discard changes", role: .destructive) {
+                if let pendingRoute { activate(pendingRoute) }
+                pendingRoute = nil
+            }
+            Button("Keep editing", role: .cancel) { pendingRoute = nil }
+        }
+    }
+
+    private var journeyContent: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 if let child = store.selectedChild {
@@ -44,7 +80,7 @@ struct MilestoneJourneyView: View {
         }
         .scrollPosition(id: $scrollAnchor, anchor: .top)
         .background(LogStyle.canvas)
-        .navigationTitle("Milestones").navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(usesColumns ? "" : String(localized: "Milestones")).navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .topBarLeading) {
                 if let child = store.selectedChild {
@@ -57,12 +93,6 @@ struct MilestoneJourneyView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 SettingsButton(store: store, presentation: settingsPresentation)
-            }
-        }
-        .sheet(item: $route) { item in
-            MilestoneCheckInView(store: store, route: item) { id in
-                savedID = id
-                withAnimation(.easeOut(duration: 0.18)) { confirmation = String(localized: "Observation saved") }
             }
         }
         .sheet(item: $childEditor) { ChildEditor(store: store, existing: $0.child) }
@@ -90,9 +120,9 @@ struct MilestoneJourneyView: View {
             if let argument = MotionReview.arguments.first(where: { $0.hasPrefix("--milestone-illustration=") }),
                let skill = MilestoneCatalog.skill(String(argument.dropFirst("--milestone-illustration=".count))),
                let child = store.selectedChild {
-                route = .init(child: child, skill: skill)
+                select(.init(child: child, skill: skill))
             } else if MotionReview.has("--milestone-detail"), let child = store.selectedChild {
-                route = .init(child: child, skill: MilestoneCatalog.motorSkills[0])
+                select(.init(child: child, skill: MilestoneCatalog.motorSkills[0]))
             }
             if MotionReview.has("--milestone-scroll-review") {
                 // Exercise real scroll geometry with fictional data, including reversing direction.
@@ -104,7 +134,12 @@ struct MilestoneJourneyView: View {
             }
         }
         #endif
-        .onChange(of: store.selectedChildID) { _, _ in scrollAnchor = nil; confirmation = nil }
+        .onChange(of: store.selectedChildID) { _, _ in
+            scrollAnchor = nil
+            confirmation = nil
+            // Keep an unfinished observation attached to its original child.
+            if draft?.isDirty != true { closeCheckIn() }
+        }
         .onChange(of: checkpointRequest, initial: true) {
             guard let checkpointRequest, checkpointRequest.childID == store.selectedChild?.id,
                   MilestoneCatalog.checkpoints.contains(checkpointRequest.months) else { return }
@@ -119,7 +154,7 @@ struct MilestoneJourneyView: View {
         let age = MilestoneAge(child: child, now: .now, calendar: calendar)
         VStack(alignment: .leading, spacing: 18) {
             childHeading(child)
-            if !typeSize.isAccessibilitySize {
+            if !typeSize.isAccessibilitySize && !usesColumns {
                 Text("Their unfolding\nstory.")
                     .font(.system(size: storyTitleSize, weight: .semibold, design: .serif))
                     .tracking(-0.7).lineSpacing(-2)
@@ -179,14 +214,14 @@ struct MilestoneJourneyView: View {
                     MilestoneChapterCard(
                         months: months, stage: stage, featured: months == (age?.suggested ?? 2),
                         observations: observations.filter { MilestoneCatalog.skill($0.skillID)?.months == months },
-                        snapshot: store.snapshot,
+                        snapshot: store.snapshot, selectedSkillID: route?.skill.id,
                         openRequest: checkpointRequest?.childID == child.id && checkpointRequest?.months == months
                             ? checkpointRequest?.id : nil
-                    ) { skill in route = .init(child: child, skill: skill) }
+                    ) { skill in select(.init(child: child, skill: skill)) }
                 }.id("chapter-\(months)")
             }
             StoryRibbonRow(symbol: "figure.child") {
-                MilestoneMotorCard { skill in route = .init(child: child, skill: skill) }
+                MilestoneMotorCard { skill in select(.init(child: child, skill: skill)) }
             }.id("motor")
         }.scrollTargetLayout()
             .background(alignment: .topLeading) {
@@ -206,9 +241,31 @@ struct MilestoneJourneyView: View {
         MilestoneConcernNotice()
     }
 
+    private func select(_ next: MilestoneCheckInRoute) {
+        if draft?.isDirty == true {
+            pendingRoute = next
+            confirmReplacement = true
+        } else { activate(next) }
+    }
+
+    private func activate(_ next: MilestoneCheckInRoute) {
+        route = next
+        draft = MilestoneCheckInDraft(route: next, snapshot: store.snapshot)
+        compactColumn = .detail
+        if usesColumns, let months = next.skill.months {
+            scrollAnchor = "chapter-\(months)"
+        }
+    }
+
+    private func closeCheckIn() {
+        compactColumn = .sidebar
+        route = nil
+        draft = nil
+    }
+
     private func open(_ observation: MilestoneObservation, child: ChildProfile) {
         guard let skill = MilestoneCatalog.skill(observation.skillID) else { return }
-        route = .init(child: child, skill: skill, observation: observation)
+        select(.init(child: child, skill: skill, observation: observation))
     }
 
     private func childHeading(_ child: ChildProfile) -> some View {
@@ -266,6 +323,7 @@ private struct MilestoneChapterCard: View {
     let featured: Bool
     let observations: [MilestoneObservation]
     let snapshot: FamilySnapshot
+    let selectedSkillID: String?
     let openRequest: UUID?
     let open: (MilestoneSkill) -> Void
     @State private var expanded: Bool
@@ -273,10 +331,11 @@ private struct MilestoneChapterCard: View {
     @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(\.colorScheme) private var scheme
     private var skills: [MilestoneSkill] { MilestoneCatalog.skills(at: months) }
-    init(months: Int, stage: String, featured: Bool, observations: [MilestoneObservation], snapshot: FamilySnapshot, openRequest: UUID? = nil, open: @escaping (MilestoneSkill) -> Void) {
+    init(months: Int, stage: String, featured: Bool, observations: [MilestoneObservation], snapshot: FamilySnapshot, selectedSkillID: String? = nil, openRequest: UUID? = nil, open: @escaping (MilestoneSkill) -> Void) {
         self.months = months; self.stage = stage; self.featured = featured
         self.observations = observations; self.snapshot = snapshot; self.open = open
         self.openRequest = openRequest
+        self.selectedSkillID = selectedSkillID
         #if DEBUG && targetEnvironment(simulator)
         expanded = MotionReview.has("--milestone-expanded") && featured
         #else
@@ -340,7 +399,10 @@ private struct MilestoneChapterCard: View {
                                         Spacer(minLength: 0)
                                         Image(systemName: "chevron.forward").font(.caption2).padding(.top, 4).foregroundStyle(LogStyle.muted)
                                     }.frame(maxWidth: .infinity, minHeight: 44, alignment: .leading).padding(.vertical, 8).contentShape(.rect)
-                                }.buttonStyle(.plain).accessibilityIdentifier("milestones.skill.\(skill.id)")
+                                }
+                                .background(selectedSkillID == skill.id ? LogStyle.forest.opacity(0.10) : .clear, in: .rect(cornerRadius: 12))
+                                .buttonStyle(.plain).accessibilityIdentifier("milestones.skill.\(skill.id)")
+                                    .accessibilityAddTraits(selectedSkillID == skill.id ? .isSelected : [])
                                     .accessibilityHint("Open skill and family observations")
                                 Divider()
                             }
@@ -352,6 +414,9 @@ private struct MilestoneChapterCard: View {
         }.foregroundStyle(LogStyle.ink)
             .background { MilestonePaper(tone: featured ? .sage : .ivory, folded: featured && !typeSize.isAccessibilitySize, unfolded: expanded) }
             .sensoryFeedback(.selection, trigger: expanded)
+            .onChange(of: selectedSkillID, initial: true) {
+                if skills.contains(where: { $0.id == selectedSkillID }) { expanded = true }
+            }
             .onChange(of: openRequest, initial: true) { if openRequest != nil { expanded = true } }
             #if DEBUG && targetEnvironment(simulator)
             .task {
