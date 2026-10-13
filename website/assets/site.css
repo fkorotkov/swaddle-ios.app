@@ -21,6 +21,8 @@
 .hero-stage{overflow:clip;overflow-clip-margin:20px}
 .widget-image{max-width:100%}
 .site-nav a{white-space:nowrap}
+.site-nav a,.footer-links a{display:inline-flex;align-items:center;min-height:44px}
+.brand,.text-link{min-height:44px}
 @media(min-width:1500px){.hero-phone{width:290px}.hero-stage .sample-note{bottom:0}}
 @media(max-width:440px){.site-nav>a:first-child{display:none}.header-inner{gap:12px}.hero-actions{gap:14px}.hero .eyebrow{letter-spacing:.13em}}
 @media print{.site-header,.site-footer,.hero-stage,.care-art,.growth-art,.milestone-art{display:none}body{background:white;color:black}.wrap{width:100%}.section{padding:25px 0}.document-layout{display:block}.page-toc{display:none}details>div{display:block}.motion-ready [data-reveal]{opacity:1;transform:none}a{text-decoration:underline}}
