@@ -273,11 +273,8 @@ final class CareCloudSync: CKSyncEngineDelegate {
             failure = CareSyncError.revoked
           } else {
             failure = failed.error
-            if !Self.isAutomaticallyRetried(failed.error) {
-              try replica.block(
-                CareCloudID(failed.record.recordID, scope: scope),
-                reason: failed.error.localizedDescription)
-            }
+            try Self.handleFailedRecordUpload(
+              failed.error, id: CareCloudID(failed.record.recordID, scope: scope), replica: replica)
           }
         }
         for (id, error) in event.failedRecordDeletes {
@@ -285,9 +282,8 @@ final class CareCloudSync: CKSyncEngineDelegate {
             try replica.acknowledge([], deleted: [CareCloudID(id, scope: scope)])
           } else {
             failure = error
-            if !Self.isAutomaticallyRetried(error) {
-              try replica.block(CareCloudID(id, scope: scope), reason: error.localizedDescription)
-            }
+            try Self.handleFailedRecordUpload(
+              error, id: CareCloudID(id, scope: scope), replica: replica)
           }
         }
         queuePendingChanges()
@@ -296,10 +292,8 @@ final class CareCloudSync: CKSyncEngineDelegate {
         for zone in event.savedZones { try replica.zoneSaved(zone.zoneID, scope: scope) }
         for failed in event.failedZoneSaves {
           failure = failed.error
-          if !Self.isAutomaticallyRetried(failed.error) {
-            try replica.blockZone(
-              failed.zone.zoneID, scope: scope, reason: failed.error.localizedDescription)
-          }
+          try Self.handleFailedZoneUpload(
+            failed.error, zoneID: failed.zone.zoneID, scope: scope, replica: replica)
         }
         queuePendingChanges()
       case .willFetchChanges:
@@ -346,10 +340,28 @@ final class CareCloudSync: CKSyncEngineDelegate {
   }
 
   nonisolated static func isAutomaticallyRetried(_ error: CKError) -> Bool {
+    // CKSyncEngine retains and retries these changes. Blocking them here would
+    // remove them from its pending state in queuePendingChanges(), preventing
+    // recovery after an interrupted operation or temporary account outage.
     [
       .networkFailure, .networkUnavailable, .serviceUnavailable, .requestRateLimited,
-      .zoneBusy, .batchRequestFailed,
+      .zoneBusy, .batchRequestFailed, .operationCancelled, .notAuthenticated,
+      .accountTemporarilyUnavailable,
     ].contains(error.code)
+  }
+
+  static func handleFailedRecordUpload(
+    _ error: CKError, id: CareCloudID, replica: CareSyncReplica
+  ) throws {
+    guard !isAutomaticallyRetried(error) else { return }
+    try replica.block(id, reason: error.localizedDescription)
+  }
+
+  static func handleFailedZoneUpload(
+    _ error: CKError, zoneID: CKRecordZone.ID, scope: CareCloudScope, replica: CareSyncReplica
+  ) throws {
+    guard !isAutomaticallyRetried(error) else { return }
+    try replica.blockZone(zoneID, scope: scope, reason: error.localizedDescription)
   }
 
   func refreshShares() async throws {

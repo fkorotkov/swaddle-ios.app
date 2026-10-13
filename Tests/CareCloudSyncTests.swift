@@ -9,12 +9,15 @@ import Testing
 struct CareCloudSyncTests {
   let date = Date(timeIntervalSince1970: 1_790_000_000)
 
-  func fixture() throws -> (PersistenceController, CareSyncReplica, NSManagedObject) {
+  func fixture(scope: CareCloudScope = .personal) throws -> (
+    PersistenceController, CareSyncReplica, NSManagedObject
+  ) {
     let persistence = PersistenceController(inMemory: true)
     if let error = persistence.loadError { throw error }
     let context = persistence.context
     let root = NSEntityDescription.insertNewObject(forEntityName: "FamilyRoot", into: context)
-    context.assign(root, to: try #require(persistence.privateStore))
+    context.assign(
+      root, to: try #require(scope == .personal ? persistence.privateStore : persistence.sharedStore))
     root.setValue(UUID(), forKey: "id")
     root.setValue(UUID(), forKey: "ownerID")
     root.setValue("Our family", forKey: "name")
@@ -24,6 +27,12 @@ struct CareCloudSyncTests {
       path: "SwaddleSyncTest-\(UUID()).json")
     let replica = CareSyncReplica(
       persistence: persistence, journal: CareSyncJournal(account: "test-account"), url: url)
+    if scope == .shared {
+      let id = CareCloudID(
+        CKRecord.ID(recordName: "shared-family", zoneID: .init(
+          zoneName: "shared-zone", ownerName: "other-icloud-owner")), scope: .shared)
+      try replica.receive([serverCopy(CareCloudRecord(object: root, id: id, familyRecordName: nil))])
+    }
     return (persistence, replica, root)
   }
 
@@ -540,12 +549,13 @@ struct CareCloudSyncTests {
     #expect(replica.journal.entries[changed.id.key]?.baseline.fields["tombstone"] == .integer(0))
   }
 
-  @Test func permanentFailuresStayBlockedUntilAnExplicitRetry() throws {
+  @Test(arguments: [CKError.Code.permissionFailure, .invalidArguments])
+  func permanentFailuresStayBlockedUntilAnExplicitRetry(code: CKError.Code) throws {
     let (_, replica, _) = try fixture()
     defer { try? FileManager.default.removeItem(at: replica.journalURL) }
     try replica.reconcile()
     let id = try #require(replica.journal.entries.values.first?.baseline.id)
-    try replica.block(id, reason: "Permission changed")
+    try CareCloudSync.handleFailedRecordUpload(CKError(code), id: id, replica: replica)
     try replica.reconcile()
     #expect(replica.journal.entries[id.key]?.blockedReason != nil)
     #expect(replica.journal.pendingCount == 1)
@@ -556,18 +566,96 @@ struct CareCloudSyncTests {
     #expect(!CareCloudSync.isAutomaticallyRetried(CKError(.invalidArguments)))
   }
 
-  @Test func permanentZoneFailureSurvivesRestartWithoutDiscardingQueuedRecords() throws {
-    let (persistence, replica, _) = try fixture()
+  @Test(
+    arguments: [CKError.Code.operationCancelled, .notAuthenticated, .accountTemporarilyUnavailable],
+    CareCloudScope.allCases)
+  func interruptedUploadsRemainRetryableAfterRestart(code: CKError.Code, scope: CareCloudScope) throws {
+    let (persistence, replica, root) = try fixture(scope: scope)
     defer { try? FileManager.default.removeItem(at: replica.journalURL) }
     try replica.reconcile()
-    let id = try #require(replica.journal.newZones.first)
-    try replica.blockZone(id.zoneID, scope: id.scope, reason: "Permission denied")
+    try acknowledgeEverything(replica)
+    root.setValue("America/Chicago", forKey: "timeZone")
+    try persistence.context.save()
+    try replica.reconcile()
+    let sending = try #require(replica.journal.entries.values.first?.pending)
+
+    try CareCloudSync.handleFailedRecordUpload(CKError(code), id: sending.id, replica: replica)
     let restored = CareSyncReplica(
       persistence: persistence,
       journal: try #require(try CareSyncJournal.read(from: replica.journalURL)),
       url: replica.journalURL)
     try restored.reconcile()
-    #expect(restored.journal.blockedZones[id.zoneKey] == "Permission denied")
+    let retained = try #require(restored.journal.entries[sending.id.key])
+    #expect(restored.journal.pendingCount == 1)
+    #expect(retained.blockedReason == nil)
+    #expect(retained.pending?.fields == sending.fields)
+    #expect(retained.pending?.id == sending.id)
+    // No manual unblock is needed, and a real acknowledgement drains the outbox.
+    try restored.acknowledge([serverCopy(sending)], deleted: [])
+    #expect(restored.journal.pendingCount == 0)
+    #expect(restored.journal.entries.count == 1)
+  }
+
+  @Test(arguments: CareCloudScope.allCases)
+  func cancelledDeletionRemainsQueuedAfterRestart(scope: CareCloudScope) throws {
+    let (persistence, replica, root) = try fixture(scope: scope)
+    defer { try? FileManager.default.removeItem(at: replica.journalURL) }
+    try replica.reconcile()
+    try acknowledgeEverything(replica)
+    let id = try #require(replica.reference(for: root.objectID))
+    persistence.context.delete(root)
+    try persistence.context.save()
+    try replica.reconcile()
+    try CareCloudSync.handleFailedRecordUpload(CKError(.operationCancelled), id: id, replica: replica)
+    let restored = CareSyncReplica(
+      persistence: persistence,
+      journal: try #require(try CareSyncJournal.read(from: replica.journalURL)),
+      url: replica.journalURL)
+    try restored.reconcile()
+    #expect(restored.journal.pendingCount == 1)
+    #expect(restored.journal.entries[id.key]?.deleting == true)
+    #expect(restored.journal.entries[id.key]?.blockedReason == nil)
+    try restored.acknowledge([], deleted: [id])
+    #expect(restored.journal.pendingCount == 0)
+    #expect(restored.journal.entries.isEmpty)
+  }
+
+  @Test(arguments: [CKError.Code.operationCancelled, .notAuthenticated, .accountTemporarilyUnavailable])
+  func interruptedZoneCreationKeepsRecordsRetryable(code: CKError.Code) throws {
+    let (persistence, replica, _) = try fixture()
+    defer { try? FileManager.default.removeItem(at: replica.journalURL) }
+    try replica.reconcile()
+    let zone = try #require(replica.journal.newZones.first)
+    try CareCloudSync.handleFailedZoneUpload(
+      CKError(code), zoneID: zone.zoneID, scope: zone.scope, replica: replica)
+    let restored = CareSyncReplica(
+      persistence: persistence,
+      journal: try #require(try CareSyncJournal.read(from: replica.journalURL)),
+      url: replica.journalURL)
+    try restored.reconcile()
+    #expect(restored.journal.blockedZones.isEmpty)
+    #expect(restored.journal.newZones == [zone])
+    #expect(restored.journal.pendingCount == 1)
+    try restored.zoneSaved(zone.zoneID, scope: zone.scope)
+    try acknowledgeEverything(restored)
+    #expect(restored.journal.newZones.isEmpty)
+    #expect(restored.journal.pendingCount == 0)
+  }
+
+  @Test func permanentZoneFailureSurvivesRestartWithoutDiscardingQueuedRecords() throws {
+    let (persistence, replica, _) = try fixture()
+    defer { try? FileManager.default.removeItem(at: replica.journalURL) }
+    try replica.reconcile()
+    let id = try #require(replica.journal.newZones.first)
+    let error = CKError(.permissionFailure)
+    try CareCloudSync.handleFailedZoneUpload(
+      error, zoneID: id.zoneID, scope: id.scope, replica: replica)
+    let restored = CareSyncReplica(
+      persistence: persistence,
+      journal: try #require(try CareSyncJournal.read(from: replica.journalURL)),
+      url: replica.journalURL)
+    try restored.reconcile()
+    #expect(restored.journal.blockedZones[id.zoneKey] == error.localizedDescription)
     #expect(restored.journal.pendingCount == 1)
     #expect(restored.journal.newZones.count == 1)
     try restored.retryBlockedUploads()
