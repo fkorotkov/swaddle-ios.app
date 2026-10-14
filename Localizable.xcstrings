@@ -1,6 +1,1873 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Privacy policy" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy policy"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de privacidad"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاست حفظ حریم خصوصی"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patakaran sa pribasiya"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politique de confidentialité"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गोपनीयता नीति"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Règleman sou vi prive"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개인정보 처리방침"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de privacidade"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siyaasadda gaar ahaanshaha"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chính sách bảo mật"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私政策"
+          }
+        }
+      }
+    },
+    "Support" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الدعم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayuda"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پشتیبانی"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tulong"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assistance"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सहायता"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sipò"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지원"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suporte"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taageero"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hỗ trợ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持"
+          }
+        }
+      }
+    },
+    "A little smile during our morning walk." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A little smile during our morning walk."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una pequeña sonrisa durante nuestro paseo de la mañana."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un petit sourire pendant notre promenade du matin."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um sorrisinho durante nossa caminhada da manhã."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Маленькая улыбка на утренней прогулке."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "早晨散步时的一抹微笑。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아침 산책 중에 보여 준 작은 미소."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một nụ cười nhỏ trong buổi đi dạo sáng."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isang munting ngiti sa paglalakad namin sa umaga."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yon ti souri pandan pwomnad nou nan maten."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dhoollacaddayn yar intii aan socodka subaxnimo ku jirnay."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सुबह की सैर के दौरान एक छोटी-सी मुस्कान।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابتسامة صغيرة خلال نزهتنا الصباحية."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لبخندی کوچک هنگام پیاده‌روی صبحگاهی‌مان."
+          }
+        }
+      }
+    },
+    "A shared family log with iCloud" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A shared family log with iCloud"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un registro familiar compartido con iCloud"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un journal familial partagé avec iCloud"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um registro familiar compartilhado pelo iCloud"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общий семейный журнал через iCloud"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通过 iCloud 共享家庭记录"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud로 공유하는 가족 기록"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhật ký gia đình chia sẻ qua iCloud"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Talaan ng pamilya na naibabahagi sa iCloud"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yon jounal fanmi pataje ak iCloud"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diiwaan qoys oo lagu wadaago iCloud"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud से साझा पारिवारिक रिकॉर्ड"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل عائلي مشترك عبر iCloud"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دفتر خانوادگی مشترک با iCloud"
+          }
+        }
+      }
+    },
+    "All records are fictional. You can change them freely; they never sync to iCloud or appear in your widgets or Siri." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All records are fictional. You can change them freely; they never sync to iCloud or appear in your widgets or Siri."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos los registros son ficticios. Puedes cambiarlos libremente; nunca se sincronizan con iCloud ni aparecen en tus widgets o en Siri."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toutes les données sont fictives. Vous pouvez les modifier librement ; elles ne sont jamais synchronisées avec iCloud et n’apparaissent ni dans vos widgets ni dans Siri."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos os registros são fictícios. Você pode alterá-los livremente; eles nunca são sincronizados com o iCloud nem aparecem nos seus widgets ou na Siri."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все записи вымышлены. Меняйте их свободно: они не синхронизируются с iCloud и не появляются в ваших виджетах или Siri."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有记录均为虚构。你可以随意修改；它们不会同步到 iCloud，也不会出现在你的小组件或 Siri 中。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 기록은 가상이에요. 자유롭게 수정해도 iCloud에 동기화되거나 위젯 또는 Siri에 표시되지 않아요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả bản ghi đều là giả định. Bạn có thể tùy ý thay đổi; chúng không bao giờ đồng bộ với iCloud hay xuất hiện trong tiện ích hoặc Siri."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kathang-isip ang lahat ng tala. Maaari mong baguhin ang mga ito; hindi sila isi-sync sa iCloud o lalabas sa iyong mga widget o Siri."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout antre yo envante. Ou ka chanje yo jan ou vle; yo pap janm senkronize ak iCloud ni parèt nan widjèt ou yo oswa Siri."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dhammaan diiwaannadu waa kuwo la sameeyay oo tusaale ah. Si xor ah ayaad u beddeli kartaa; waligood lama waafajiyo iCloud mana ka muuqdaan widget-yadaada ama Siri."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सभी रिकॉर्ड काल्पनिक हैं। आप इन्हें बेझिझक बदल सकते हैं; ये कभी iCloud से सिंक नहीं होते और न ही आपके विजेट या Siri में दिखते हैं।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كل السجلات خيالية. يمكنك تعديلها بحرية؛ فهي لا تتزامن مع iCloud ولا تظهر في أدواتك أو Siri."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "همهٔ سوابق ساختگی هستند. می‌توانید آزادانه آن‌ها را تغییر دهید؛ هرگز با iCloud همگام نمی‌شوند و در ویجت‌ها یا Siri شما ظاهر نمی‌شوند."
+          }
+        }
+      }
+    },
+    "Couldn’t prepare the demo. Try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t prepare the demo. Try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo preparar la demostración. Inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de préparer la démo. Réessayez."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível preparar a demonstração. Tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось подготовить деморежим. Попробуйте ещё раз."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法准备演示。请重试。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데모를 준비하지 못했어요. 다시 시도해 주세요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể chuẩn bị bản dùng thử. Vui lòng thử lại."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hindi maihanda ang demo. Subukan muli."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nou pa t kapab prepare demonstrasyon an. Eseye ankò."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tusaalaha lama diyaarin karin. Mar kale isku day."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेमो तैयार नहीं हो सका। फिर से कोशिश करें।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر إعداد العرض التجريبي. حاول مرة أخرى."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخهٔ نمایشی آماده نشد. دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "Demo · sample data only" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo · sample data only"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demostración · datos de ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démo · données fictives"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demonstração · dados fictícios"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деморежим · вымышленные данные"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演示 · 仅含示例数据"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데모 · 예시 데이터만 표시"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử · chỉ có dữ liệu mẫu"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo · halimbawang data lang"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demonstrasyon · done egzanp sèlman"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tusaale · xog tijaabo ah oo keliya"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेमो · केवल उदाहरण डेटा"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض تجريبي · بيانات توضيحية فقط"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخهٔ نمایشی · فقط داده‌های نمونه"
+          }
+        }
+      }
+    },
+    "Example records show how Swaddle works, not care recommendations or targets." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example records show how Swaddle works, not care recommendations or targets."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los registros de ejemplo muestran cómo funciona Swaddle; no son recomendaciones ni objetivos de cuidado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ces exemples montrent le fonctionnement de Swaddle. Ce ne sont ni des recommandations de soins ni des objectifs."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os registros de exemplo mostram como o Swaddle funciona, não são recomendações nem metas de cuidados."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Примеры записей показывают, как работает Swaddle. Это не рекомендации по уходу и не целевые показатели."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "示例记录仅用于展示 Swaddle 的使用方式，并非护理建议或目标。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예시 기록은 Swaddle의 사용 방법을 보여 주며, 돌봄 권장 사항이나 목표가 아니에요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các bản ghi mẫu minh họa cách dùng Swaddle, không phải khuyến nghị hay mục tiêu chăm sóc."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ipinapakita ng mga halimbawang tala kung paano gumagana ang Swaddle. Hindi ito mga rekomendasyon o target sa pangangalaga."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antre egzanp yo montre kijan Swaddle fonksyone; se pa rekòmandasyon ni objektif swen."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diiwaannada tusaaluhu waxay muujinayaan sida Swaddle u shaqeeyo, mana aha talooyin daryeel ama yoolal."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उदाहरण रिकॉर्ड बताते हैं कि Swaddle कैसे काम करता है। ये देखभाल की सलाह या लक्ष्य नहीं हैं।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توضّح السجلات النموذجية طريقة عمل Swaddle، وليست توصيات للرعاية أو أهدافًا."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سوابق نمونه روش کار Swaddle را نشان می‌دهند و توصیه یا هدف مراقبتی نیستند."
+          }
+        }
+      }
+    },
+    "Exit demo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit demo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir de la demostración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitter la démo"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sair da demonstração"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти из деморежима"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出演示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데모 종료"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thoát dùng thử"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lumabas sa demo"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sòti nan demonstrasyon an"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ka bax tusaalaha"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेमो से बाहर निकलें"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخروج من العرض التجريبي"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خروج از نسخهٔ نمایشی"
+          }
+        }
+      }
+    },
+    "Explore Swaddle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore Swaddle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar Swaddle"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découvrir Swaddle"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar o Swaddle"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Знакомство со Swaddle"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索 Swaddle"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swaddle 둘러보기"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khám phá Swaddle"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuklasin ang Swaddle"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksplore Swaddle"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sahami Swaddle"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swaddle को जानें"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استكشف Swaddle"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آشنایی با Swaddle"
+          }
+        }
+      }
+    },
+    "Explore a demo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore a demo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar una demostración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découvrir une démo"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar uma demonstração"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробовать деморежим"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "体验演示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데모 둘러보기"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khám phá bản dùng thử"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subukan ang demo"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksplore yon demonstrasyon"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sahami tusaale"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेमो आज़माएँ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استكشاف عرض تجريبي"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کاوش نسخهٔ نمایشی"
+          }
+        }
+      }
+    },
+    "Feeds, pumping & everyday care" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feeds, pumping & everyday care"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tomas, extracciones y cuidados diarios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repas, tirage de lait et soins quotidiens"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alimentação, extração e cuidados diários"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кормления, сцеживания и ежедневный уход"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喂养、吸奶和日常照护"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수유, 유축 및 일상 돌봄"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cho bú, hút sữa và chăm sóc hằng ngày"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pagpapakain, pagpump at araw-araw na pag-aalaga"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manje, ponpaj ak swen chak jou"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quudinta, lisidda caanaha iyo daryeelka maalinlaha ah"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दूध पिलाना, पंपिंग और रोज़ की देखभाल"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرضعات وشفط الحليب والرعاية اليومية"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغذیه، دوشیدن شیر و مراقبت روزانه"
+          }
+        }
+      }
+    },
+    "Growth charts & first milestones" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Growth charts & first milestones"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gráficas de crecimiento y primeros hitos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Courbes de croissance et premières étapes"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gráficos de crescimento e primeiros marcos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Графики роста и первые навыки"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生长图表和早期里程碑"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "성장 차트와 첫 발달 이정표"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biểu đồ tăng trưởng và những mốc đầu tiên"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mga chart ng paglaki at unang mga milestone"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grafik kwasans ak premye etap yo"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaantusyada koritaanka iyo tallaabooyinka ugu horreeya"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "विकास के चार्ट और पहले पड़ाव"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مخططات النمو وأولى مراحل التطور"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمودارهای رشد و نخستین مراحل رشد"
+          }
+        }
+      }
+    },
+    "Keep exploring" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep exploring"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguir explorando"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer à explorer"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar explorando"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить знакомство"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续探索"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속 둘러보기"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục khám phá"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patuloy na tuklasin"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontinye eksplore"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sii wad sahaminta"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "देखना जारी रखें"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متابعة الاستكشاف"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادامهٔ کاوش"
+          }
+        }
+      }
+    },
+    "Make yourself at home" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make yourself at home"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siéntete como en casa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites comme chez vous"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinta-se em casa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Осваивайтесь"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放心探索"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편하게 둘러보세요"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cứ thoải mái khám phá"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maging komportable"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fè tankou ou lakay ou"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si xor ah u tijaabi"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बेझिझक आज़माएँ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استكشف بحرية"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "با خیال راحت بگردید"
+          }
+        }
+      }
+    },
+    "Meet Robin & family." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meet Robin & family."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conoce a Robin y su familia."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voici Robin et sa famille."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conheça Robin e sua família."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Знакомьтесь: Робин и его семья."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "认识 Robin 和家人。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin과 가족을 만나 보세요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Làm quen với Robin và gia đình."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilalanin si Robin at ang pamilya."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Men Robin ak fanmi li."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baro Robin iyo qoyskiisa."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin और परिवार से मिलें।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعرّف على روبن وعائلته."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "با رابین و خانواده‌اش آشنا شوید."
+          }
+        }
+      }
+    },
+    "Robin was born six days before the due date, at 39 weeks and 1 day. This is full term, so growth charts use age since birth." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin was born six days before the due date, at 39 weeks and 1 day. This is full term, so growth charts use age since birth."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin nació seis días antes de la fecha prevista, a las 39 semanas y 1 día. Nació a término, así que las gráficas de crecimiento usan la edad desde el nacimiento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin est né six jours avant la date prévue, à 39 semaines et 1 jour. Il est né à terme ; les courbes de croissance utilisent donc son âge depuis la naissance."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin nasceu seis dias antes da data prevista, com 39 semanas e 1 dia. É um nascimento a termo, então os gráficos de crescimento usam a idade desde o nascimento."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Робин родился за шесть дней до предполагаемой даты родов, на сроке 39 недель и 1 день. Он доношенный, поэтому графики роста используют возраст с рождения."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin 比预产期提前六天出生，出生时孕周为 39 周 1 天。这属于足月，因此生长图表使用出生后的实际年龄。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin은 예정일보다 6일 빠른 임신 39주 1일에 태어났어요. 만삭 출생이므로 성장 차트에는 출생 후 실제 나이를 사용해요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin sinh sớm hơn ngày dự sinh sáu ngày, ở tuần 39 và 1 ngày. Đây là sinh đủ tháng, nên biểu đồ tăng trưởng dùng tuổi tính từ ngày sinh."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ipinanganak si Robin nang anim na araw bago ang takdang petsa, sa 39 na linggo at 1 araw. Full term ito, kaya edad mula sa kapanganakan ang ginagamit sa mga chart ng paglaki."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin te fèt sis jou anvan dat yo te prevwa a, nan 39 semèn ak 1 jou gwosès. Se yon nesans a tèm, kidonk grafik kwasans yo sèvi ak laj depi nesans la."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin wuxuu dhashay lix maalmood ka hor taariikhdii la filayay, markii uurku ahaa 39 toddobaad iyo 1 maalin. Wuxuu dhashay xilligii buuxa, sidaas darteed jaantusyada koritaanku waxay isticmaalaan da’da laga bilaabo dhalashada."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robin का जन्म तय तारीख से छह दिन पहले, गर्भावस्था के 39 सप्ताह और 1 दिन पर हुआ था। यह पूर्ण अवधि का जन्म है, इसलिए विकास चार्ट जन्म से अब तक की उम्र का उपयोग करते हैं।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وُلد روبن قبل موعد الولادة المتوقع بستة أيام، في الأسبوع 39 واليوم الأول. هذه ولادة مكتملة المدة، لذا تستخدم مخططات النمو العمر منذ الولادة."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رابین شش روز پیش از موعد مورد انتظار، در ۳۹ هفتگی و ۱ روز به دنیا آمد. این تولد ترم کامل است، بنابراین نمودارهای رشد از سن از زمان تولد استفاده می‌کنند."
+          }
+        }
+      }
+    },
+    "Start demo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start demo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar demostración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lancer la démo"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar demonstração"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запустить деморежим"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始演示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데모 시작"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu dùng thử"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simulan ang demo"
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kòmanse demonstrasyon an"
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilow tusaalaha"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डेमो शुरू करें"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بدء العرض التجريبي"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروع نسخهٔ نمایشی"
+          }
+        }
+      }
+    },
+    "Tap Exit demo anytime. Fully closing the app also ends the demo. Your own family log stays untouched." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Exit demo anytime. Fully closing the app also ends the demo. Your own family log stays untouched."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca Salir de la demostración cuando quieras. Cerrar la app por completo también finaliza la demostración. El registro de tu propia familia no cambia."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez Quitter la démo à tout moment. Fermer complètement l’app met aussi fin à la démo. Le journal de votre famille reste inchangé."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque em Sair da demonstração quando quiser. Fechar o app por completo também encerra a demonstração. O registro da sua própria família permanece intacto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В любой момент нажмите «Выйти из деморежима». Полное закрытие приложения тоже завершает деморежим. Журнал вашей семьи останется без изменений."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "随时轻点“退出演示”。完全关闭 App 也会结束演示。你自己的家庭记录不会受到影响。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "언제든 데모 종료를 탭하세요. 앱을 완전히 종료해도 데모가 끝나요. 실제 가족 기록은 그대로 유지돼요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm Thoát dùng thử bất cứ lúc nào. Đóng hoàn toàn ứng dụng cũng kết thúc bản dùng thử. Nhật ký gia đình của bạn vẫn nguyên vẹn."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I-tap ang Lumabas sa demo anumang oras. Matatapos din ang demo kapag ganap mong isinara ang app. Hindi mababago ang sariling talaan ng pamilya mo."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peze Sòti nan demonstrasyon an nenpòt lè. Fèmen aplikasyon an nèt ap fini demonstrasyon an tou. Jounal pwòp fanmi ou a pap chanje."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taabo Ka bax tusaalaha wakhti kasta. Inaad abka gebi ahaan xirto ayaa sidoo kale joojinaysa tusaalaha. Diiwaanka qoyskaaga waxba lagama beddelayo."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कभी भी डेमो से बाहर निकलें पर टैप करें। ऐप को पूरी तरह बंद करने से भी डेमो समाप्त हो जाता है। आपके अपने परिवार का रिकॉर्ड नहीं बदलता।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط على الخروج من العرض التجريبي في أي وقت. إغلاق التطبيق تمامًا ينهي العرض أيضًا. يظل سجل عائلتك دون تغيير."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هر زمان خواستید روی خروج از نسخهٔ نمایشی بزنید. بستن کامل برنامه هم نسخهٔ نمایشی را پایان می‌دهد. دفتر خانوادهٔ خودتان بدون تغییر می‌ماند."
+          }
+        }
+      }
+    },
+    "Three months of growing, with Sam and Alex. Try logging a bottle, explore pumping and growth charts, or check in on a milestone." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three months of growing, with Sam and Alex. Try logging a bottle, explore pumping and growth charts, or check in on a milestone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres meses de crecimiento con Sam y Alex. Prueba a registrar un biberón, explorar las gráficas de extracción y crecimiento o anotar un hito del desarrollo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trois mois de croissance avec Sam et Alex. Essayez de noter un biberon, explorez les graphiques de tirage et de croissance ou renseignez une étape du développement."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Três meses de crescimento com Sam e Alex. Experimente registrar uma mamadeira, explorar os gráficos de extração e crescimento ou acompanhar um marco do desenvolvimento."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Три месяца роста вместе с Сэм и Алексом. Попробуйте записать кормление из бутылочки, посмотреть графики сцеживаний и роста или отметить навык малыша."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "与 Sam 和 Alex 一起，见证三个月的成长。试着记录一次瓶喂、查看吸奶和生长图表，或记录一项发育里程碑。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sam, Alex와 함께한 3개월의 성장 기록이에요. 젖병 수유를 기록하고, 유축 및 성장 차트를 살펴보거나 발달 이정표를 확인해 보세요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ba tháng lớn lên cùng Sam và Alex. Hãy thử ghi một cữ bú bình, xem biểu đồ hút sữa và tăng trưởng, hoặc ghi nhận một mốc phát triển."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tatlong buwang paglaki kasama sina Sam at Alex. Subukang magtala ng pagdede sa bote, tingnan ang mga chart ng pagpump at paglaki, o magtala ng milestone."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twa mwa ap grandi avèk Sam ak Alex. Eseye anrejistre yon bibwon, gade grafik ponpaj ak kwasans yo, oswa note yon etap devlopman."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saddex bilood oo koritaan ah oo ay weheliyaan Sam iyo Alex. Isku day inaad diiwaangeliso quudin dhalo ah, eeg jaantusyada lisidda caanaha iyo koritaanka, ama diiwaangeli tallaabo horumarineed."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sam और Alex के साथ तीन महीने का विकास। बोतल से दूध पिलाने का रिकॉर्ड बनाएँ, पंपिंग और विकास के चार्ट देखें या विकास का कोई पड़ाव दर्ज करें।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثلاثة أشهر من النمو مع سام وأليكس. جرّب تسجيل رضعة بالزجاجة، أو استكشف مخططات شفط الحليب والنمو، أو سجّل ملاحظة عن إحدى مراحل التطور."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سه ماه رشد، همراه با سم و الکس. ثبت تغذیه با شیشه، نمودارهای دوشیدن شیر و رشد یا ثبت یکی از مراحل رشد را امتحان کنید."
+          }
+        }
+      }
+    },
+    "Widgets and Siri use your own family log, not the demo." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets and Siri use your own family log, not the demo."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los widgets y Siri usan el registro de tu propia familia, no la demostración."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les widgets et Siri utilisent le journal de votre famille, pas la démo."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os widgets e a Siri usam o registro da sua própria família, não a demonstração."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виджеты и Siri используют журнал вашей семьи, а не данные деморежима."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件和 Siri 使用你自己的家庭记录，而非演示数据。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위젯과 Siri는 데모가 아닌 실제 가족 기록을 사용해요."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiện ích và Siri dùng nhật ký gia đình của bạn, không dùng dữ liệu mẫu."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ginagamit ng mga widget at Siri ang sariling talaan ng pamilya mo, hindi ang demo."
+          }
+        },
+        "ht" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widjèt yo ak Siri sèvi ak jounal pwòp fanmi ou a, pa demonstrasyon an."
+          }
+        },
+        "so" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget-yada iyo Siri waxay isticmaalaan diiwaanka qoyskaaga, ee ma isticmaalaan tusaalaha."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "विजेट और Siri आपके अपने परिवार के रिकॉर्ड का उपयोग करते हैं, डेमो का नहीं।"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تستخدم الأدوات وSiri سجل عائلتك، وليس العرض التجريبي."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ویجت‌ها و Siri از دفتر خانوادهٔ خودتان استفاده می‌کنند، نه نسخهٔ نمایشی."
+          }
+        }
+      }
+    },
     "" : {
       "localizations" : {
         "es" : {

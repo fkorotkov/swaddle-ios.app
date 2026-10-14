@@ -6,6 +6,9 @@ struct SiriSetupView: View {
     @Environment(\.babyPalette) private var palette
     var body: some View {
         List {
+            if store.isDemo {
+                Section { Text("Widgets and Siri use your own family log, not the demo.") }
+            }
             Section {
                 VStack(alignment: .leading, spacing: 14) {
                     Image(systemName: "waveform").font(.largeTitle).foregroundStyle(palette.accent)
@@ -18,7 +21,7 @@ struct SiriSetupView: View {
                 Section {
                     Toggle("Care history in Siri & Search", isOn: Binding(get: { store.siriDiscoveryEnabled }, set: { enabled in
                         do { try store.setSiriDiscoveryEnabled(enabled) } catch { store.report(error) }
-                    })).accessibilityIdentifier("siri.careHistory")
+                    })).disabled(store.isDemo).accessibilityIdentifier("siri.careHistory")
                     if store.siriDiscoveryEnabled {
                         Label(store.siriDiscoveryStatus, systemImage: "checkmark.shield").font(.footnote).foregroundStyle(.secondary)
                     }

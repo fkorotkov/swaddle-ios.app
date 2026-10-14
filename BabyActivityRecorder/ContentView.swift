@@ -3,6 +3,7 @@ import CoreSpotlight
 
 struct ContentView: View {
     let store: LogStore
+    @Binding var externalURL: AppOpenURL?
     @Environment(\.scenePhase) private var scenePhase
     @State private var tab: Int
     @State private var todayOpenRequest = UUID()
@@ -11,8 +12,9 @@ struct ContentView: View {
     @State private var openingMotion: CocoonOpeningSession
     @State private var milestoneRequest: MilestoneCheckpointRequest?
 
-    init(store: LogStore, openingDuration: TimeInterval = 0.85) {
+    init(store: LogStore, openingDuration: TimeInterval = 0.85, externalURL: Binding<AppOpenURL?> = .constant(nil)) {
         self.store = store
+        self._externalURL = externalURL
         #if DEBUG && targetEnvironment(simulator)
         tab = MotionReview.has("--milestones") ? 2 : MotionReview.has("--trends") ? 1 : 0
         #else
@@ -22,7 +24,11 @@ struct ContentView: View {
     }
     var body: some View {
         Group {
-            if !store.isReady {
+            if store.snapshot.family == nil {
+                // Exploring never depends on iCloud discovery. Creating a real family
+                // remains disabled until that check finishes, avoiding duplicate roots.
+                WelcomeView(store: store, openingMotion: openingMotion)
+            } else if !store.isReady {
                 ContentUnavailableView {
                     Label("Your log is unavailable", systemImage: "externaldrive.badge.exclamationmark")
                 } description: {
@@ -30,8 +36,6 @@ struct ContentView: View {
                 } actions: {
                     Button("Try again") { Task { await store.checkAccount(); await store.syncCloud(); store.reload() } }
                 }
-            } else if store.snapshot.family == nil {
-                WelcomeView(store: store, openingMotion: openingMotion)
             } else if store.canEdit && !store.snapshot.caregivers.contains(where: { $0.id == store.caregiverID }) {
                 JoinProfileView(store: store)
             } else {
@@ -65,15 +69,14 @@ struct ContentView: View {
         .sheet(item: Binding(get: { store.siriNavigation }, set: { store.siriNavigation = $0 })) { request in
             SiriDestinationView(store: store, request: request)
         }
-        .onContinueUserActivity(CSSearchableItemActionType) { activity in
-            openingMotion.settle()
-            showingSettings = false
-            store.openSearchActivity(activity)
-        }
         .sheet(item: $widgetBottleRoute) { route in
             ActivityEditor(store: store, route: route)
         }
-        .onOpenURL { url in
+        .task(id: externalURL?.id) {
+            guard !store.isDemo, let url = externalURL?.url else { return }
+            // Consume before handling; replacing the view on a later demo exit must
+            // not replay a widget diaper command or reopen an old bottle editor.
+            externalURL = nil
             guard url.scheme == "littlelog" else { return }
             openingMotion.settle()
             showingSettings = false
@@ -143,6 +146,57 @@ struct ContentView: View {
 struct WelcomeView: View {
     let store: LogStore
     var openingMotion: CocoonOpeningSession? = nil
+    @Environment(\.demoSession) private var demoSession
+    @State private var showingSetup = false
+    @State private var showingDemo = false
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    CocoonOpeningMark(session: openingMotion, size: 144)
+                        .frame(width: 100, height: 116).padding(.top, 4)
+                    Text("Little moments.\nA little clearer.")
+                        .font(LogStyle.heading(.largeTitle))
+                    Text("A shared record of feeding, changes, and growing. One less thing to remember.")
+                        .font(.title3).foregroundStyle(.secondary)
+                    VStack(alignment: .leading, spacing: 18) {
+                        Label("Feeds, pumping & everyday care", systemImage: "waterbottle")
+                        Label("Growth charts & first milestones", systemImage: "leaf")
+                        Label("A shared family log with iCloud", systemImage: "person.2")
+                    }.font(.subheadline).foregroundStyle(LogStyle.forest).padding(.vertical, 6)
+                    VStack(spacing: 12) {
+                        PrimaryButton(title: String(localized: "Start our family log"), disabled: !store.isReady) { showingSetup = true }
+                            .accessibilityIdentifier("welcome.setup")
+                        if demoSession != nil {
+                            Button { showingDemo = true } label: {
+                                Label("Explore a demo", systemImage: "sparkles")
+                                    .font(.headline).frame(maxWidth: .infinity, minHeight: 26)
+                            }.buttonStyle(.glass).controlSize(.large).buttonBorderShape(.capsule)
+                                .accessibilityIdentifier("welcome.demo")
+                        }
+                    }
+                    if !store.isReady {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(store.errorMessage ?? String(localized: "Loading your family…"))
+                                .font(.footnote).foregroundStyle(.secondary)
+                            Button("Try again") {
+                                Task { await store.checkAccount(); await store.syncCloud(); store.reload() }
+                            }
+                        }
+                    }
+                    Text("Already invited? Open your family’s iCloud invitation to join. You can add more children and invite caregivers in Settings.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }.padding(24).frame(maxWidth: 540).frame(maxWidth: .infinity)
+            }.background(LogStyle.canvas)
+                .navigationDestination(isPresented: $showingSetup) { FamilySetupView(store: store) }
+                .sheet(isPresented: $showingDemo) { DemoIntroductionView() }
+        }
+    }
+}
+
+struct FamilySetupView: View {
+    let store: LogStore
     @State private var childName = ""
     @State private var gender: ChildGender?
     @State private var name = ""
@@ -150,11 +204,8 @@ struct WelcomeView: View {
     @State private var unit: VolumeUnit = .ml
     @State private var error: String?
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 26) {
-                    CocoonOpeningMark(session: openingMotion, size: 144)
-                        .frame(width: 100, height: 116).padding(.top, 4)
                     Text("Little moments.\nA little clearer.")
                         .font(.system(.largeTitle, design: .serif, weight: .semibold))
                     Text("A shared record of feeding, changes, and growing. One less thing to remember.")
@@ -177,10 +228,10 @@ struct WelcomeView: View {
                     }
                     Text("Already invited? Open your family’s iCloud invitation to join. You can add more children and invite caregivers in Settings.")
                         .font(.footnote).foregroundStyle(.secondary)
-                }.padding(24)
+                }.padding(24).frame(maxWidth: 540).frame(maxWidth: .infinity)
             }.background(LogStyle.canvas).navigationTitle("Swaddle").navigationBarTitleDisplayMode(.inline)
                 .scrollDismissesKeyboard(.interactively)
-        }.babyPalette(for: gender)
+            .babyPalette(for: gender)
     }
 }
 

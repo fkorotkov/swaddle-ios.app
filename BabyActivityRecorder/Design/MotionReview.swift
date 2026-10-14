@@ -179,7 +179,9 @@
 
     var body: some View {
       Group {
-        if MotionReview.has("--sync-study") {
+        if MotionReview.has("--welcome") || MotionReview.has("--demo-entry") {
+          FamilyLogRootView(store: store)
+        } else if MotionReview.has("--sync-study") {
           MotionReviewSyncStudy()
         } else if let skill = MotionReview.arguments.first(where: { $0.hasPrefix("--illustration-skill=") })
             .flatMap({ MilestoneCatalog.skill(String($0.dropFirst("--illustration-skill=".count))) }),

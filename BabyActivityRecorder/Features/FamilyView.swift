@@ -5,6 +5,7 @@ import AppIntents
 
 struct SettingsView: View {
     @Bindable var store: LogStore
+    @Environment(\.demoSession) private var demoSession
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
     @State private var childEditor: ChildEditRoute?
@@ -13,6 +14,7 @@ struct SettingsView: View {
     @State private var timeZone = ""
     @State private var confirmZone = false
     @State private var confirmFamilyDeletion = false
+    @State private var showingDemo = false
   @State private var copiedSyncDiagnostics = false
     var body: some View {
         NavigationStack {
@@ -55,16 +57,20 @@ struct SettingsView: View {
                             }
                         }
                     }
-                    Button(store.isOwner ? String(localized: "Invite or manage caregivers") : String(localized: "Manage family access"), systemImage: "person.badge.plus") { invite = true }
+                    if !store.isDemo {
+                        Button(store.isOwner ? String(localized: "Invite or manage caregivers") : String(localized: "Manage family access"), systemImage: "person.badge.plus") { invite = true }
+                    }
                     Button("Add pumping profile", systemImage: "drop.halffull") { caregiverEditor = CaregiverEditRoute() }.disabled(!store.canEdit)
                 }
                 Section {
                     Picker("Volume", selection: $store.volumeUnit) { ForEach(VolumeUnit.allCases) { Text($0 == .ml ? String(localized: "Milliliters") : String(localized: "Ounces")).tag($0) } }
-                    Button {
-                        if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
-                    } label: {
-                        Label("App language", systemImage: "globe")
-                    }.accessibilityHint("Choose your preferred app language in iPhone Settings.")
+                    if !store.isDemo {
+                        Button {
+                            if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                        } label: {
+                            Label("App language", systemImage: "globe")
+                        }.accessibilityHint("Choose your preferred app language in iPhone Settings.")
+                    }
                 } header: { Text("Preferences") } footer: { Text("Swaddle uses 1 oz = 30 mL for volume entry and display. Changing units preserves saved amounts.") }
                 Section("Siri & widgets") {
                     NavigationLink { SiriSetupView(store: store, childName: store.snapshot.children.count == 1 ? String(localized: "my baby") : store.selectedChild?.name ?? String(localized: "my baby")) } label: { Label("Siri", systemImage: "waveform") }
@@ -96,13 +102,34 @@ struct SettingsView: View {
                     }
                     if let last = store.lastUpload { LabeledContent("Last upload", value: last.formatted(date: .abbreviated, time: .shortened)) }
                     if let last = store.lastSync { LabeledContent("Last checked iCloud", value: last.formatted(date: .abbreviated, time: .shortened)) }
-                    if !store.persistence.cloudEnabled { Text("This Simulator build saves locally. Sharing becomes available in a signed device build with iCloud configured.").font(.footnote).foregroundStyle(.secondary) }
+                    if store.isDemo {
+                        Text("All records are fictional. You can change them freely; they never sync to iCloud or appear in your widgets or Siri.").font(.footnote).foregroundStyle(.secondary)
+                    } else if !store.persistence.cloudEnabled {
+                        Text("This Simulator build saves locally. Sharing becomes available in a signed device build with iCloud configured.").font(.footnote).foregroundStyle(.secondary)
+                    }
                     LabeledContent("Reporting time zone", value: store.snapshot.family?.timeZoneIdentifier ?? TimeZone.current.identifier)
                     if store.canEdit {
                         Button("Change reporting time zone") { timeZone = store.snapshot.family?.timeZoneIdentifier ?? TimeZone.current.identifier; confirmZone = true }
                     }
                 } header: { Text("Data & recovery") } footer: { Text("Local saves work offline. iCloud updates are eventual; a save doesn’t confirm another caregiver has received it.") }
-                if store.isOwner {
+                if let demoSession {
+                    Section {
+                        if store.isDemo {
+                            Button("Exit demo", systemImage: "rectangle.portrait.and.arrow.right") { demoSession.exit() }
+                        } else {
+                            Button("Explore a demo", systemImage: "sparkles") { showingDemo = true }
+                        }
+                    }
+                }
+                Section {
+                    Link(destination: URL(string: "https://swaddle-ios.app/privacy/")!) {
+                        Label("Privacy policy", systemImage: "hand.raised")
+                    }.accessibilityIdentifier("settings.privacy")
+                    Link(destination: URL(string: "https://swaddle-ios.app/support/")!) {
+                        Label("Support", systemImage: "questionmark.circle")
+                    }.accessibilityIdentifier("settings.support")
+                }
+                if store.isOwner && !store.isDemo {
                     Section {
                         Button("Delete family and all records", role: .destructive) { confirmFamilyDeletion = true }
                     } footer: { Text("To keep your records and remove access instead, use Invite or manage caregivers.") }
@@ -119,6 +146,7 @@ struct SettingsView: View {
                 .sheet(item: $childEditor) { ChildEditor(store: store, existing: $0.child) }
                 .sheet(item: $caregiverEditor) { CaregiverEditor(store: store, existing: $0.person) }
                 .sheet(isPresented: $invite) { InviteCaregiverView(store: store) }
+                .sheet(isPresented: $showingDemo) { DemoIntroductionView() }
                 .confirmationDialog("Permanently delete this family?", isPresented: $confirmFamilyDeletion, titleVisibility: .visible) {
                     Button("Delete family and all records", role: .destructive) {
                         do { try store.deleteFamily() } catch { store.report(error) }
@@ -375,7 +403,7 @@ struct CaregiverEditor: View {
                     Toggle("Pumping profile", isOn: $mother)
                 } footer: { Text("Not specified keeps neutral adult artwork. Pumping is an independent choice.") }
                 .disabled(!store.canEdit)
-                if let existing, store.isOwner, existing.id != store.caregiverID {
+                if let existing, store.isOwner, !store.isDemo, existing.id != store.caregiverID {
                     Section {
                         Button(name.trimmingCharacters(in: .whitespacesAndNewlines) != existing.name || mother != existing.isMother || sexChanged
                                ? String(localized: "Save and invite this caregiver") : String(localized: "Invite this caregiver"), systemImage: "person.badge.plus") {
@@ -664,10 +692,17 @@ struct CloudShareSheet: UIViewControllerRepresentable {
 
 struct WidgetHelpView: View {
     let store: LogStore
-    @State private var unit = WidgetCache.unit
+    @State private var unit: VolumeUnit
+    init(store: LogStore) {
+        self.store = store
+        _unit = State(initialValue: store.isDemo ? store.volumeUnit : WidgetCache.unit)
+    }
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                if store.isDemo {
+                    Text("Widgets and Siri use your own family log, not the demo.").font(.callout).foregroundStyle(LogStyle.forest)
+                }
                 Text("A glance is enough.").font(.system(.largeTitle, design: .serif, weight: .semibold))
                 LogCard {
                     VStack(alignment: .leading, spacing: 12) {
@@ -697,7 +732,7 @@ struct WidgetHelpView: View {
                 if let child = store.selectedChild {
                     Button {
                         unit = unit == .ml ? .oz : .ml
-                        WidgetCache.setUnit(unit)
+                        if !store.isDemo { WidgetCache.setUnit(unit) }
                     } label: {
                         LogCard(color: BabyPalette(gender: child.paletteGender).surface) {
                             VStack(alignment: .leading, spacing: 14) {

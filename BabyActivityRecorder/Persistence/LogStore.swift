@@ -10,6 +10,7 @@ import CoreSpotlight
 @MainActor @Observable
 final class LogStore {
     static let shared = LogStore()
+    let isDemo: Bool
     private(set) var snapshot = FamilySnapshot()
     private(set) var isReady = false
     private(set) var canEdit = true
@@ -77,15 +78,20 @@ final class LogStore {
     var isOwner: Bool { snapshot.family?.ownerID == caregiverID }
     var myName: String { snapshot.caregiverName(caregiverID) }
 
-    init(persistence: PersistenceController? = nil, defaults: UserDefaults? = nil, publishesWidgets: Bool = true) {
-        self.publishesWidgets = publishesWidgets
-        self.persistence = persistence ?? PersistenceController()
+    init(persistence: PersistenceController? = nil, defaults: UserDefaults? = nil, publishesWidgets: Bool = true, isDemo: Bool = false) {
+        self.isDemo = isDemo
+        self.publishesWidgets = publishesWidgets && !isDemo
+        // The demo always owns an in-memory store, even if a caller supplies persistence.
+        self.persistence = isDemo ? PersistenceController(inMemory: true) : persistence ?? PersistenceController()
+        precondition(!isDemo || defaults != nil, "Demo preferences must be isolated")
         self.defaults = defaults ?? .standard
         self.volumeUnit = VolumeUnit(rawValue: self.defaults.string(forKey: "volumeUnit") ?? "") ?? .ml
         self.selectedChildID = self.defaults.string(forKey: "selectedChild").flatMap(UUID.init(uuidString:))
         importingFamily = self.defaults.bool(forKey: "importingFamily")
         reload()
     updateSyncStatus()
+        // Demo stores must not observe real CloudKit/account events or alter their status.
+        guard !isDemo else { return }
         if self.persistence.cloudEnabled { Task { await self.checkAccount(); await self.syncCloud() } }
         observers.append(NotificationCenter.default.addObserver(forName: .careSyncChanged, object: self.persistence, queue: nil) { [weak self] _ in
             Task { @MainActor [weak self] in self?.updateSyncStatus(); self?.reload() }
@@ -355,12 +361,15 @@ final class LogStore {
             }
             isReady = true
             errorMessage = nil
-            if !persistence.cloudEnabled { syncMessage = String(localized: "Saved on this iPhone") }
+            if !persistence.cloudEnabled {
+                syncMessage = isDemo ? String(localized: "Demo · sample data only") : String(localized: "Saved on this iPhone")
+            }
             if publishesWidgets { WidgetCache.write(snapshot: snapshot, actorID: caregiverID, canRecord: isReady && canEdit && snapshot.caregivers.contains { $0.id == caregiverID }) }
         } catch { errorMessage = error.localizedDescription; isReady = false }
     }
 
     func setSiriDiscoveryEnabled(_ enabled: Bool) throws {
+        guard !isDemo else { return }
         guard #available(iOS 27.0, *) else { throw LogError.message(String(localized: "Care history discovery requires iOS 27. Voice logging and feeding answers remain available.")) }
         guard isReady, let family = snapshot.family else { throw LogError.message(String(localized: "Open your family before changing access.")) }
         defaults.set(enabled, forKey: "siri.discovery.\(family.id.uuidString)")
@@ -386,6 +395,11 @@ final class LogStore {
     }
 
     private func refreshSiriDiscovery() {
+        guard !isDemo else {
+            siriDiscoveryEnabled = false
+            siriNavigation = nil
+            return
+        }
         guard #available(iOS 27.0, *) else {
             siriDiscoveryEnabled = false
             siriNavigation = nil
@@ -424,6 +438,32 @@ final class LogStore {
             volumeUnit = unit
             if publishesWidgets, WidgetCache.defaults.object(forKey: "widgetVolumeUnit") == nil { WidgetCache.setUnit(unit) }
             selectedChildID = child.id
+            reload()
+        } catch { context.rollback(); throw error }
+    }
+
+    /// One transaction, with the same record validation as normal saves. Never available
+    /// to the real store and never shares roots, revisions, or identifiers with it.
+    func loadDemoFamily(_ example: DemoFamily, now: Date = .now) throws {
+        guard isDemo, !persistence.cloudEnabled, snapshot.family == nil, root == nil else {
+            throw LogError.message(String(localized: "Couldn’t prepare the demo. Try again."))
+        }
+        if let error = persistence.loadError { throw error }
+        let exampleSnapshot = example.snapshot
+        for value in example.records { try LogRules.validate(value, in: exampleSnapshot, now: now) }
+        let context = persistence.context
+        let family = NSEntityDescription.insertNewObject(forEntityName: "FamilyRoot", into: context)
+        family.setValue(example.family.id, forKey: "id")
+        family.setValue(example.family.name, forKey: "name")
+        family.setValue(example.family.timeZoneIdentifier, forKey: "timeZone")
+        family.setValue(example.family.ownerID, forKey: "ownerID")
+        if let privateStore = persistence.privateStore { context.assign(family, to: privateStore) }
+        defaults.set(example.family.ownerID.uuidString, forKey: "caregiverID")
+        do {
+            for value in example.records { try insert(value, root: family, parents: [], commandID: UUID()) }
+            try persistence.save()
+            defaults.set(example.family.id.uuidString, forKey: "familyID")
+            selectedChildID = example.child.id
             reload()
         } catch { context.rollback(); throw error }
     }

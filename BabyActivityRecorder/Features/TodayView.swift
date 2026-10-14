@@ -85,50 +85,48 @@ struct TodayView: View {
       } ?? []
     NavigationStack(path: $navigationPath) {
       AdaptiveCarePage { wide in
-        Group {
+        HStack(alignment: .top, spacing: 24) {
           if wide, let child {
-            HStack(alignment: .top, spacing: 24) {
-              ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                  identity
-                  overview(child: child, entries: entries, overlapping: overlapping)
-                }.padding(.top, 8).padding(.bottom, 24)
-              }
-              .scrollPosition($overviewPosition)
-              .refreshable { await store.syncCloud() }
-              .frame(maxWidth: .infinity)
-              ScrollView {
-                timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
-                  .padding(.top, 8).padding(.bottom, 24)
-              }
-              .scrollPosition($scrollPosition)
-              .refreshable { await store.syncCloud() }
-              .frame(maxWidth: .infinity)
-            }.padding(.horizontal, 22).frame(maxWidth: 1240)
-          } else {
             ScrollView {
-              VStack(alignment: .leading, spacing: 20) {
-                identity
-                if let child {
-                  overview(child: child, entries: entries, overlapping: overlapping)
-                  timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
-                } else {
-                  ContentUnavailableView("Add a child", systemImage: "person.crop.circle.badge.plus",
-                    description: Text("Open Settings to add a child to your shared log."))
-                }
-              }.padding(.horizontal, 22).padding(.top, 8).padding(.bottom, 32)
-                .frame(maxWidth: 640).frame(maxWidth: .infinity)
+              timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
+                .padding(.top, 8).padding(.bottom, 24)
             }
             .scrollPosition($scrollPosition)
             .refreshable { await store.syncCloud() }
+            .frame(maxWidth: .infinity)
+            .accessibilityIdentifier("today.timeline")
           }
+          // The primary scroll view keeps its identity when the history pane
+          // appears beside it. SwiftUI mirrors this trailing placement for RTL.
+          ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+              identity
+              if let child {
+                overview(child: child, entries: entries, overlapping: overlapping)
+                if !wide {
+                  timeline(child: child, recentCare: recentCare, visibleCare: visibleCare, dayGroups: dayGroups)
+                }
+              } else {
+                ContentUnavailableView("Add a child", systemImage: "person.crop.circle.badge.plus",
+                  description: Text("Open Settings to add a child to your shared log."))
+              }
+            }.padding(.top, 8).padding(.bottom, wide ? 24 : 32)
+          }
+          .scrollPosition($overviewPosition)
+          .refreshable { await store.syncCloud() }
+          .frame(maxWidth: .infinity)
+          .accessibilitySortPriority(1)
+          .accessibilityIdentifier("today.overview")
         }
+        .padding(.horizontal, 22)
+        .frame(maxWidth: wide ? 1240 : 640)
       }
       .background(LogStyle.canvas).navigationTitle("").navigationBarTitleDisplayMode(.inline)
       .environment(\.calendar, calendar).environment(\.timeZone, calendar.timeZone)
       .toolbarVisibility(.hidden, for: .navigationBar)
       .sheet(isPresented: $showingSync) {
-        FamilySyncDetailsView(store: store).presentationDetents([.medium, .large])
+        if store.isDemo { DemoIntroductionView(isActive: true) }
+        else { FamilySyncDetailsView(store: store).presentationDetents([.medium, .large]) }
       }
       .navigationDestination(for: Destination.self) { destination in
         Group {
@@ -416,8 +414,15 @@ struct TodayView: View {
       }.buttonStyle(.plain).logGlass(in: .circle, interactive: true)
         .accessibilityLabel("Siri, log and ask hands free")
         .accessibilityIdentifier("today.siri")
-      FamilySyncIndicator(status: store.syncStatus) { showingSync = true }
-        .buttonStyle(.plain).logGlass(in: .circle, interactive: true)
+      if store.isDemo {
+        Button { showingSync = true } label: {
+          Image(systemName: "sparkles").frame(width: 44, height: 44)
+        }.buttonStyle(.plain).logGlass(in: .circle, interactive: true)
+          .accessibilityLabel("Demo · sample data only")
+      } else {
+        FamilySyncIndicator(status: store.syncStatus) { showingSync = true }
+          .buttonStyle(.plain).logGlass(in: .circle, interactive: true)
+      }
       SettingsButton(store: store, presentation: settingsPresentation)
         .buttonStyle(.plain).logGlass(in: .circle, interactive: true)
     }.foregroundStyle(LogStyle.forest)

@@ -175,7 +175,7 @@ struct ActivityEditor: View {
         let previous = route.childID.flatMap { store.previousBottle(childID: $0) }
         var bottle: Bottle? = route.activity == nil && route.kind == .bottle ? previous : nil
         var diaper = Diaper(pee: false, poo: false)
-        let preferredLengthUnit = UserDefaults.standard.string(forKey: LengthUnit.preferenceKey).flatMap(LengthUnit.init(rawValue:)) ?? .cm
+        let preferredLengthUnit = store.defaults.string(forKey: LengthUnit.preferenceKey).flatMap(LengthUnit.init(rawValue:)) ?? .cm
         let bodyMeasurement = route.kind.map { [.length, .headCircumference].contains($0) } ?? false
         var numeric = "", unit = route.kind == .temperature ? "°C" : bodyMeasurement ? preferredLengthUnit.rawValue : "kg", measurementMethod = ""
         var position: LengthMeasurementPosition = .lyingDown
@@ -325,7 +325,7 @@ struct ActivityEditor: View {
             Picker("Measurement unit", selection: $measureUnit) {
                 ForEach(LengthUnit.allCases) { Text($0.label).tag($0.rawValue) }
             }.logPickerStyle().onChange(of: measureUnit) { old, new in
-                UserDefaults.standard.set(new, forKey: LengthUnit.preferenceKey)
+                store.defaults.set(new, forKey: LengthUnit.preferenceKey)
                 guard let amount = Decimal.input(value), let oldUnit = LengthUnit(rawValue: old),
                       let newUnit = LengthUnit(rawValue: new) else { return }
                 value = newUnit.fromCentimeters(oldUnit.toCentimeters(amount)).formatted(.number.precision(.fractionLength(0...4)))
