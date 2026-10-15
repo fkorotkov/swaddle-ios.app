@@ -23,7 +23,7 @@ The visual style follows `BabyActivityRecorder/Design/LogStyle.swift`: cream, fo
 
 The entire `website/` folder is public. Never place family records, diagnostics, credentials, archives, or internal QA reports in it.
 
-The App Store launch is pending, so the site deliberately uses “Coming to the App Store.” When the app's public listing is available, replace the launch notes and download FAQ with the verified App Store link and update the software metadata. Do not add fabricated ratings, reviews, medical claims, or download counts.
+Swaddle is available free on the [App Store](https://apps.apple.com/app/swaddle-newborn-log/id6814224127) for iPhone with iOS 26 or later. Keep the download buttons, FAQ, footer links, README, and software metadata pointed at this listing. The country-neutral link lets Apple select the visitor's storefront. Do not add fabricated ratings, reviews, medical claims, or download counts.
 
 Public contact is `support@swaddle-ios.app`. Cloudflare Email Routing forwards it to the owner's verified Gmail destination. Free forwarding is enabled; outgoing email from the support address has not been configured. Keep the address consistent on the support and privacy pages.
 

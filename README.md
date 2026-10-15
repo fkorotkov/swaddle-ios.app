@@ -10,7 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://swaddle-ios.app"><strong>Explore Swaddle</strong></a> ·
+  <a href="https://apps.apple.com/app/swaddle-newborn-log/id6814224127"><strong>Download on the App Store</strong></a> ·
+  <a href="https://swaddle-ios.app">Explore Swaddle</a> ·
   <a href="https://swaddle-ios.app/support/">Support</a> ·
   <a href="https://swaddle-ios.app/privacy/">Privacy</a> ·
   <a href="#build-it-yourself">Build it yourself</a>
@@ -92,7 +93,7 @@ Growth references and milestone checklists help organize observations for a conv
 
 ## Get Swaddle
 
-Swaddle is being prepared for its first public App Store release. The [website](https://swaddle-ios.app) will carry the download link when it is available. Existing testers can continue using TestFlight.
+**[Download Swaddle free on the App Store](https://apps.apple.com/app/swaddle-newborn-log/id6814224127)** for iPhone with iOS 26 or later. Every feature is included, with no ads, subscriptions, or in-app purchases.
 
 The source is available now, under the **Mozilla Public License 2.0**.
 
