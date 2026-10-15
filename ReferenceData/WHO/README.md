@@ -22,7 +22,7 @@ This release covers measurements before the child's second calendar birthday. Ca
 
 Swaddle now uses WHO only for all growth comparisons. For a known preterm birth (before 37 weeks), primary weight comparisons use corrected age from the estimated 40-week due date, and the detail also shows WHO at actual age since birth. Both use the measurement date and the same resolved Boys/Girls reference. The primary percentile is not repeated above the paired comparison. Before the due date, corrected-age WHO is unavailable; the original measurement and actual-age comparison remain visible. The table is never extrapolated or clamped to day zero. Term and unknown-gestation profiles retain a single actual-age WHO result.
 
-This is the product's WHO-only comparison policy, chosen October 12, 2026. It does not claim that WHO replaces a clinician's separate preterm growth reference. The app no longer includes INTERGROWTH calculations or curves. Historical source files remain in `ReferenceData/Preterm` for provenance, outside the app target.
+This is the product's WHO-only comparison policy. It does not claim that WHO replaces a clinician's separate preterm growth reference. The app does not include INTERGROWTH calculations or curves.
 
 - [WHO Child Growth Standards](https://www.who.int/tools/child-growth-standards/standards/weight-for-age) supplies the reference data.
 - [AAP corrected age for premature babies](https://www.healthychildren.org/English/ages-stages/baby/preemie/Pages/Corrected-Age-For-Preemies.aspx) explains counting from the estimated due date.

@@ -18,10 +18,6 @@ The app uses numerical reference data from the [WHO Child Growth Standards](http
 
 The app bundles generated numerical coefficients rather than the original workbooks or WHO chart artwork. See the [weight reference notes](ReferenceData/WHO/README.md), [length/height and head reference notes](ReferenceData/GrowthMeasurements/README.md), and [motor-development provenance](ReferenceData/Milestones/README.md). WHO does not endorse Swaddle.
 
-## Historical preterm references
-
-`ReferenceData/Preterm` and the archived Oxford tables document an earlier implementation. They do not supply percentiles in the current app. Their original source terms and attributions remain applicable; see the [historical notes](ReferenceData/Preterm/README.md). The MPL notice does not grant rights in externally authored documents or previously attributed code.
-
 ## Apple technologies
 
 SwiftUI, CloudKit, WidgetKit, App Intents, system fonts, and SF Symbols are Apple technologies used under their applicable terms. Apple trademarks and system assets are not relicensed by this repository.

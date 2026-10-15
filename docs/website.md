@@ -33,9 +33,7 @@ GitHub Pages hosts the site; Cloudflare manages `swaddle-ios.app` DNS. The custo
 
 The public repository at https://github.com/fkorotkov/swaddle-ios.app contains the iOS app and website together on `main`. Original source, documentation, and artwork use the Mozilla Public License 2.0; third-party materials retain their own terms. The workflow in `.github/workflows/website.yml` publishes only `website/`; no separate website branch or repository is needed.
 
-On October 13, 2026, the owner chose to publish the clean app-and-website repository under MPL 2.0. This supersedes the earlier private-repository configuration, which disabled Pages because the account's plan did not support private-repository hosting. Public-repository Pages does not require that plan upgrade. Configure Pages to use GitHub Actions and set the custom domain to `swaddle-ios.app`.
-
-The initial app upload is a clean snapshot of the current source, tests, resources, reference data, and build configuration. Local build products, signing credentials, family exports, design experiments, and release/QA evidence are excluded. The older local app history is retained locally, not pushed to GitHub. Never publish the repository root as a Pages artifact.
+Configure Pages to use GitHub Actions with the custom domain `swaddle-ios.app`. Local build products, signing credentials, family exports, design experiments, and release/QA evidence are excluded from Git. Never publish the repository root as a Pages artifact.
 
 To publish updates from this app checkout:
 

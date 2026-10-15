@@ -4,9 +4,6 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-import re
-import shutil
-import subprocess
 
 from generate_who_weight_reference import rows
 
@@ -46,31 +43,6 @@ def generate():
                     fixtures.append(f"  .init(metric: .{metric}, sex: .{sex}, day: {day}, percentile: {p}, centimeters: {value:.3f}),")
     data.append("}")
     fixtures.append("]")
-    fixtures.extend(["", "// Independent Oxford postnatal preterm centile PDFs; rounded to 0.1 cm.",
-                     "struct PretermMeasurementFixture: Sendable {",
-                     "  let metric: GrowthMeasurementMetric", "  let sex: GrowthReferenceSex",
-                     "  let week: Int", "  let percentile: Double", "  let centimeters: Double", "}",
-                     "let pretermMeasurementFixtures: [PretermMeasurementFixture] = ["])
-    for name, metric in [("length", "length"), ("head", "headCircumference")]:
-        for label, sex in [("boys", "male"), ("girls", "female")]:
-            pdf = SOURCE / f"preterm-{label}-{name}-centiles.pdf"
-            if shutil.which("pdftotext"):
-                text = subprocess.check_output(["pdftotext", "-layout", str(pdf), "-"], text=True)
-            else:
-                from pypdf import PdfReader
-                text = PdfReader(pdf).pages[0].extract_text(extraction_mode="layout")
-            extracted = []
-            for line in text.splitlines():
-                match = re.fullmatch(r"\s*(\d{2})\s+" + r"\s+".join([r"(\d+\.\d+)"] * 7) + r"\s*", line)
-                if not match:
-                    continue
-                values = match.groups()
-                week = int(values[0])
-                extracted.append(week)
-                for index, p in [(1, 3), (4, 50), (7, 97)]:
-                    fixtures.append(f"  .init(metric: .{metric}, sex: .{sex}, week: {week}, percentile: {p}, centimeters: {float(values[index]):.1f}),")
-            assert extracted == list(range(27, 65)), (label, name, extracted)
-    fixtures.append("]")
     return {
         ROOT / "BabyActivityRecorder/Domain/WHOMeasurementReference.swift": "\n".join(data) + "\n",
         ROOT / "Tests/GrowthMeasurementReferenceFixtures.swift": "\n".join(fixtures) + "\n",
@@ -86,4 +58,4 @@ if __name__ == "__main__":
             assert path.read_text() == content, f"Regenerate {path}"
         else:
             path.write_text(content)
-    print("Verified 7,428 WHO daily LMS rows, 260 WHO centiles, and 456 preterm centiles.")
+    print("Verified 7,428 WHO daily LMS rows and 260 WHO centiles.")

@@ -74,7 +74,7 @@ Or ask Siri:
 >
 > “How much did my baby eat in Swaddle?”
 
-Diaper widgets open the app to save after authentication. Bottle opens the editor so you can check the amount. Siri support depends on the device, language, and system settings.
+Diaper widgets save through the app after authentication. Bottle opens the editor so you can check the amount. Siri support depends on the device, language, and system settings.
 
 ### Soft in the small hours
 
@@ -106,7 +106,7 @@ cd swaddle-ios.app
 open BabyActivityRecorder.xcodeproj
 ```
 
-Select the **BabyActivityRecorder** scheme and an available iPhone simulator, then run. Create a fictional family to explore the app. Simulator builds use local storage with CloudKit disabled.
+Select the **BabyActivityRecorder** scheme and an available iPhone simulator, then run. Choose **Start demo** from the welcome flow to explore Robin, Sam, and Alex's fictional family. Demo changes stay in memory and never reach iCloud, widgets, Siri, or your own family; **Exit demo** or fully closing the app ends the session. Simulator builds use local storage with CloudKit disabled.
 
 For a physical-device build, configure your own signing team, app and widget bundle IDs, App Group, and CloudKit container. Keep the matching entitlements and identifiers in `PersistenceController` consistent. The repository does not include signing credentials. Changing containers creates a separate data space.
 
@@ -134,7 +134,7 @@ Run the app-hosted tests through the shared scheme in Xcode. Family sharing also
 
 Care records use immutable revisions. Edits retain their parents, competing changes remain reviewable, and a stale edit does not silently resurrect a deleted entry. CloudKit transports the shared records; local projections provide the interface and totals.
 
-[Product specification](SPEC.md) · [Import formats](IMPORT_FORMAT.md) · [Sync architecture](CloudSyncMigration.md) · [Website publishing](docs/website.md)
+[Care data contract](docs/care-data.md) · [Import formats](IMPORT_FORMAT.md) · [iCloud synchronization](docs/icloud-sync.md) · [Siri & widgets](docs/siri-and-widgets.md) · [Website publishing](docs/website.md)
 
 </details>
 

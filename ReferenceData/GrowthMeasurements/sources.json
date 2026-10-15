@@ -40,26 +40,6 @@
       "file": "hcfa-boys-percentiles-expanded-tables.xlsx",
       "url": "https://cdn.who.int/media/docs/default-source/child-growth/child-growth-standards/indicators/head-circumference-for-age/expanded-tables/hcfa-boys-percentiles-expanded-tables.xlsx?sfvrsn=c266c88f_7",
       "sha256": "3e4d401a557841a93d56d552889d2778e4ad4e42585c8d768f5514aaf65979ff"
-    },
-    {
-      "file": "preterm-boys-length-centiles.pdf",
-      "url": "https://intergrowth21.com/sites/default/files/2023-02/grow_preterm-ct-boys_lt_table.pdf",
-      "sha256": "9b3979031d225245d268b8c2e508815eec9718d9feee199a1fb746f081ea59fe"
-    },
-    {
-      "file": "preterm-girls-length-centiles.pdf",
-      "url": "https://intergrowth21.com/sites/default/files/2023-02/grow_preterm-ct-girls_lt_table_0.pdf",
-      "sha256": "aec4e5b54e6eb36f52f85332e6c9ed6a310ba93f8b78ab5f739e50fc8defc796"
-    },
-    {
-      "file": "preterm-boys-head-centiles.pdf",
-      "url": "https://intergrowth21.com/sites/default/files/2023-02/grow_preterm-ct-boys_hc_table.pdf",
-      "sha256": "7db604231079c326890ca7aa40221f265572fff79b4d970eaf3fb7a13d82c95b"
-    },
-    {
-      "file": "preterm-girls-head-centiles.pdf",
-      "url": "https://intergrowth21.com/sites/default/files/2023-02/grow_preterm-ct-girls_hc_table.pdf",
-      "sha256": "2d28fd1a4bc0d418e4e5ea1396c2559bf8e44be57ffe130d0a1a479bf40d6daa"
     }
   ]
 }
