@@ -1,12 +1,13 @@
 <p align="center">
   <a href="https://swaddle-ios.app">
-    <img src="website/assets/social-card.jpg" alt="Swaddle — Made for the small hours. A free baby care journal for iPhone." width="1200">
+    <img src="website/assets/social-card-family.jpg" alt="Swaddle — Your family’s story. Yours to share. The free baby care journal for iPhone." width="1200">
   </a>
 </p>
 
 <p align="center">
-  <strong>One little life. Everyone in the loop.</strong><br>
-  Feeding, diapers, pumping, growth, and firsts — together in one calm family journal.
+  <strong>Your family’s story. Yours to share.</strong><br>
+  Feeding, diapers, pumping, growth, and firsts — together in one calm family journal.<br>
+  Protected by iCloud encryption. Shared with the caregivers you invite.
 </p>
 
 <p align="center">
@@ -77,13 +78,15 @@ Or ask Siri:
 
 Diaper widgets save through the app after authentication. Bottle opens the editor so you can check the amount. Siri support depends on the device, language, and system settings.
 
-### Soft in the small hours
+### Thoughtful, day and night
 
 Warm ivory in the light. Deep forest in the dark. A folded intake card, a thread through the timeline, and gentle celebrations for little birthdays and pumping records. Native controls, larger text, and Reduce Motion support keep the interface familiar and adaptable.
 
 English · Español · العربية · Português (Brasil) · فارسی · Français · Kreyòl ayisyen · हिन्दी · 한국어 · 简体中文 · Soomaali · Filipino · Tiếng Việt · Русский
 
 ## Your family's care belongs to your family
+
+**Protected by iCloud encryption. Shared with the caregivers you invite.** Apple’s iCloud protects synchronized data in transit and at rest.
 
 Swaddle has **no developer-run journal server, advertising, or third-party analytics**. It stores records locally and uses Apple's private and shared CloudKit databases for sync. Widgets use an on-device cache. Care-note import is processed locally, and care-history discovery in Siri and system search can be turned off.
 
@@ -151,4 +154,4 @@ Copyright © 2026 Fedor Korotkov. Original Swaddle source, documentation, and ar
 
 Thanks to the teams behind [Lottie](https://github.com/airbnb/lottie-ios), the [WHO Child Growth Standards](https://www.who.int/tools/child-growth-standards), and the [CDC milestone checklists](https://www.cdc.gov/act-early/milestones/index.html).
 
-<p align="center"><sub>All the little things, together.</sub></p>
+<p align="center"><sub>Your family’s story. Yours to share.</sub></p>
